@@ -1,0 +1,15 @@
+,class_counts,sex_counts,fold_counts
+Label_D,2252.0,,
+Label_O,1527.0,,
+Label_C,402.0,,
+Label_G,397.0,,
+Label_A,319.0,,
+Label_M,293.0,,
+Label_H,204.0,,
+Male,,3424.0,
+Female,,2968.0,
+0,,,1278.0
+1,,,1278.0
+2,,,1278.0
+3,,,1278.0
+4,,,1280.0

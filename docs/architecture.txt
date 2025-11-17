@@ -1,0 +1,1 @@
+Workspace layout mirrors the multi-stage pipeline: data ingestion, preprocessing, augmentation, modeling, evaluation, and web deployment artifacts each live in dedicated modules.

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.venv
+build/
+dist/
+logs/
+models/
+*.log
+.DS_Store
+.notebooks/
+wandb/
+mlruns/
+RAW DATA FULL/
+data/raw/

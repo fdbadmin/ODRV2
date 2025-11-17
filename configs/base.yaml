@@ -1,0 +1,26 @@
+project:
+  name: odir_multilabel
+  seed: 42
+
+paths:
+  raw_data: RAW DATA FULL
+  processed_data: data/processed
+  labels_csv: data/processed/odir_eye_labels.csv
+  logs: logs
+  models: models
+
+data:
+  image_size: [512, 512]
+  num_classes: 7
+  class_names: [D, G, C, A, H, M, O]
+
+training:
+  batch_size: 16
+  epochs: 100
+  precision: 16
+  optimizer: adamw
+  scheduler: cosine
+
+inference:
+  threshold_strategy: per_class
+  web_batch_size: 4
