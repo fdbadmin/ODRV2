@@ -5,7 +5,9 @@ from tempfile import NamedTemporaryFile
 from typing import Any
 
 import torch  # type: ignore[import]
-from fastapi import FastAPI, UploadFile  # type: ignore[import]
+from fastapi import FastAPI, UploadFile, Form  # type: ignore[import]
+from fastapi.staticfiles import StaticFiles  # type: ignore[import]
+from fastapi.responses import RedirectResponse  # type: ignore[import]
 
 from src.preprocessing.pipeline import preprocess_batch
 from src.training.loop import FundusLightningModule, TrainingConfig
@@ -84,8 +86,14 @@ def create_app(models: list[FundusLightningModule], config: TrainingConfig, devi
     # D, G, C, A, H, M, O
     THRESHOLDS = [0.45, 0.45, 0.40, 0.75, 0.15, 0.30, 0.25]
 
+    app.mount("/static", StaticFiles(directory="src/webapp/static"), name="static")
+
+    @app.get("/")
+    async def root():
+        return RedirectResponse(url="/static/index.html")
+
     @app.post("/predict")
-    async def predict(file: UploadFile, age: float, sex: int) -> dict[str, Any]:
+    async def predict(file: UploadFile, age: float = Form(...), sex: int = Form(...)) -> dict[str, Any]:
         image_bytes = await file.read()
         image_path = _write_temp_image(image_bytes)
 

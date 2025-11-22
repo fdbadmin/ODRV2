@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODRV2 - AI-Powered Ocular Disease Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #1a202c;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        .container { 
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .left-panel {
+            padding: 40px;
+            background: #f8fafc;
+            border-right: 1px solid #e2e8f0;
+        }
+        .right-panel {
+            padding: 40px;
+        }
+        .upload-area { 
+            border: 3px dashed #cbd5e0;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            position: relative;
+        }
+        .upload-area:hover { 
+            border-color: #667eea;
+            background: #f7fafc;
+            transform: translateY(-2px);
+        }
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #eef2ff;
+        }
+        .upload-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            opacity: 0.6;
+        }
+        .upload-text {
+            font-size: 1.1rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+        .upload-subtext {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-top: 8px;
+        }
+        .form-group { 
+            margin-bottom: 24px;
+        }
+        label { 
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.95rem;
+        }
+        input, select { 
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        button { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        button:hover:not(:disabled) { 
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        #preview { 
+            max-width: 100%;
+            max-height: 350px;
+            margin-top: 20px;
+            border-radius: 12px;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        #result { 
+            margin-top: 20px;
+            display: none;
+        }
+        .result-header {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .prediction-card { 
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+        .prediction-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .positive { 
+            border-left: 5px solid #f56565;
+            background: linear-gradient(to right, #fff5f5, white);
+        }
+        .negative { 
+            border-left: 5px solid #48bb78;
+            background: linear-gradient(to right, #f0fff4, white);
+        }
+        .disease-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .disease-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #2d3748;
+        }
+        .disease-threshold {
+            font-size: 0.85rem;
+            color: #718096;
+        }
+        .prob-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .prob-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            min-width: 60px;
+            text-align: right;
+        }
+        .prob-bar { 
+            height: 10px;
+            background-color: #e2e8f0;
+            border-radius: 5px;
+            width: 120px;
+            overflow: hidden;
+        }
+        .prob-fill { 
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.6s ease;
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .badge-positive {
+            background: #feb2b2;
+            color: #742a2a;
+        }
+        .badge-negative {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        @media (max-width: 968px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .left-panel {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 ODRV2 Diagnostic Platform</h1>
+        <p>AI-Powered Fundus Image Analysis • 5-Model Ensemble • Clinical-Grade Detection</p>
+    </div>
+
+    <div class="container">
+        <div class="main-grid">
+            <div class="left-panel">
+                <div class="upload-area" id="drop-zone">
+                    <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    </svg>
+                    <div class="upload-text">Drop fundus image here</div>
+                    <div class="upload-subtext">or click to browse • PNG, JPG up to 10MB</div>
+                    <input type="file" id="file-input" accept="image/*" aria-label="Upload fundus image">
+                </div>
+                <img id="preview" alt="Preview">
+
+                <div class="form-group">
+                    <label for="age">Patient Age (years)</label>
+                    <input type="number" id="age" value="65" min="0" max="120" placeholder="e.g., 65">
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Patient Sex</label>
+                    <select id="sex">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </div>
+
+                <button onclick="predict()" id="analyze-btn">
+                    🔍 Analyze Image
+                </button>
+            </div>
+
+            <div class="right-panel">
+                <div id="result">
+                    <div class="result-header">
+                        📊 Analysis Results
+                    </div>
+                    <div id="predictions-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const preview = document.getElementById('preview');
+        let selectedFile = null;
+
+        dropZone.onclick = () => fileInput.click();
+
+        fileInput.onchange = (e) => {
+            selectedFile = e.target.files[0];
+            showPreview(selectedFile);
+        };
+
+        dropZone.ondragover = (e) => { e.preventDefault(); dropZone.style.backgroundColor = '#e8f6f3'; };
+        dropZone.ondragleave = () => { dropZone.style.backgroundColor = ''; };
+        dropZone.ondrop = (e) => {
+            e.preventDefault();
+            dropZone.style.backgroundColor = '';
+            selectedFile = e.dataTransfer.files[0];
+            showPreview(selectedFile);
+        };
+
+        function showPreview(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function predict() {
+            if (!selectedFile) {
+                alert('⚠️ Please select a fundus image first');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            formData.append('age', document.getElementById('age').value);
+            formData.append('sex', document.getElementById('sex').value);
+
+            const btn = document.getElementById('analyze-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Analyzing with AI Ensemble...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                alert('❌ Error: ' + error.message);
+                console.error(error);
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        function displayResults(data) {
+            const container = document.getElementById('predictions-list');
+            container.innerHTML = '';
+            document.getElementById('result').style.display = 'block';
+
+            const classes = ['Diabetes', 'Glaucoma', 'Cataract', 'AMD', 'Hypertension', 'Myopia', 'Other'];
+            
+            data.probabilities.forEach((prob, i) => {
+                const isPositive = data.labels[i];
+                const div = document.createElement('div');
+                div.className = `prediction-card ${isPositive ? 'positive' : 'negative'}`;
+                
+                const probPercent = (prob * 100).toFixed(1);
+                const fillWidth = `${prob * 100}%`;
+                
+                div.innerHTML = `
+                    <div class="disease-info">
+                        <div class="disease-name">
+                            ${classes[i]}
+                            <span class="status-badge ${isPositive ? 'badge-positive' : 'badge-negative'}">
+                                ${isPositive ? 'DETECTED' : 'Normal'}
+                            </span>
+                        </div>
+                        <div class="disease-threshold">Detection threshold: ${data.thresholds[i]}</div>
+                    </div>
+                    <div class="prob-container">
+                        <div class="prob-value">${probPercent}%</div>
+                        <div class="prob-bar">
+                            <div class="prob-fill"></div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+                
+                // Animate the probability bar
+                setTimeout(() => {
+                    div.querySelector('.prob-fill').style.width = fillWidth;
+                }, 100);
+            });
+        }
+    </script>
+</body>
+</html>

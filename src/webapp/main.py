@@ -9,7 +9,12 @@ from src.inference.service import create_app, load_ensemble
 
 MODEL_DIR = Path("models")
 CONFIG_PATH = Path("configs/training.yaml")
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+if torch.backends.mps.is_available():
+    DEVICE = torch.device("mps")
+elif torch.cuda.is_available():
+    DEVICE = torch.device("cuda")
+else:
+    DEVICE = torch.device("cpu")
 
 
 def init_app() -> FastAPI:
