@@ -39,6 +39,14 @@ def run_from_config(config_path: Path) -> None:
         batch_size=cfg.datamodule.batch_size,
         model_dir=Path(cfg.paths.models),
         pos_weight=cfg.datamodule.get("class_weights", None),
+        precision=str(cfg.trainer.get("precision", "32")),
+        accelerator=cfg.trainer.get("accelerator", None),
+        devices=cfg.trainer.get("devices", None),
+        accumulate_grad_batches=cfg.trainer.get("accumulate_grad_batches", 1),
+        log_every_n_steps=cfg.logging.get("log_every_n_steps", 20),
+            num_sanity_val_steps=cfg.trainer.get("num_sanity_val_steps", 2),
+            early_stopping_patience=cfg.trainer.get("early_stopping_patience", None),
+        image_size=tuple(cfg.datamodule.image_size),
     )
     metadata_csv = cfg.datamodule.get("metadata_csv", None)
     if metadata_csv is None:
@@ -56,6 +64,7 @@ def run_from_config(config_path: Path) -> None:
         val_fold=cfg.datamodule.get("val_fold", 0),
         pin_memory=cfg.datamodule.get("pin_memory", True),
         persistent_workers=cfg.datamodule.get("persistent_workers", False),
+        single_eye=cfg.datamodule.get("single_eye", True),
     )
     train_model(training_cfg, datamodule)
 

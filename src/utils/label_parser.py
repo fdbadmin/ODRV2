@@ -45,7 +45,6 @@ PHRASE_MAP: dict[str, Sequence[str]] = {
         r"drusen",
         r"epiretinal membrane",
         r"vitreous",
-        r"laser spot",
         r"macular hole",
         r"central serous",
         r"sheen",

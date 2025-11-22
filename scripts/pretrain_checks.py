@@ -88,20 +88,22 @@ def save_preprocessed_examples(cfg, qc_dir: Path) -> None:
         val_fold=cfg.datamodule.val_fold,
         pin_memory=False,
         persistent_workers=False,
+        single_eye=True,
     )
     dm.setup()
     batch = next(iter(dm.val_dataloader()))
-    left = batch["left_image"][:4].permute(0, 2, 3, 1).cpu().numpy()
-    right = batch["right_image"][:4].permute(0, 2, 3, 1).cpu().numpy()
+    images = batch["image"][:8].permute(0, 2, 3, 1).cpu().numpy()
 
-    fig, axes = plt.subplots(4, 2, figsize=(6, 10))
-    for idx in range(4):
-        axes[idx, 0].imshow(unnormalize(left[idx]))
-        axes[idx, 0].axis("off")
-        axes[idx, 0].set_title(f"Sample {idx} Left")
-        axes[idx, 1].imshow(unnormalize(right[idx]))
-        axes[idx, 1].axis("off")
-        axes[idx, 1].set_title(f"Sample {idx} Right")
+    rows = 2
+    cols = 4
+    fig, axes = plt.subplots(rows, cols, figsize=(8, 4 * rows))
+    axes = axes.flatten()
+    for idx in range(len(images)):
+        axes[idx].imshow(unnormalize(images[idx]))
+        axes[idx].axis("off")
+        axes[idx].set_title(f"Sample {idx}")
+    for idx in range(len(images), rows * cols):
+        axes[idx].axis("off")
     plt.tight_layout()
     fig.savefig(qc_dir / "preprocessed_examples.png", dpi=200)
     plt.close(fig)
