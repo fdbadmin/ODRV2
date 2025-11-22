@@ -199,7 +199,7 @@ def main():
         "--dataset",
         type=str,
         required=True,
-        choices=['idrid', 'messidor', 'refuge'],
+        choices=['idrid', 'aptos', 'messidor', 'refuge'],
         help="External dataset name"
     )
     parser.add_argument(
