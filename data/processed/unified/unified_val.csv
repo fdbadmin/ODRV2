@@ -1,0 +1,906 @@
+ID,source_dataset,source_id,filename,image_path,Patient Age,Patient Sex,Label_D,Label_G,Label_C,Label_A,Label_H,Label_M,Label_O
+2448,ODIR,3347.0,3347_right.jpg,RAW DATA FULL/3347_right.jpg,63.0,Female,0,0,0,0,0,0,0
+1576,ODIR,2397.0,2397_right.jpg,RAW DATA FULL/2397_right.jpg,58.0,Male,0,0,0,0,0,0,0
+7972,RFMID1,834.0,834.png,external_data/RFMID1/Training/834.png,55.0,Female,0,0,0,0,0,0,0
+3762,ODIR,659.0,659_left.jpg,RAW DATA FULL/659_left.jpg,51.0,Female,0,0,0,0,0,0,1
+213,ODIR,249.0,249_right.jpg,RAW DATA FULL/249_right.jpg,64.0,Male,1,0,0,0,0,0,0
+778,ODIR,902.0,902_right.jpg,RAW DATA FULL/902_right.jpg,70.0,Female,0,0,0,0,0,0,1
+5511,ODIR,3206.0,3206_left.jpg,RAW DATA FULL/3206_left.jpg,71.0,Male,0,0,0,0,0,0,0
+3496,ODIR,349.0,349_left.jpg,RAW DATA FULL/349_left.jpg,72.0,Male,0,0,0,0,0,0,1
+7770,RFMID1,632.0,632.png,external_data/RFMID1/Training/632.png,55.0,Female,0,1,0,0,0,0,0
+2043,ODIR,2908.0,2908_right.jpg,RAW DATA FULL/2908_right.jpg,55.0,Female,0,0,0,0,0,0,0
+8816,RFMID1,1678.0,1678.png,external_data/RFMID1/Training/1678.png,55.0,Female,0,0,0,1,0,0,0
+8605,RFMID1,1467.0,1467.png,external_data/RFMID1/Training/1467.png,55.0,Female,1,0,0,0,0,0,0
+5420,ODIR,3109.0,3109_left.jpg,RAW DATA FULL/3109_left.jpg,69.0,Male,0,0,0,0,0,0,0
+6154,ODIR,4402.0,4402_left.jpg,RAW DATA FULL/4402_left.jpg,64.0,Male,1,0,0,0,0,0,0
+1567,ODIR,2388.0,2388_right.jpg,RAW DATA FULL/2388_right.jpg,54.0,Female,0,0,0,0,0,0,0
+165,ODIR,193.0,193_right.jpg,RAW DATA FULL/193_right.jpg,53.0,Male,1,0,0,0,0,0,1
+4702,ODIR,2282.0,2282_left.jpg,RAW DATA FULL/2282_left.jpg,64.0,Male,1,0,1,0,0,0,1
+3566,ODIR,431.0,431_left.jpg,RAW DATA FULL/431_left.jpg,53.0,Male,1,0,0,0,0,0,1
+7975,RFMID1,837.0,837.png,external_data/RFMID1/Training/837.png,55.0,Female,0,1,0,0,0,1,0
+8821,RFMID1,1683.0,1683.png,external_data/RFMID1/Training/1683.png,55.0,Female,0,0,0,0,0,0,1
+5439,ODIR,3129.0,3129_left.jpg,RAW DATA FULL/3129_left.jpg,59.0,Male,0,0,0,0,0,0,0
+2013,ODIR,2876.0,2876_right.jpg,RAW DATA FULL/2876_right.jpg,67.0,Female,0,0,0,0,0,0,0
+273,ODIR,312.0,312_right.jpg,RAW DATA FULL/312_right.jpg,74.0,Male,1,0,0,0,0,0,1
+3860,ODIR,765.0,765_left.jpg,RAW DATA FULL/765_left.jpg,70.0,Female,1,0,0,0,0,0,0
+4167,ODIR,1168.0,1168_left.jpg,RAW DATA FULL/1168_left.jpg,67.0,Female,0,0,0,1,0,0,0
+7904,RFMID1,766.0,766.png,external_data/RFMID1/Training/766.png,55.0,Female,0,1,0,0,0,0,0
+3788,ODIR,688.0,688_left.jpg,RAW DATA FULL/688_left.jpg,60.0,Female,1,0,0,0,0,0,0
+5183,ODIR,2849.0,2849_left.jpg,RAW DATA FULL/2849_left.jpg,50.0,Female,0,0,0,0,0,0,0
+394,ODIR,452.0,452_right.jpg,RAW DATA FULL/452_right.jpg,54.0,Female,1,0,0,0,0,0,1
+583,ODIR,674.0,674_right.jpg,RAW DATA FULL/674_right.jpg,64.0,Female,0,0,0,0,0,0,1
+8977,RFMID1,1839.0,1839.png,external_data/RFMID1/Training/1839.png,55.0,Female,0,0,0,0,0,0,0
+9045,RFMID1,1907.0,1907.png,external_data/RFMID1/Training/1907.png,55.0,Female,0,0,0,0,0,0,1
+116,ODIR,137.0,137_right.jpg,RAW DATA FULL/137_right.jpg,44.0,Male,1,0,0,0,0,0,1
+6644,HYGD,83.0,83_0.jpg,external_data/glaucoma_standard/Images/83_0.jpg,60.0,Female,0,1,0,0,0,0,0
+8139,RFMID1,1001.0,1001.png,external_data/RFMID1/Training/1001.png,55.0,Female,0,1,0,0,0,0,0
+6869,HYGD,163.0,163_2.jpg,external_data/glaucoma_standard/Images/163_2.jpg,60.0,Female,0,1,0,0,0,0,0
+9013,RFMID1,1875.0,1875.png,external_data/RFMID1/Training/1875.png,55.0,Female,0,0,0,0,0,0,0
+8996,RFMID1,1858.0,1858.png,external_data/RFMID1/Training/1858.png,55.0,Female,0,0,0,0,0,0,0
+8018,RFMID1,880.0,880.png,external_data/RFMID1/Training/880.png,55.0,Female,0,0,0,0,0,0,1
+520,ODIR,596.0,596_right.jpg,RAW DATA FULL/596_right.jpg,52.0,Male,1,0,0,0,0,0,1
+1763,ODIR,2602.0,2602_right.jpg,RAW DATA FULL/2602_right.jpg,52.0,Female,0,0,0,0,0,0,0
+1875,ODIR,2726.0,2726_right.jpg,RAW DATA FULL/2726_right.jpg,48.0,Female,0,0,0,0,0,0,0
+5355,ODIR,3040.0,3040_left.jpg,RAW DATA FULL/3040_left.jpg,54.0,Female,0,0,0,0,0,0,0
+3965,ODIR,886.0,886_left.jpg,RAW DATA FULL/886_left.jpg,65.0,Female,0,0,0,1,0,0,1
+3344,ODIR,172.0,172_left.jpg,RAW DATA FULL/172_left.jpg,68.0,Male,0,0,0,0,0,0,1
+6598,HYGD,66.0,66_1.jpg,external_data/glaucoma_standard/Images/66_1.jpg,60.0,Female,0,1,0,0,0,0,0
+2253,ODIR,3136.0,3136_right.jpg,RAW DATA FULL/3136_right.jpg,45.0,Male,0,0,0,0,0,0,0
+6877,HYGD,165.0,165_1.jpg,external_data/glaucoma_standard/Images/165_1.jpg,60.0,Female,0,1,0,0,0,0,0
+3224,ODIR,34.0,34_left.jpg,RAW DATA FULL/34_left.jpg,61.0,Male,0,0,0,0,0,0,1
+526,ODIR,603.0,603_right.jpg,RAW DATA FULL/603_right.jpg,66.0,Female,0,0,0,1,0,0,0
+7412,RFMID1,274.0,274.png,external_data/RFMID1/Training/274.png,55.0,Female,0,0,0,0,0,0,0
+2946,ODIR,4392.0,4392_right.jpg,RAW DATA FULL/4392_right.jpg,17.0,Male,1,0,0,0,0,0,0
+4473,ODIR,1694.0,1694_left.jpg,RAW DATA FULL/1694_left.jpg,52.0,Male,0,0,0,0,0,1,1
+3899,ODIR,808.0,808_left.jpg,RAW DATA FULL/808_left.jpg,48.0,Male,1,0,0,1,0,0,0
+5655,ODIR,3365.0,3365_left.jpg,RAW DATA FULL/3365_left.jpg,60.0,Male,0,0,0,0,0,0,0
+692,ODIR,795.0,795_right.jpg,RAW DATA FULL/795_right.jpg,56.0,Female,1,0,0,0,0,0,1
+6059,ODIR,4298.0,4298_left.jpg,RAW DATA FULL/4298_left.jpg,59.0,Male,1,0,0,0,0,0,0
+959,ODIR,1154.0,1154_right.jpg,RAW DATA FULL/1154_right.jpg,43.0,Female,0,0,0,1,0,0,0
+4444,ODIR,1610.0,1610_left.jpg,RAW DATA FULL/1610_left.jpg,64.0,Male,0,0,0,0,0,1,0
+8535,RFMID1,1397.0,1397.png,external_data/RFMID1/Training/1397.png,55.0,Female,0,1,0,0,0,1,0
+6342,ODIR,4623.0,4623_left.jpg,RAW DATA FULL/4623_left.jpg,55.0,Male,1,0,0,0,0,0,0
+6131,ODIR,4375.0,4375_left.jpg,RAW DATA FULL/4375_left.jpg,57.0,Female,1,0,0,0,0,0,0
+3633,ODIR,513.0,513_left.jpg,RAW DATA FULL/513_left.jpg,55.0,Female,0,0,0,1,0,0,0
+5805,ODIR,4018.0,4018_left.jpg,RAW DATA FULL/4018_left.jpg,67.0,Male,1,0,0,0,0,0,0
+1050,ODIR,1287.0,1287_right.jpg,RAW DATA FULL/1287_right.jpg,74.0,Male,0,1,0,0,0,0,0
+590,ODIR,681.0,681_right.jpg,RAW DATA FULL/681_right.jpg,56.0,Male,0,0,0,1,0,0,0
+519,ODIR,594.0,594_right.jpg,RAW DATA FULL/594_right.jpg,70.0,Female,1,0,1,0,0,0,0
+3380,ODIR,217.0,217_left.jpg,RAW DATA FULL/217_left.jpg,69.0,Female,1,0,0,0,0,0,1
+3676,ODIR,561.0,561_left.jpg,RAW DATA FULL/561_left.jpg,59.0,Female,1,0,0,0,1,0,0
+5776,ODIR,3981.0,3981_left.jpg,RAW DATA FULL/3981_left.jpg,69.0,Female,1,0,0,0,1,0,0
+8161,RFMID1,1023.0,1023.png,external_data/RFMID1/Training/1023.png,55.0,Female,0,0,0,0,0,0,1
+6573,HYGD,62.0,62_2.jpg,external_data/glaucoma_standard/Images/62_2.jpg,60.0,Female,0,1,0,0,0,0,0
+5179,ODIR,2845.0,2845_left.jpg,RAW DATA FULL/2845_left.jpg,50.0,Male,0,0,0,0,0,0,0
+1607,ODIR,2429.0,2429_right.jpg,RAW DATA FULL/2429_right.jpg,68.0,Female,0,0,0,0,0,0,0
+3610,ODIR,484.0,484_left.jpg,RAW DATA FULL/484_left.jpg,54.0,Male,1,0,0,0,0,0,1
+8836,RFMID1,1698.0,1698.png,external_data/RFMID1/Training/1698.png,55.0,Female,0,0,0,0,0,0,1
+6635,HYGD,79.0,79_1.jpg,external_data/glaucoma_standard/Images/79_1.jpg,60.0,Female,0,1,0,0,0,0,0
+9056,RFMID1,1918.0,1918.png,external_data/RFMID1/Training/1918.png,55.0,Female,0,0,0,0,0,0,0
+1809,ODIR,2652.0,2652_right.jpg,RAW DATA FULL/2652_right.jpg,49.0,Female,0,0,0,0,0,0,0
+791,ODIR,917.0,917_right.jpg,RAW DATA FULL/917_right.jpg,60.0,Male,1,0,0,0,0,0,0
+792,ODIR,918.0,918_right.jpg,RAW DATA FULL/918_right.jpg,60.0,Female,0,0,0,0,0,0,1
+8144,RFMID1,1006.0,1006.png,external_data/RFMID1/Training/1006.png,55.0,Female,0,0,0,0,0,0,1
+1855,ODIR,2704.0,2704_right.jpg,RAW DATA FULL/2704_right.jpg,67.0,Male,0,0,0,0,0,0,0
+1980,ODIR,2839.0,2839_right.jpg,RAW DATA FULL/2839_right.jpg,47.0,Male,0,0,0,0,0,0,0
+3233,ODIR,45.0,45_left.jpg,RAW DATA FULL/45_left.jpg,54.0,Male,1,0,0,0,1,0,0
+3598,ODIR,468.0,468_left.jpg,RAW DATA FULL/468_left.jpg,60.0,Female,0,0,0,0,0,0,1
+933,ODIR,1118.0,1118_right.jpg,RAW DATA FULL/1118_right.jpg,47.0,Female,0,0,0,0,0,0,1
+3963,ODIR,884.0,884_left.jpg,RAW DATA FULL/884_left.jpg,60.0,Female,0,0,0,0,0,0,1
+7376,RFMID1,238.0,238.png,external_data/RFMID1/Training/238.png,55.0,Female,0,0,0,0,0,0,0
+5626,ODIR,3334.0,3334_left.jpg,RAW DATA FULL/3334_left.jpg,66.0,Female,0,0,0,0,0,0,0
+5506,ODIR,3201.0,3201_left.jpg,RAW DATA FULL/3201_left.jpg,46.0,Male,0,0,0,0,0,0,0
+6072,ODIR,4311.0,4311_left.jpg,RAW DATA FULL/4311_left.jpg,67.0,Female,1,0,0,0,0,0,0
+1682,ODIR,2514.0,2514_right.jpg,RAW DATA FULL/2514_right.jpg,62.0,Male,0,0,0,0,0,0,0
+4179,ODIR,1197.0,1197_left.jpg,RAW DATA FULL/1197_left.jpg,54.0,Female,0,0,0,1,0,0,0
+4026,ODIR,953.0,953_left.jpg,RAW DATA FULL/953_left.jpg,46.0,Male,1,0,0,0,0,0,1
+8498,RFMID1,1360.0,1360.png,external_data/RFMID1/Training/1360.png,55.0,Female,0,0,0,0,0,0,1
+6446,HYGD,22.0,22_0.jpg,external_data/glaucoma_standard/Images/22_0.jpg,60.0,Female,0,1,0,0,0,0,0
+4116,ODIR,1090.0,1090_left.jpg,RAW DATA FULL/1090_left.jpg,55.0,Male,0,0,0,0,0,0,1
+988,ODIR,1211.0,1211_right.jpg,RAW DATA FULL/1211_right.jpg,80.0,Male,0,1,0,0,0,0,1
+7642,RFMID1,504.0,504.png,external_data/RFMID1/Training/504.png,55.0,Female,0,1,0,0,0,0,0
+8315,RFMID1,1177.0,1177.png,external_data/RFMID1/Training/1177.png,55.0,Female,0,0,0,0,0,0,1
+3453,ODIR,301.0,301_left.jpg,RAW DATA FULL/301_left.jpg,55.0,Male,0,0,0,0,0,0,1
+2896,ODIR,4333.0,4333_right.jpg,RAW DATA FULL/4333_right.jpg,42.0,Male,1,0,0,0,0,0,0
+3778,ODIR,677.0,677_left.jpg,RAW DATA FULL/677_left.jpg,49.0,Male,1,0,0,0,0,0,1
+5658,ODIR,3368.0,3368_left.jpg,RAW DATA FULL/3368_left.jpg,55.0,Female,0,0,0,0,0,0,0
+8256,RFMID1,1118.0,1118.png,external_data/RFMID1/Training/1118.png,55.0,Female,0,0,0,0,0,0,1
+3093,ODIR,4566.0,4566_right.jpg,RAW DATA FULL/4566_right.jpg,53.0,Female,1,0,0,0,0,0,0
+3155,ODIR,4633.0,4633_right.jpg,RAW DATA FULL/4633_right.jpg,66.0,Male,1,0,0,0,0,0,0
+5069,ODIR,2726.0,2726_left.jpg,RAW DATA FULL/2726_left.jpg,48.0,Female,0,0,0,0,0,0,0
+5806,ODIR,4020.0,4020_left.jpg,RAW DATA FULL/4020_left.jpg,41.0,Female,1,0,0,0,0,0,0
+3201,ODIR,8.0,8_left.jpg,RAW DATA FULL/8_left.jpg,59.0,Male,0,0,0,0,0,0,0
+7999,RFMID1,861.0,861.png,external_data/RFMID1/Training/861.png,55.0,Female,0,0,0,0,0,0,1
+8711,RFMID1,1573.0,1573.png,external_data/RFMID1/Training/1573.png,55.0,Female,0,0,0,0,0,0,1
+1098,ODIR,1397.0,1397_right.jpg,RAW DATA FULL/1397_right.jpg,56.0,Female,0,1,0,0,0,0,0
+8210,RFMID1,1072.0,1072.png,external_data/RFMID1/Training/1072.png,55.0,Female,0,0,0,0,0,0,0
+2844,ODIR,4280.0,4280_right.jpg,RAW DATA FULL/4280_right.jpg,74.0,Female,1,0,0,0,0,0,0
+886,ODIR,1046.0,1046_right.jpg,RAW DATA FULL/1046_right.jpg,55.0,Male,1,0,0,0,1,0,0
+3342,ODIR,169.0,169_left.jpg,RAW DATA FULL/169_left.jpg,64.0,Female,1,0,0,0,0,0,1
+8793,RFMID1,1655.0,1655.png,external_data/RFMID1/Training/1655.png,55.0,Female,0,0,0,0,0,1,0
+6540,HYGD,53.0,53_1.jpg,external_data/glaucoma_standard/Images/53_1.jpg,60.0,Female,0,1,0,0,0,0,0
+8463,RFMID1,1325.0,1325.png,external_data/RFMID1/Training/1325.png,55.0,Female,0,1,0,0,0,0,0
+6096,ODIR,4335.0,4335_left.jpg,RAW DATA FULL/4335_left.jpg,66.0,Female,1,0,0,0,0,0,0
+515,ODIR,590.0,590_right.jpg,RAW DATA FULL/590_right.jpg,57.0,Male,0,0,0,0,0,0,1
+3356,ODIR,186.0,186_left.jpg,RAW DATA FULL/186_left.jpg,45.0,Male,1,0,0,0,0,0,1
+4833,ODIR,2466.0,2466_left.jpg,RAW DATA FULL/2466_left.jpg,70.0,Male,0,0,0,0,0,0,0
+1453,ODIR,2183.0,2183_right.jpg,RAW DATA FULL/2183_right.jpg,47.0,Female,0,0,1,0,0,0,0
+3553,ODIR,415.0,415_left.jpg,RAW DATA FULL/415_left.jpg,62.0,Male,1,0,0,0,0,0,0
+3609,ODIR,483.0,483_left.jpg,RAW DATA FULL/483_left.jpg,49.0,Male,0,0,0,0,0,0,1
+9003,RFMID1,1865.0,1865.png,external_data/RFMID1/Training/1865.png,55.0,Female,0,0,0,0,0,0,0
+4665,ODIR,2206.0,2206_left.jpg,RAW DATA FULL/2206_left.jpg,65.0,Female,0,0,1,0,0,0,0
+2506,ODIR,3410.0,3410_right.jpg,RAW DATA FULL/3410_right.jpg,72.0,Male,0,0,0,0,0,0,0
+2994,ODIR,4448.0,4448_right.jpg,RAW DATA FULL/4448_right.jpg,50.0,Male,1,0,0,0,0,0,1
+3999,ODIR,922.0,922_left.jpg,RAW DATA FULL/922_left.jpg,45.0,Female,0,0,0,0,0,0,1
+6222,ODIR,4484.0,4484_left.jpg,RAW DATA FULL/4484_left.jpg,46.0,Female,1,0,0,0,0,0,0
+8796,RFMID1,1658.0,1658.png,external_data/RFMID1/Training/1658.png,55.0,Female,0,0,0,0,0,0,1
+8964,RFMID1,1826.0,1826.png,external_data/RFMID1/Training/1826.png,55.0,Female,0,0,0,0,0,0,1
+906,ODIR,1079.0,1079_right.jpg,RAW DATA FULL/1079_right.jpg,64.0,Female,0,0,0,0,0,0,1
+28,ODIR,34.0,34_right.jpg,RAW DATA FULL/34_right.jpg,61.0,Male,0,0,0,0,0,0,1
+8348,RFMID1,1210.0,1210.png,external_data/RFMID1/Training/1210.png,55.0,Female,0,0,0,0,0,0,1
+2507,ODIR,3411.0,3411_right.jpg,RAW DATA FULL/3411_right.jpg,61.0,Male,0,0,0,0,0,0,0
+2428,ODIR,3327.0,3327_right.jpg,RAW DATA FULL/3327_right.jpg,68.0,Male,0,0,0,0,0,0,0
+5043,ODIR,2699.0,2699_left.jpg,RAW DATA FULL/2699_left.jpg,65.0,Female,0,0,0,0,0,0,0
+5346,ODIR,3027.0,3027_left.jpg,RAW DATA FULL/3027_left.jpg,62.0,Male,0,0,0,0,0,0,0
+762,ODIR,883.0,883_right.jpg,RAW DATA FULL/883_right.jpg,63.0,Male,0,0,0,0,0,0,1
+3747,ODIR,643.0,643_left.jpg,RAW DATA FULL/643_left.jpg,73.0,Female,0,0,0,0,0,0,1
+4811,ODIR,2440.0,2440_left.jpg,RAW DATA FULL/2440_left.jpg,59.0,Female,0,0,0,0,0,0,0
+284,ODIR,326.0,326_right.jpg,RAW DATA FULL/326_right.jpg,55.0,Male,0,0,0,0,0,0,1
+686,ODIR,788.0,788_right.jpg,RAW DATA FULL/788_right.jpg,48.0,Male,0,0,0,1,0,0,0
+4799,ODIR,2428.0,2428_left.jpg,RAW DATA FULL/2428_left.jpg,76.0,Male,0,0,0,0,0,0,0
+2353,ODIR,3242.0,3242_right.jpg,RAW DATA FULL/3242_right.jpg,46.0,Male,0,0,0,0,0,0,0
+6353,ODIR,4634.0,4634_left.jpg,RAW DATA FULL/4634_left.jpg,64.0,Female,1,0,0,0,0,0,0
+7969,RFMID1,831.0,831.png,external_data/RFMID1/Training/831.png,55.0,Female,0,1,0,0,0,0,0
+4569,ODIR,2104.0,2104_left.jpg,RAW DATA FULL/2104_left.jpg,74.0,Male,0,0,1,0,0,0,0
+21,ODIR,26.0,26_right.jpg,RAW DATA FULL/26_right.jpg,63.0,Female,1,0,0,0,0,0,0
+2752,ODIR,4178.0,4178_right.jpg,RAW DATA FULL/4178_right.jpg,27.0,Female,1,0,0,0,0,0,0
+885,ODIR,1045.0,1045_right.jpg,RAW DATA FULL/1045_right.jpg,51.0,Male,1,0,0,0,1,0,0
+8432,RFMID1,1294.0,1294.png,external_data/RFMID1/Training/1294.png,55.0,Female,0,0,0,0,0,0,1
+917,ODIR,1093.0,1093_right.jpg,RAW DATA FULL/1093_right.jpg,53.0,Male,0,0,0,0,0,0,1
+7768,RFMID1,630.0,630.png,external_data/RFMID1/Training/630.png,55.0,Female,0,0,0,0,0,0,1
+1040,ODIR,1273.0,1273_right.jpg,RAW DATA FULL/1273_right.jpg,62.0,Male,0,1,0,0,0,0,1
+6335,ODIR,4616.0,4616_left.jpg,RAW DATA FULL/4616_left.jpg,50.0,Male,1,0,0,0,0,0,0
+7857,RFMID1,719.0,719.png,external_data/RFMID1/Training/719.png,55.0,Female,0,1,0,0,0,0,0
+1265,ODIR,1623.0,1623_right.jpg,RAW DATA FULL/1623_right.jpg,58.0,Female,0,0,0,0,0,1,0
+4579,ODIR,2114.0,2114_left.jpg,RAW DATA FULL/2114_left.jpg,80.0,Female,0,0,1,0,0,0,0
+8385,RFMID1,1247.0,1247.png,external_data/RFMID1/Training/1247.png,55.0,Female,1,0,0,0,0,0,0
+7059,HYGD,247.0,247_0.jpg,external_data/glaucoma_standard/Images/247_0.jpg,60.0,Female,0,0,0,0,0,0,0
+8714,RFMID1,1576.0,1576.png,external_data/RFMID1/Training/1576.png,55.0,Female,0,0,0,0,0,0,1
+277,ODIR,316.0,316_right.jpg,RAW DATA FULL/316_right.jpg,51.0,Male,0,0,0,0,0,0,1
+5084,ODIR,2745.0,2745_left.jpg,RAW DATA FULL/2745_left.jpg,48.0,Male,0,0,0,0,0,0,0
+2084,ODIR,2952.0,2952_right.jpg,RAW DATA FULL/2952_right.jpg,69.0,Female,0,0,0,0,0,0,0
+1245,ODIR,1600.0,1600_right.jpg,RAW DATA FULL/1600_right.jpg,1.0,Female,0,0,0,0,0,1,0
+2382,ODIR,3273.0,3273_right.jpg,RAW DATA FULL/3273_right.jpg,53.0,Male,0,0,0,0,0,0,0
+571,ODIR,655.0,655_right.jpg,RAW DATA FULL/655_right.jpg,50.0,Female,0,0,0,0,0,0,1
+1435,ODIR,2165.0,2165_right.jpg,RAW DATA FULL/2165_right.jpg,36.0,Female,1,0,1,0,0,0,0
+3902,ODIR,812.0,812_left.jpg,RAW DATA FULL/812_left.jpg,59.0,Female,1,0,0,0,0,0,0
+5089,ODIR,2750.0,2750_left.jpg,RAW DATA FULL/2750_left.jpg,59.0,Male,0,0,0,0,0,0,0
+1247,ODIR,1602.0,1602_right.jpg,RAW DATA FULL/1602_right.jpg,38.0,Female,0,0,0,0,0,1,0
+7440,RFMID1,302.0,302.png,external_data/RFMID1/Training/302.png,55.0,Female,0,1,0,0,0,0,0
+4681,ODIR,2223.0,2223_left.jpg,RAW DATA FULL/2223_left.jpg,56.0,Male,0,0,1,0,0,0,0
+3526,ODIR,383.0,383_left.jpg,RAW DATA FULL/383_left.jpg,59.0,Female,1,0,0,0,0,0,1
+6557,HYGD,57.0,57_0.jpg,external_data/glaucoma_standard/Images/57_0.jpg,60.0,Female,0,1,0,0,0,0,0
+2514,ODIR,3419.0,3419_right.jpg,RAW DATA FULL/3419_right.jpg,64.0,Male,0,0,0,0,0,0,0
+5445,ODIR,3136.0,3136_left.jpg,RAW DATA FULL/3136_left.jpg,45.0,Male,0,0,0,0,0,0,0
+1007,ODIR,1234.0,1234_right.jpg,RAW DATA FULL/1234_right.jpg,66.0,Female,0,1,0,0,0,0,0
+4770,ODIR,2398.0,2398_left.jpg,RAW DATA FULL/2398_left.jpg,55.0,Male,0,0,0,0,0,0,0
+6508,HYGD,43.0,43_0.jpg,external_data/glaucoma_standard/Images/43_0.jpg,60.0,Female,0,1,0,0,0,0,0
+6999,HYGD,217.0,217_0.jpg,external_data/glaucoma_standard/Images/217_0.jpg,60.0,Female,0,0,0,0,0,0,0
+4543,ODIR,2004.0,2004_left.jpg,RAW DATA FULL/2004_left.jpg,47.0,Male,1,0,0,0,1,0,0
+7468,RFMID1,330.0,330.png,external_data/RFMID1/Training/330.png,55.0,Female,0,1,0,0,0,0,0
+7769,RFMID1,631.0,631.png,external_data/RFMID1/Training/631.png,55.0,Female,0,0,0,0,0,0,1
+8663,RFMID1,1525.0,1525.png,external_data/RFMID1/Training/1525.png,55.0,Female,0,0,0,0,0,0,0
+4455,ODIR,1623.0,1623_left.jpg,RAW DATA FULL/1623_left.jpg,58.0,Female,0,0,0,0,0,1,0
+2064,ODIR,2931.0,2931_right.jpg,RAW DATA FULL/2931_right.jpg,67.0,Male,0,0,0,0,0,0,0
+5352,ODIR,3035.0,3035_left.jpg,RAW DATA FULL/3035_left.jpg,80.0,Female,0,0,0,0,0,0,0
+7822,RFMID1,684.0,684.png,external_data/RFMID1/Training/684.png,55.0,Female,0,0,0,0,0,0,0
+1690,ODIR,2524.0,2524_right.jpg,RAW DATA FULL/2524_right.jpg,59.0,Male,0,0,0,0,0,0,0
+3117,ODIR,4591.0,4591_right.jpg,RAW DATA FULL/4591_right.jpg,65.0,Male,1,0,0,0,1,0,0
+8609,RFMID1,1471.0,1471.png,external_data/RFMID1/Training/1471.png,55.0,Female,0,1,0,0,0,0,0
+5343,ODIR,3023.0,3023_left.jpg,RAW DATA FULL/3023_left.jpg,64.0,Female,0,0,0,0,0,0,0
+1985,ODIR,2845.0,2845_right.jpg,RAW DATA FULL/2845_right.jpg,50.0,Male,0,0,0,0,0,0,0
+294,ODIR,338.0,338_right.jpg,RAW DATA FULL/338_right.jpg,61.0,Female,1,0,0,0,0,0,1
+1547,ODIR,2367.0,2367_right.jpg,RAW DATA FULL/2367_right.jpg,75.0,Female,0,0,0,0,0,0,0
+2012,ODIR,2874.0,2874_right.jpg,RAW DATA FULL/2874_right.jpg,45.0,Male,0,0,0,0,0,0,0
+588,ODIR,679.0,679_right.jpg,RAW DATA FULL/679_right.jpg,51.0,Male,0,0,0,0,0,0,1
+3329,ODIR,156.0,156_left.jpg,RAW DATA FULL/156_left.jpg,82.0,Female,0,0,0,0,0,0,1
+2403,ODIR,3299.0,3299_right.jpg,RAW DATA FULL/3299_right.jpg,57.0,Male,0,0,0,0,0,0,0
+2129,ODIR,2998.0,2998_right.jpg,RAW DATA FULL/2998_right.jpg,49.0,Male,0,0,0,0,0,0,0
+3998,ODIR,921.0,921_left.jpg,RAW DATA FULL/921_left.jpg,57.0,Male,0,0,0,0,0,0,1
+1574,ODIR,2395.0,2395_right.jpg,RAW DATA FULL/2395_right.jpg,70.0,Male,0,0,0,0,0,0,0
+3741,ODIR,636.0,636_left.jpg,RAW DATA FULL/636_left.jpg,61.0,Female,0,0,0,0,0,0,1
+3508,ODIR,362.0,362_left.jpg,RAW DATA FULL/362_left.jpg,62.0,Male,1,0,0,0,0,0,0
+8343,RFMID1,1205.0,1205.png,external_data/RFMID1/Training/1205.png,55.0,Female,0,1,0,0,0,0,0
+2719,ODIR,4138.0,4138_right.jpg,RAW DATA FULL/4138_right.jpg,49.0,Male,1,0,0,0,0,0,0
+4521,ODIR,1891.0,1891_left.jpg,RAW DATA FULL/1891_left.jpg,64.0,Male,0,0,0,1,0,0,1
+6678,HYGD,95.0,95_1.jpg,external_data/glaucoma_standard/Images/95_1.jpg,60.0,Female,0,1,0,0,0,0,0
+5150,ODIR,2815.0,2815_left.jpg,RAW DATA FULL/2815_left.jpg,74.0,Male,0,0,0,0,0,0,0
+2808,ODIR,4240.0,4240_right.jpg,RAW DATA FULL/4240_right.jpg,50.0,Female,1,0,0,0,0,0,0
+8631,RFMID1,1493.0,1493.png,external_data/RFMID1/Training/1493.png,55.0,Female,1,0,0,0,0,0,0
+556,ODIR,639.0,639_right.jpg,RAW DATA FULL/639_right.jpg,56.0,Female,1,0,0,0,0,0,1
+6276,ODIR,4551.0,4551_left.jpg,RAW DATA FULL/4551_left.jpg,53.0,Male,1,0,0,0,0,0,0
+7955,RFMID1,817.0,817.png,external_data/RFMID1/Training/817.png,55.0,Female,0,1,0,0,0,0,0
+4795,ODIR,2424.0,2424_left.jpg,RAW DATA FULL/2424_left.jpg,58.0,Female,0,0,0,0,0,0,0
+2469,ODIR,3370.0,3370_right.jpg,RAW DATA FULL/3370_right.jpg,50.0,Female,0,0,0,0,0,0,0
+3738,ODIR,633.0,633_left.jpg,RAW DATA FULL/633_left.jpg,38.0,Male,0,0,0,0,0,0,1
+4286,ODIR,1378.0,1378_left.jpg,RAW DATA FULL/1378_left.jpg,72.0,Female,0,1,0,0,0,0,0
+8153,RFMID1,1015.0,1015.png,external_data/RFMID1/Training/1015.png,55.0,Female,0,0,0,0,0,0,0
+5289,ODIR,2967.0,2967_left.jpg,RAW DATA FULL/2967_left.jpg,62.0,Male,0,0,0,0,0,0,0
+1716,ODIR,2553.0,2553_right.jpg,RAW DATA FULL/2553_right.jpg,54.0,Female,0,0,0,0,0,0,0
+2604,ODIR,4003.0,4003_right.jpg,RAW DATA FULL/4003_right.jpg,50.0,Male,1,0,0,0,0,0,0
+8168,RFMID1,1030.0,1030.png,external_data/RFMID1/Training/1030.png,55.0,Female,0,0,0,1,0,1,0
+6924,HYGD,183.0,183_0.jpg,external_data/glaucoma_standard/Images/183_0.jpg,60.0,Female,0,1,0,0,0,0,0
+1704,ODIR,2539.0,2539_right.jpg,RAW DATA FULL/2539_right.jpg,52.0,Female,0,0,0,0,0,0,0
+6959,HYGD,197.0,197_0.jpg,external_data/glaucoma_standard/Images/197_0.jpg,60.0,Female,0,0,0,0,0,0,0
+6714,HYGD,106.0,106_0.jpg,external_data/glaucoma_standard/Images/106_0.jpg,60.0,Female,0,1,0,0,0,0,0
+6496,HYGD,38.0,38_0.jpg,external_data/glaucoma_standard/Images/38_0.jpg,60.0,Female,0,1,0,0,0,0,0
+2139,ODIR,3009.0,3009_right.jpg,RAW DATA FULL/3009_right.jpg,74.0,Female,0,0,0,0,0,0,0
+3239,ODIR,52.0,52_left.jpg,RAW DATA FULL/52_left.jpg,67.0,Male,0,0,0,0,0,0,1
+2383,ODIR,3274.0,3274_right.jpg,RAW DATA FULL/3274_right.jpg,39.0,Female,0,0,0,0,0,0,0
+7314,RFMID1,176.0,176.png,external_data/RFMID1/Training/176.png,55.0,Female,0,0,0,0,0,0,1
+4311,ODIR,1421.0,1421_left.jpg,RAW DATA FULL/1421_left.jpg,60.0,Male,0,1,0,0,0,0,0
+1285,ODIR,1706.0,1706_right.jpg,RAW DATA FULL/1706_right.jpg,63.0,Female,1,0,0,0,0,1,1
+1312,ODIR,1856.0,1856_right.jpg,RAW DATA FULL/1856_right.jpg,84.0,Female,0,0,0,1,0,0,0
+7853,RFMID1,715.0,715.png,external_data/RFMID1/Training/715.png,55.0,Female,0,0,0,0,0,0,0
+1996,ODIR,2856.0,2856_right.jpg,RAW DATA FULL/2856_right.jpg,59.0,Male,0,0,0,0,0,0,0
+3930,ODIR,848.0,848_left.jpg,RAW DATA FULL/848_left.jpg,56.0,Male,0,0,0,0,0,0,1
+6183,ODIR,4436.0,4436_left.jpg,RAW DATA FULL/4436_left.jpg,49.0,Female,1,0,0,0,0,0,0
+5985,ODIR,4220.0,4220_left.jpg,RAW DATA FULL/4220_left.jpg,55.0,Female,1,0,0,0,0,0,0
+7503,RFMID1,365.0,365.png,external_data/RFMID1/Training/365.png,55.0,Female,0,1,0,0,0,0,0
+1591,ODIR,2412.0,2412_right.jpg,RAW DATA FULL/2412_right.jpg,60.0,Female,0,0,0,0,0,0,0
+8765,RFMID1,1627.0,1627.png,external_data/RFMID1/Training/1627.png,55.0,Female,1,0,0,0,0,0,0
+8501,RFMID1,1363.0,1363.png,external_data/RFMID1/Training/1363.png,55.0,Female,0,1,0,0,0,0,0
+2162,ODIR,3038.0,3038_right.jpg,RAW DATA FULL/3038_right.jpg,66.0,Male,0,0,0,0,0,0,0
+2396,ODIR,3291.0,3291_right.jpg,RAW DATA FULL/3291_right.jpg,61.0,Female,0,0,0,0,0,0,0
+317,ODIR,363.0,363_right.jpg,RAW DATA FULL/363_right.jpg,65.0,Female,0,0,0,0,0,0,1
+6367,ODIR,4651.0,4651_left.jpg,RAW DATA FULL/4651_left.jpg,41.0,Male,1,0,0,0,0,0,0
+8551,RFMID1,1413.0,1413.png,external_data/RFMID1/Training/1413.png,55.0,Female,1,0,0,0,0,0,0
+3111,ODIR,4585.0,4585_right.jpg,RAW DATA FULL/4585_right.jpg,54.0,Female,1,0,0,0,0,0,0
+5233,ODIR,2906.0,2906_left.jpg,RAW DATA FULL/2906_left.jpg,58.0,Male,0,0,0,0,0,0,0
+7912,RFMID1,774.0,774.png,external_data/RFMID1/Training/774.png,55.0,Female,0,0,0,0,0,0,1
+5068,ODIR,2725.0,2725_left.jpg,RAW DATA FULL/2725_left.jpg,47.0,Male,0,0,0,0,0,0,0
+4036,ODIR,964.0,964_left.jpg,RAW DATA FULL/964_left.jpg,71.0,Male,1,0,0,0,0,0,1
+795,ODIR,922.0,922_right.jpg,RAW DATA FULL/922_right.jpg,45.0,Female,0,0,0,0,0,0,1
+3020,ODIR,4477.0,4477_right.jpg,RAW DATA FULL/4477_right.jpg,53.0,Male,1,0,0,0,0,0,0
+1711,ODIR,2547.0,2547_right.jpg,RAW DATA FULL/2547_right.jpg,59.0,Male,0,0,0,0,0,0,0
+3387,ODIR,227.0,227_left.jpg,RAW DATA FULL/227_left.jpg,58.0,Female,0,0,0,0,0,0,1
+36,ODIR,45.0,45_right.jpg,RAW DATA FULL/45_right.jpg,54.0,Male,1,0,0,0,1,0,0
+4549,ODIR,2034.0,2034_left.jpg,RAW DATA FULL/2034_left.jpg,63.0,Male,0,0,0,1,0,0,1
+913,ODIR,1086.0,1086_right.jpg,RAW DATA FULL/1086_right.jpg,62.0,Male,0,0,0,0,0,0,1
+5721,ODIR,3435.0,3435_left.jpg,RAW DATA FULL/3435_left.jpg,52.0,Female,0,0,0,0,0,0,0
+5295,ODIR,2973.0,2973_left.jpg,RAW DATA FULL/2973_left.jpg,63.0,Female,0,0,0,0,0,0,0
+3972,ODIR,893.0,893_left.jpg,RAW DATA FULL/893_left.jpg,34.0,Male,0,0,0,0,0,0,1
+5370,ODIR,3058.0,3058_left.jpg,RAW DATA FULL/3058_left.jpg,66.0,Male,0,0,0,0,0,0,0
+6471,HYGD,31.0,31_6.jpg,external_data/glaucoma_standard/Images/31_6.jpg,60.0,Female,0,1,0,0,0,0,0
+4133,ODIR,1114.0,1114_left.jpg,RAW DATA FULL/1114_left.jpg,67.0,Male,0,0,0,0,0,0,1
+974,ODIR,1177.0,1177_right.jpg,RAW DATA FULL/1177_right.jpg,63.0,Female,0,0,0,0,0,0,1
+7291,RFMID1,153.0,153.png,external_data/RFMID1/Training/153.png,55.0,Female,0,0,0,0,0,0,0
+983,ODIR,1205.0,1205_right.jpg,RAW DATA FULL/1205_right.jpg,58.0,Female,1,0,0,0,0,0,0
+7921,RFMID1,783.0,783.png,external_data/RFMID1/Training/783.png,55.0,Female,0,0,0,0,0,0,1
+8086,RFMID1,948.0,948.png,external_data/RFMID1/Training/948.png,55.0,Female,1,0,0,0,0,0,0
+1418,ODIR,2146.0,2146_right.jpg,RAW DATA FULL/2146_right.jpg,87.0,Male,0,0,1,0,0,0,0
+7428,RFMID1,290.0,290.png,external_data/RFMID1/Training/290.png,55.0,Female,0,0,0,0,0,0,1
+1560,ODIR,2381.0,2381_right.jpg,RAW DATA FULL/2381_right.jpg,35.0,Male,0,0,0,0,0,0,0
+4135,ODIR,1117.0,1117_left.jpg,RAW DATA FULL/1117_left.jpg,65.0,Male,0,0,0,0,0,0,1
+5582,ODIR,3287.0,3287_left.jpg,RAW DATA FULL/3287_left.jpg,56.0,Male,0,0,0,0,0,0,0
+7899,RFMID1,761.0,761.png,external_data/RFMID1/Training/761.png,55.0,Female,0,0,0,0,0,0,1
+4265,ODIR,1311.0,1311_left.jpg,RAW DATA FULL/1311_left.jpg,67.0,Female,0,0,0,0,0,0,1
+1355,ODIR,2006.0,2006_right.jpg,RAW DATA FULL/2006_right.jpg,44.0,Male,0,1,0,0,0,0,1
+8424,RFMID1,1286.0,1286.png,external_data/RFMID1/Training/1286.png,55.0,Female,0,0,0,0,0,0,1
+5016,ODIR,2668.0,2668_left.jpg,RAW DATA FULL/2668_left.jpg,45.0,Male,0,0,0,0,0,0,0
+8811,RFMID1,1673.0,1673.png,external_data/RFMID1/Training/1673.png,55.0,Female,0,0,0,0,0,1,0
+987,ODIR,1210.0,1210_right.jpg,RAW DATA FULL/1210_right.jpg,62.0,Male,0,1,0,0,0,0,0
+2682,ODIR,4096.0,4096_right.jpg,RAW DATA FULL/4096_right.jpg,61.0,Female,1,0,0,0,0,0,0
+7490,RFMID1,352.0,352.png,external_data/RFMID1/Training/352.png,55.0,Female,0,1,0,0,0,0,0
+5047,ODIR,2704.0,2704_left.jpg,RAW DATA FULL/2704_left.jpg,67.0,Male,0,0,0,0,0,0,0
+1640,ODIR,2467.0,2467_right.jpg,RAW DATA FULL/2467_right.jpg,69.0,Female,0,0,0,0,0,0,0
+1290,ODIR,1817.0,1817_right.jpg,RAW DATA FULL/1817_right.jpg,51.0,Female,0,0,0,1,0,0,0
+3681,ODIR,566.0,566_left.jpg,RAW DATA FULL/566_left.jpg,60.0,Male,1,0,0,0,0,0,1
+1380,ODIR,2106.0,2106_right.jpg,RAW DATA FULL/2106_right.jpg,81.0,Female,0,0,1,0,0,0,0
+1933,ODIR,2791.0,2791_right.jpg,RAW DATA FULL/2791_right.jpg,77.0,Male,0,0,0,0,0,0,0
+4675,ODIR,2217.0,2217_left.jpg,RAW DATA FULL/2217_left.jpg,85.0,Female,0,0,1,0,0,0,0
+2376,ODIR,3267.0,3267_right.jpg,RAW DATA FULL/3267_right.jpg,37.0,Male,0,0,0,0,0,0,0
+3160,ODIR,4638.0,4638_right.jpg,RAW DATA FULL/4638_right.jpg,32.0,Female,1,0,0,0,0,0,0
+2030,ODIR,2895.0,2895_right.jpg,RAW DATA FULL/2895_right.jpg,33.0,Male,0,0,0,0,0,0,0
+892,ODIR,1056.0,1056_right.jpg,RAW DATA FULL/1056_right.jpg,62.0,Male,1,0,0,0,1,0,1
+7287,RFMID1,149.0,149.png,external_data/RFMID1/Training/149.png,55.0,Female,0,0,0,0,0,0,1
+4876,ODIR,2514.0,2514_left.jpg,RAW DATA FULL/2514_left.jpg,62.0,Male,0,0,0,0,0,0,0
+4069,ODIR,1012.0,1012_left.jpg,RAW DATA FULL/1012_left.jpg,56.0,Female,0,0,0,0,0,1,1
+4255,ODIR,1297.0,1297_left.jpg,RAW DATA FULL/1297_left.jpg,70.0,Male,0,1,0,0,0,0,1
+2,ODIR,2.0,2_right.jpg,RAW DATA FULL/2_right.jpg,42.0,Male,1,0,0,0,0,0,1
+8198,RFMID1,1060.0,1060.png,external_data/RFMID1/Training/1060.png,55.0,Female,1,0,0,0,0,0,0
+8493,RFMID1,1355.0,1355.png,external_data/RFMID1/Training/1355.png,55.0,Female,0,1,0,0,0,0,0
+2109,ODIR,2978.0,2978_right.jpg,RAW DATA FULL/2978_right.jpg,70.0,Male,0,0,0,0,0,0,0
+849,ODIR,987.0,987_right.jpg,RAW DATA FULL/987_right.jpg,64.0,Female,0,0,0,0,0,0,1
+2737,ODIR,4161.0,4161_right.jpg,RAW DATA FULL/4161_right.jpg,55.0,Female,1,0,0,0,0,0,0
+2466,ODIR,3366.0,3366_right.jpg,RAW DATA FULL/3366_right.jpg,54.0,Female,0,0,0,0,0,0,0
+1914,ODIR,2772.0,2772_right.jpg,RAW DATA FULL/2772_right.jpg,41.0,Male,0,0,0,0,0,0,0
+1596,ODIR,2417.0,2417_right.jpg,RAW DATA FULL/2417_right.jpg,51.0,Male,0,0,0,0,0,0,0
+5872,ODIR,4093.0,4093_left.jpg,RAW DATA FULL/4093_left.jpg,55.0,Male,1,0,0,0,0,0,0
+1913,ODIR,2771.0,2771_right.jpg,RAW DATA FULL/2771_right.jpg,48.0,Female,0,0,0,0,0,0,0
+5139,ODIR,2804.0,2804_left.jpg,RAW DATA FULL/2804_left.jpg,60.0,Male,0,0,0,0,0,0,0
+8780,RFMID1,1642.0,1642.png,external_data/RFMID1/Training/1642.png,55.0,Female,1,0,0,0,0,0,0
+5640,ODIR,3350.0,3350_left.jpg,RAW DATA FULL/3350_left.jpg,30.0,Male,0,0,0,0,0,0,0
+2736,ODIR,4160.0,4160_right.jpg,RAW DATA FULL/4160_right.jpg,51.0,Male,1,0,0,0,0,0,0
+726,ODIR,840.0,840_right.jpg,RAW DATA FULL/840_right.jpg,40.0,Male,1,0,0,0,0,0,0
+7214,RFMID1,76.0,76.png,external_data/RFMID1/Training/76.png,55.0,Female,0,1,0,0,0,0,0
+53,ODIR,65.0,65_right.jpg,RAW DATA FULL/65_right.jpg,56.0,Male,0,0,0,0,0,0,1
+1796,ODIR,2638.0,2638_right.jpg,RAW DATA FULL/2638_right.jpg,48.0,Male,0,0,0,0,0,0,0
+3845,ODIR,749.0,749_left.jpg,RAW DATA FULL/749_left.jpg,45.0,Male,0,0,0,0,0,0,1
+6007,ODIR,4243.0,4243_left.jpg,RAW DATA FULL/4243_left.jpg,56.0,Female,1,0,0,0,0,0,0
+6402,HYGD,6.0,6_0.jpg,external_data/glaucoma_standard/Images/6_0.jpg,60.0,Female,0,1,0,0,0,0,0
+2553,ODIR,3941.0,3941_right.jpg,RAW DATA FULL/3941_right.jpg,61.0,Male,1,0,0,0,0,0,0
+2800,ODIR,4232.0,4232_right.jpg,RAW DATA FULL/4232_right.jpg,26.0,Female,1,0,0,0,0,0,0
+936,ODIR,1121.0,1121_right.jpg,RAW DATA FULL/1121_right.jpg,47.0,Female,0,0,0,0,0,0,1
+8166,RFMID1,1028.0,1028.png,external_data/RFMID1/Training/1028.png,55.0,Female,0,0,0,1,0,0,0
+824,ODIR,955.0,955_right.jpg,RAW DATA FULL/955_right.jpg,75.0,Male,0,0,1,0,0,0,0
+4321,ODIR,1434.0,1434_left.jpg,RAW DATA FULL/1434_left.jpg,54.0,Male,1,1,0,0,0,0,0
+7274,RFMID1,136.0,136.png,external_data/RFMID1/Training/136.png,55.0,Female,0,0,0,0,0,0,1
+3401,ODIR,243.0,243_left.jpg,RAW DATA FULL/243_left.jpg,67.0,Male,0,0,0,1,0,0,0
+1389,ODIR,2116.0,2116_right.jpg,RAW DATA FULL/2116_right.jpg,81.0,Female,0,0,1,0,0,0,0
+3564,ODIR,429.0,429_left.jpg,RAW DATA FULL/429_left.jpg,54.0,Female,0,0,0,0,0,0,1
+7410,RFMID1,272.0,272.png,external_data/RFMID1/Training/272.png,55.0,Female,0,0,0,0,0,0,1
+884,ODIR,1043.0,1043_right.jpg,RAW DATA FULL/1043_right.jpg,57.0,Female,0,0,0,1,0,0,0
+5429,ODIR,3119.0,3119_left.jpg,RAW DATA FULL/3119_left.jpg,67.0,Female,0,0,0,0,0,0,0
+5703,ODIR,3417.0,3417_left.jpg,RAW DATA FULL/3417_left.jpg,66.0,Male,0,0,0,0,0,0,0
+5690,ODIR,3403.0,3403_left.jpg,RAW DATA FULL/3403_left.jpg,59.0,Male,0,0,0,0,0,0,0
+4867,ODIR,2505.0,2505_left.jpg,RAW DATA FULL/2505_left.jpg,55.0,Female,0,0,0,0,0,0,0
+6707,HYGD,104.0,104_2.jpg,external_data/glaucoma_standard/Images/104_2.jpg,60.0,Female,0,1,0,0,0,0,0
+7868,RFMID1,730.0,730.png,external_data/RFMID1/Training/730.png,55.0,Female,0,0,0,0,0,0,0
+6369,ODIR,4655.0,4655_left.jpg,RAW DATA FULL/4655_left.jpg,65.0,Male,1,0,0,0,0,0,0
+1868,ODIR,2717.0,2717_right.jpg,RAW DATA FULL/2717_right.jpg,59.0,Male,0,0,0,0,0,0,0
+5181,ODIR,2847.0,2847_left.jpg,RAW DATA FULL/2847_left.jpg,57.0,Male,0,0,0,0,0,0,0
+10,ODIR,11.0,11_right.jpg,RAW DATA FULL/11_right.jpg,60.0,Female,1,0,0,0,1,0,0
+3415,ODIR,258.0,258_left.jpg,RAW DATA FULL/258_left.jpg,58.0,Female,0,0,0,0,0,0,1
+5421,ODIR,3110.0,3110_left.jpg,RAW DATA FULL/3110_left.jpg,52.0,Male,0,0,0,0,0,0,0
+7486,RFMID1,348.0,348.png,external_data/RFMID1/Training/348.png,55.0,Female,0,0,0,0,0,0,1
+1463,ODIR,2195.0,2195_right.jpg,RAW DATA FULL/2195_right.jpg,47.0,Female,0,0,1,0,0,0,0
+806,ODIR,933.0,933_right.jpg,RAW DATA FULL/933_right.jpg,69.0,Male,0,0,0,0,0,0,1
+8077,RFMID1,939.0,939.png,external_data/RFMID1/Training/939.png,55.0,Female,0,0,0,0,0,0,1
+7547,RFMID1,409.0,409.png,external_data/RFMID1/Training/409.png,55.0,Female,0,0,0,0,0,0,1
+7782,RFMID1,644.0,644.png,external_data/RFMID1/Training/644.png,55.0,Female,0,1,0,0,0,0,0
+4068,ODIR,1011.0,1011_left.jpg,RAW DATA FULL/1011_left.jpg,36.0,Male,0,0,0,0,0,0,1
+2108,ODIR,2977.0,2977_right.jpg,RAW DATA FULL/2977_right.jpg,64.0,Male,0,0,0,0,0,0,0
+8279,RFMID1,1141.0,1141.png,external_data/RFMID1/Training/1141.png,55.0,Female,1,0,0,0,0,0,0
+2041,ODIR,2906.0,2906_right.jpg,RAW DATA FULL/2906_right.jpg,58.0,Male,0,0,0,0,0,0,0
+2234,ODIR,3114.0,3114_right.jpg,RAW DATA FULL/3114_right.jpg,35.0,Male,0,0,0,0,0,0,0
+7307,RFMID1,169.0,169.png,external_data/RFMID1/Training/169.png,55.0,Female,0,0,0,0,0,0,1
+963,ODIR,1165.0,1165_right.jpg,RAW DATA FULL/1165_right.jpg,44.0,Male,0,0,0,0,0,0,1
+7511,RFMID1,373.0,373.png,external_data/RFMID1/Training/373.png,55.0,Female,0,0,0,0,0,0,1
+7763,RFMID1,625.0,625.png,external_data/RFMID1/Training/625.png,55.0,Female,1,1,0,0,0,0,0
+4494,ODIR,1845.0,1845_left.jpg,RAW DATA FULL/1845_left.jpg,55.0,Male,0,0,0,1,0,0,0
+2632,ODIR,4037.0,4037_right.jpg,RAW DATA FULL/4037_right.jpg,58.0,Male,1,0,0,0,1,0,0
+6094,ODIR,4333.0,4333_left.jpg,RAW DATA FULL/4333_left.jpg,42.0,Male,1,0,0,0,0,0,0
+7092,HYGD,261.0,261_1.jpg,external_data/glaucoma_standard/Images/261_1.jpg,60.0,Female,0,0,0,0,0,0,0
+704,ODIR,810.0,810_right.jpg,RAW DATA FULL/810_right.jpg,57.0,Female,1,0,0,0,0,0,1
+431,ODIR,496.0,496_right.jpg,RAW DATA FULL/496_right.jpg,66.0,Female,0,0,0,0,0,0,1
+4388,ODIR,1536.0,1536_left.jpg,RAW DATA FULL/1536_left.jpg,66.0,Female,0,0,0,0,0,1,0
+6077,ODIR,4316.0,4316_left.jpg,RAW DATA FULL/4316_left.jpg,36.0,Male,1,0,0,0,0,0,0
+145,ODIR,172.0,172_right.jpg,RAW DATA FULL/172_right.jpg,68.0,Male,0,0,0,0,0,0,1
+6467,HYGD,31.0,31_2.jpg,external_data/glaucoma_standard/Images/31_2.jpg,60.0,Female,0,1,0,0,0,0,0
+2033,ODIR,2898.0,2898_right.jpg,RAW DATA FULL/2898_right.jpg,54.0,Male,0,0,0,0,0,0,0
+375,ODIR,428.0,428_right.jpg,RAW DATA FULL/428_right.jpg,65.0,Female,1,0,0,0,0,0,1
+1165,ODIR,1492.0,1492_right.jpg,RAW DATA FULL/1492_right.jpg,54.0,Male,0,1,0,0,0,0,0
+3500,ODIR,353.0,353_left.jpg,RAW DATA FULL/353_left.jpg,55.0,Female,0,0,0,0,0,0,1
+2050,ODIR,2915.0,2915_right.jpg,RAW DATA FULL/2915_right.jpg,61.0,Female,0,0,0,0,0,0,0
+3760,ODIR,657.0,657_left.jpg,RAW DATA FULL/657_left.jpg,46.0,Male,0,0,0,0,0,0,1
+2624,ODIR,4028.0,4028_right.jpg,RAW DATA FULL/4028_right.jpg,77.0,Male,1,0,0,0,0,0,0
+4484,ODIR,1833.0,1833_left.jpg,RAW DATA FULL/1833_left.jpg,65.0,Female,1,0,0,0,1,0,0
+4435,ODIR,1599.0,1599_left.jpg,RAW DATA FULL/1599_left.jpg,1.0,Female,0,0,0,0,0,1,0
+7907,RFMID1,769.0,769.png,external_data/RFMID1/Training/769.png,55.0,Female,0,0,0,0,0,0,0
+7677,RFMID1,539.0,539.png,external_data/RFMID1/Training/539.png,55.0,Female,1,0,0,0,0,0,0
+7069,HYGD,252.0,252_0.jpg,external_data/glaucoma_standard/Images/252_0.jpg,60.0,Female,0,0,0,0,0,0,0
+4361,ODIR,1492.0,1492_left.jpg,RAW DATA FULL/1492_left.jpg,54.0,Male,0,1,0,0,0,0,0
+2424,ODIR,3321.0,3321_right.jpg,RAW DATA FULL/3321_right.jpg,58.0,Male,0,0,0,0,0,0,0
+1262,ODIR,1619.0,1619_right.jpg,RAW DATA FULL/1619_right.jpg,70.0,Female,0,0,0,0,0,1,0
+1771,ODIR,2612.0,2612_right.jpg,RAW DATA FULL/2612_right.jpg,56.0,Male,0,0,0,0,0,0,0
+3511,ODIR,365.0,365_left.jpg,RAW DATA FULL/365_left.jpg,60.0,Female,1,1,0,0,1,0,0
+271,ODIR,310.0,310_right.jpg,RAW DATA FULL/310_right.jpg,33.0,Male,0,0,0,0,0,0,1
+4792,ODIR,2421.0,2421_left.jpg,RAW DATA FULL/2421_left.jpg,51.0,Female,0,0,0,0,0,0,0
+4843,ODIR,2477.0,2477_left.jpg,RAW DATA FULL/2477_left.jpg,47.0,Male,0,0,0,0,0,0,0
+244,ODIR,281.0,281_right.jpg,RAW DATA FULL/281_right.jpg,68.0,Female,1,0,0,0,0,0,1
+8913,RFMID1,1775.0,1775.png,external_data/RFMID1/Training/1775.png,55.0,Female,0,0,0,0,0,0,0
+4572,ODIR,2107.0,2107_left.jpg,RAW DATA FULL/2107_left.jpg,78.0,Male,1,0,1,0,0,0,1
+2032,ODIR,2897.0,2897_right.jpg,RAW DATA FULL/2897_right.jpg,66.0,Male,0,0,0,0,0,0,0
+5053,ODIR,2710.0,2710_left.jpg,RAW DATA FULL/2710_left.jpg,52.0,Male,0,0,0,0,0,0,0
+7829,RFMID1,691.0,691.png,external_data/RFMID1/Training/691.png,55.0,Female,0,0,0,0,0,0,1
+813,ODIR,943.0,943_right.jpg,RAW DATA FULL/943_right.jpg,64.0,Male,0,0,0,0,0,0,1
+8750,RFMID1,1612.0,1612.png,external_data/RFMID1/Training/1612.png,55.0,Female,1,0,0,0,0,0,0
+6010,ODIR,4246.0,4246_left.jpg,RAW DATA FULL/4246_left.jpg,56.0,Female,1,0,0,0,0,0,0
+3810,ODIR,712.0,712_left.jpg,RAW DATA FULL/712_left.jpg,62.0,Male,1,0,0,1,0,0,0
+5727,ODIR,3441.0,3441_left.jpg,RAW DATA FULL/3441_left.jpg,44.0,Male,0,0,0,0,0,0,0
+7583,RFMID1,445.0,445.png,external_data/RFMID1/Training/445.png,55.0,Female,0,0,0,1,0,0,0
+9021,RFMID1,1883.0,1883.png,external_data/RFMID1/Training/1883.png,55.0,Female,0,0,0,0,0,0,0
+8047,RFMID1,909.0,909.png,external_data/RFMID1/Training/909.png,55.0,Female,0,0,0,0,0,0,1
+1804,ODIR,2646.0,2646_right.jpg,RAW DATA FULL/2646_right.jpg,50.0,Female,0,0,0,0,0,0,0
+8413,RFMID1,1275.0,1275.png,external_data/RFMID1/Training/1275.png,55.0,Female,1,0,0,0,0,0,0
+4346,ODIR,1476.0,1476_left.jpg,RAW DATA FULL/1476_left.jpg,68.0,Male,0,1,0,0,0,0,0
+2461,ODIR,3361.0,3361_right.jpg,RAW DATA FULL/3361_right.jpg,64.0,Male,0,0,0,0,0,0,0
+545,ODIR,624.0,624_right.jpg,RAW DATA FULL/624_right.jpg,56.0,Female,0,0,0,0,0,0,1
+3241,ODIR,54.0,54_left.jpg,RAW DATA FULL/54_left.jpg,66.0,Female,1,0,0,0,0,1,0
+738,ODIR,855.0,855_right.jpg,RAW DATA FULL/855_right.jpg,55.0,Female,0,0,0,1,0,0,0
+310,ODIR,355.0,355_right.jpg,RAW DATA FULL/355_right.jpg,55.0,Male,1,0,0,0,1,0,0
+3521,ODIR,377.0,377_left.jpg,RAW DATA FULL/377_left.jpg,48.0,Male,0,0,0,1,0,0,0
+7037,HYGD,236.0,236_0.jpg,external_data/glaucoma_standard/Images/236_0.jpg,60.0,Female,0,0,0,0,0,0,0
+1131,ODIR,1441.0,1441_right.jpg,RAW DATA FULL/1441_right.jpg,50.0,Male,0,1,0,0,0,0,0
+5545,ODIR,3244.0,3244_left.jpg,RAW DATA FULL/3244_left.jpg,45.0,Female,0,0,0,0,0,0,0
+492,ODIR,562.0,562_right.jpg,RAW DATA FULL/562_right.jpg,73.0,Male,1,0,0,0,0,0,0
+4111,ODIR,1083.0,1083_left.jpg,RAW DATA FULL/1083_left.jpg,55.0,Female,1,0,1,0,0,0,0
+7328,RFMID1,190.0,190.png,external_data/RFMID1/Training/190.png,55.0,Female,0,0,0,0,0,0,1
+2769,ODIR,4199.0,4199_right.jpg,RAW DATA FULL/4199_right.jpg,67.0,Female,1,0,0,0,1,0,0
+7564,RFMID1,426.0,426.png,external_data/RFMID1/Training/426.png,55.0,Female,1,0,0,0,0,0,0
+920,ODIR,1098.0,1098_right.jpg,RAW DATA FULL/1098_right.jpg,66.0,Male,0,0,0,1,0,0,0
+8874,RFMID1,1736.0,1736.png,external_data/RFMID1/Training/1736.png,55.0,Female,0,0,0,0,0,0,0
+8248,RFMID1,1110.0,1110.png,external_data/RFMID1/Training/1110.png,55.0,Female,1,0,0,0,0,0,0
+3587,ODIR,457.0,457_left.jpg,RAW DATA FULL/457_left.jpg,64.0,Female,0,0,0,0,0,0,1
+6640,HYGD,81.0,81_1.jpg,external_data/glaucoma_standard/Images/81_1.jpg,60.0,Female,0,1,0,0,0,0,0
+3959,ODIR,879.0,879_left.jpg,RAW DATA FULL/879_left.jpg,54.0,Female,0,0,0,0,0,0,1
+38,ODIR,47.0,47_right.jpg,RAW DATA FULL/47_right.jpg,60.0,Female,1,0,0,0,0,0,1
+4459,ODIR,1629.0,1629_left.jpg,RAW DATA FULL/1629_left.jpg,50.0,Female,0,0,0,0,0,1,0
+7126,HYGD,281.0,281_1.jpg,external_data/glaucoma_standard/Images/281_1.jpg,60.0,Female,0,0,0,0,0,0,0
+4278,ODIR,1362.0,1362_left.jpg,RAW DATA FULL/1362_left.jpg,47.0,Female,0,1,0,0,0,0,0
+7129,HYGD,283.0,283_0.jpg,external_data/glaucoma_standard/Images/283_0.jpg,60.0,Female,0,0,0,0,0,0,0
+2983,ODIR,4436.0,4436_right.jpg,RAW DATA FULL/4436_right.jpg,49.0,Female,1,0,0,0,0,0,0
+5290,ODIR,2968.0,2968_left.jpg,RAW DATA FULL/2968_left.jpg,57.0,Female,0,0,0,0,0,0,0
+6948,HYGD,191.0,191_1.jpg,external_data/glaucoma_standard/Images/191_1.jpg,60.0,Female,0,0,0,0,0,0,0
+130,ODIR,156.0,156_right.jpg,RAW DATA FULL/156_right.jpg,82.0,Female,0,0,0,0,0,0,1
+5217,ODIR,2887.0,2887_left.jpg,RAW DATA FULL/2887_left.jpg,49.0,Female,0,0,0,0,0,0,0
+8986,RFMID1,1848.0,1848.png,external_data/RFMID1/Training/1848.png,55.0,Female,0,0,0,0,0,0,0
+2667,ODIR,4079.0,4079_right.jpg,RAW DATA FULL/4079_right.jpg,54.0,Female,1,0,0,0,0,0,0
+7138,HYGD,288.0,288_0.jpg,external_data/glaucoma_standard/Images/288_0.jpg,60.0,Female,0,0,0,0,0,0,0
+3223,ODIR,33.0,33_left.jpg,RAW DATA FULL/33_left.jpg,60.0,Female,0,0,0,0,0,0,1
+1182,ODIR,1526.0,1526_right.jpg,RAW DATA FULL/1526_right.jpg,74.0,Female,0,0,0,0,0,1,0
+7693,RFMID1,555.0,555.png,external_data/RFMID1/Training/555.png,55.0,Female,0,1,0,0,0,0,0
+5392,ODIR,3081.0,3081_left.jpg,RAW DATA FULL/3081_left.jpg,67.0,Female,0,0,0,0,0,0,0
+614,ODIR,707.0,707_right.jpg,RAW DATA FULL/707_right.jpg,59.0,Female,1,0,0,0,0,0,1
+8969,RFMID1,1831.0,1831.png,external_data/RFMID1/Training/1831.png,55.0,Female,0,0,0,0,0,0,1
+1466,ODIR,2198.0,2198_right.jpg,RAW DATA FULL/2198_right.jpg,69.0,Female,0,0,1,0,0,0,0
+4497,ODIR,1850.0,1850_left.jpg,RAW DATA FULL/1850_left.jpg,65.0,Female,0,0,0,1,0,0,0
+3042,ODIR,4506.0,4506_right.jpg,RAW DATA FULL/4506_right.jpg,56.0,Male,1,0,0,0,0,0,0
+934,ODIR,1119.0,1119_right.jpg,RAW DATA FULL/1119_right.jpg,65.0,Male,0,0,0,0,0,0,1
+2419,ODIR,3316.0,3316_right.jpg,RAW DATA FULL/3316_right.jpg,70.0,Female,0,0,0,0,0,0,0
+5085,ODIR,2746.0,2746_left.jpg,RAW DATA FULL/2746_left.jpg,62.0,Male,0,0,0,0,0,0,0
+3294,ODIR,119.0,119_left.jpg,RAW DATA FULL/119_left.jpg,59.0,Male,0,0,1,0,0,0,1
+6737,HYGD,114.0,114_1.jpg,external_data/glaucoma_standard/Images/114_1.jpg,60.0,Female,0,1,0,0,0,0,0
+8035,RFMID1,897.0,897.png,external_data/RFMID1/Training/897.png,55.0,Female,0,1,0,0,0,0,0
+4822,ODIR,2452.0,2452_left.jpg,RAW DATA FULL/2452_left.jpg,58.0,Male,0,0,0,0,0,0,0
+826,ODIR,958.0,958_right.jpg,RAW DATA FULL/958_right.jpg,52.0,Male,0,0,0,0,0,0,1
+1521,ODIR,2338.0,2338_right.jpg,RAW DATA FULL/2338_right.jpg,64.0,Male,0,0,0,0,0,0,0
+6831,HYGD,150.0,150_12.jpg,external_data/glaucoma_standard/Images/150_12.jpg,60.0,Female,0,1,0,0,0,0,0
+2930,ODIR,4372.0,4372_right.jpg,RAW DATA FULL/4372_right.jpg,65.0,Male,1,0,0,0,0,0,0
+4232,ODIR,1268.0,1268_left.jpg,RAW DATA FULL/1268_left.jpg,56.0,Female,0,1,0,0,0,0,0
+7686,RFMID1,548.0,548.png,external_data/RFMID1/Training/548.png,55.0,Female,0,1,0,0,0,0,0
+628,ODIR,723.0,723_right.jpg,RAW DATA FULL/723_right.jpg,53.0,Female,1,0,0,0,1,0,0
+4430,ODIR,1590.0,1590_left.jpg,RAW DATA FULL/1590_left.jpg,1.0,Female,0,0,0,0,0,1,0
+3853,ODIR,758.0,758_left.jpg,RAW DATA FULL/758_left.jpg,51.0,Female,0,0,0,0,0,0,1
+390,ODIR,447.0,447_right.jpg,RAW DATA FULL/447_right.jpg,56.0,Male,0,0,0,1,0,0,0
+4345,ODIR,1474.0,1474_left.jpg,RAW DATA FULL/1474_left.jpg,79.0,Female,1,1,0,0,0,0,1
+8928,RFMID1,1790.0,1790.png,external_data/RFMID1/Training/1790.png,55.0,Female,0,0,0,0,0,0,0
+7124,HYGD,280.0,280_1.jpg,external_data/glaucoma_standard/Images/280_1.jpg,60.0,Female,0,0,0,0,0,0,0
+5913,ODIR,4138.0,4138_left.jpg,RAW DATA FULL/4138_left.jpg,49.0,Male,1,0,0,0,0,0,0
+3990,ODIR,913.0,913_left.jpg,RAW DATA FULL/913_left.jpg,61.0,Female,1,0,0,0,0,0,1
+400,ODIR,460.0,460_right.jpg,RAW DATA FULL/460_right.jpg,80.0,Male,0,0,0,0,0,0,1
+4806,ODIR,2435.0,2435_left.jpg,RAW DATA FULL/2435_left.jpg,28.0,Male,0,0,0,0,0,0,0
+5135,ODIR,2800.0,2800_left.jpg,RAW DATA FULL/2800_left.jpg,63.0,Female,0,0,0,0,0,0,0
+8008,RFMID1,870.0,870.png,external_data/RFMID1/Training/870.png,55.0,Female,0,1,0,0,0,0,0
+3359,ODIR,190.0,190_left.jpg,RAW DATA FULL/190_left.jpg,51.0,Male,0,0,0,0,0,0,1
+46,ODIR,55.0,55_right.jpg,RAW DATA FULL/55_right.jpg,62.0,Male,0,0,0,1,0,0,0
+5657,ODIR,3367.0,3367_left.jpg,RAW DATA FULL/3367_left.jpg,40.0,Male,0,0,0,0,0,0,0
+488,ODIR,558.0,558_right.jpg,RAW DATA FULL/558_right.jpg,52.0,Male,1,0,0,0,0,0,1
+3993,ODIR,916.0,916_left.jpg,RAW DATA FULL/916_left.jpg,45.0,Female,1,0,0,0,0,0,0
+3642,ODIR,524.0,524_left.jpg,RAW DATA FULL/524_left.jpg,44.0,Male,0,0,0,0,0,0,1
+3726,ODIR,618.0,618_left.jpg,RAW DATA FULL/618_left.jpg,63.0,Male,0,0,0,0,0,0,1
+8647,RFMID1,1509.0,1509.png,external_data/RFMID1/Training/1509.png,55.0,Female,0,0,0,0,0,0,1
+5208,ODIR,2878.0,2878_left.jpg,RAW DATA FULL/2878_left.jpg,56.0,Female,0,0,0,0,0,0,0
+6609,HYGD,70.0,70_1.jpg,external_data/glaucoma_standard/Images/70_1.jpg,60.0,Female,0,1,0,0,0,0,0
+7704,RFMID1,566.0,566.png,external_data/RFMID1/Training/566.png,55.0,Female,0,1,0,0,0,0,0
+5319,ODIR,2997.0,2997_left.jpg,RAW DATA FULL/2997_left.jpg,55.0,Female,0,0,0,0,0,0,0
+709,ODIR,816.0,816_right.jpg,RAW DATA FULL/816_right.jpg,64.0,Male,1,0,0,0,1,0,1
+7119,HYGD,278.0,278_0.jpg,external_data/glaucoma_standard/Images/278_0.jpg,60.0,Female,0,0,0,0,0,0,0
+2421,ODIR,3318.0,3318_right.jpg,RAW DATA FULL/3318_right.jpg,57.0,Male,0,0,0,0,0,0,0
+5604,ODIR,3309.0,3309_left.jpg,RAW DATA FULL/3309_left.jpg,56.0,Male,0,0,0,0,0,0,0
+1750,ODIR,2589.0,2589_right.jpg,RAW DATA FULL/2589_right.jpg,45.0,Male,0,0,0,0,0,0,0
+9010,RFMID1,1872.0,1872.png,external_data/RFMID1/Training/1872.png,55.0,Female,0,0,0,0,0,0,0
+8113,RFMID1,975.0,975.png,external_data/RFMID1/Training/975.png,55.0,Female,0,0,0,0,0,0,1
+4062,ODIR,997.0,997_left.jpg,RAW DATA FULL/997_left.jpg,63.0,Female,1,0,0,0,0,0,0
+8871,RFMID1,1733.0,1733.png,external_data/RFMID1/Training/1733.png,55.0,Female,0,0,0,0,0,0,0
+338,ODIR,388.0,388_right.jpg,RAW DATA FULL/388_right.jpg,72.0,Male,0,0,0,0,0,0,1
+215,ODIR,251.0,251_right.jpg,RAW DATA FULL/251_right.jpg,62.0,Female,1,0,0,0,0,0,1
+3663,ODIR,547.0,547_left.jpg,RAW DATA FULL/547_left.jpg,69.0,Male,0,0,0,1,0,0,0
+1341,ODIR,1964.0,1964_right.jpg,RAW DATA FULL/1964_right.jpg,54.0,Female,0,1,0,0,0,0,1
+8640,RFMID1,1502.0,1502.png,external_data/RFMID1/Training/1502.png,55.0,Female,1,1,0,0,0,0,0
+5616,ODIR,3324.0,3324_left.jpg,RAW DATA FULL/3324_left.jpg,41.0,Female,0,0,0,0,0,0,0
+3894,ODIR,803.0,803_left.jpg,RAW DATA FULL/803_left.jpg,59.0,Male,1,0,0,0,0,0,1
+3640,ODIR,522.0,522_left.jpg,RAW DATA FULL/522_left.jpg,62.0,Female,1,0,0,0,0,0,1
+329,ODIR,378.0,378_right.jpg,RAW DATA FULL/378_right.jpg,54.0,Male,1,0,0,0,0,0,1
+7786,RFMID1,648.0,648.png,external_data/RFMID1/Training/648.png,55.0,Female,0,0,0,0,0,0,1
+3004,ODIR,4460.0,4460_right.jpg,RAW DATA FULL/4460_right.jpg,58.0,Male,1,0,0,0,0,0,1
+6960,HYGD,198.0,198_0.jpg,external_data/glaucoma_standard/Images/198_0.jpg,60.0,Female,0,0,0,0,0,0,0
+4090,ODIR,1046.0,1046_left.jpg,RAW DATA FULL/1046_left.jpg,55.0,Male,1,0,0,0,1,0,0
+3115,ODIR,4589.0,4589_right.jpg,RAW DATA FULL/4589_right.jpg,56.0,Male,1,0,0,0,0,0,0
+8898,RFMID1,1760.0,1760.png,external_data/RFMID1/Training/1760.png,55.0,Female,0,0,0,0,0,0,0
+2322,ODIR,3209.0,3209_right.jpg,RAW DATA FULL/3209_right.jpg,62.0,Male,0,0,0,0,0,0,0
+6667,HYGD,91.0,91_6.jpg,external_data/glaucoma_standard/Images/91_6.jpg,60.0,Female,0,1,0,0,0,0,0
+7009,HYGD,223.0,223_0.jpg,external_data/glaucoma_standard/Images/223_0.jpg,60.0,Female,0,0,0,0,0,0,0
+4197,ODIR,1220.0,1220_left.jpg,RAW DATA FULL/1220_left.jpg,58.0,Female,0,1,0,0,0,0,0
+3549,ODIR,410.0,410_left.jpg,RAW DATA FULL/410_left.jpg,53.0,Female,0,0,0,1,0,0,1
+1458,ODIR,2190.0,2190_right.jpg,RAW DATA FULL/2190_right.jpg,84.0,Female,0,0,1,0,0,0,0
+171,ODIR,201.0,201_right.jpg,RAW DATA FULL/201_right.jpg,62.0,Male,1,0,0,0,0,0,1
+4203,ODIR,1228.0,1228_left.jpg,RAW DATA FULL/1228_left.jpg,67.0,Male,1,1,0,0,0,0,0
+8428,RFMID1,1290.0,1290.png,external_data/RFMID1/Training/1290.png,55.0,Female,0,1,0,0,0,0,0
+3569,ODIR,434.0,434_left.jpg,RAW DATA FULL/434_left.jpg,70.0,Female,0,0,0,0,0,0,1
+4226,ODIR,1261.0,1261_left.jpg,RAW DATA FULL/1261_left.jpg,62.0,Female,0,1,0,0,0,0,0
+5158,ODIR,2823.0,2823_left.jpg,RAW DATA FULL/2823_left.jpg,59.0,Male,0,0,0,0,0,0,0
+8080,RFMID1,942.0,942.png,external_data/RFMID1/Training/942.png,55.0,Female,0,0,0,0,0,0,0
+6185,ODIR,4438.0,4438_left.jpg,RAW DATA FULL/4438_left.jpg,56.0,Male,1,0,0,0,0,0,0
+8158,RFMID1,1020.0,1020.png,external_data/RFMID1/Training/1020.png,55.0,Female,0,0,0,0,0,1,0
+938,ODIR,1124.0,1124_right.jpg,RAW DATA FULL/1124_right.jpg,63.0,Male,0,0,0,0,0,0,1
+60,ODIR,74.0,74_right.jpg,RAW DATA FULL/74_right.jpg,68.0,Male,1,0,0,0,0,0,1
+1240,ODIR,1593.0,1593_right.jpg,RAW DATA FULL/1593_right.jpg,57.0,Female,0,0,0,0,0,1,0
+5760,ODIR,3960.0,3960_left.jpg,RAW DATA FULL/3960_left.jpg,55.0,Male,1,0,0,0,0,0,0
+5136,ODIR,2801.0,2801_left.jpg,RAW DATA FULL/2801_left.jpg,70.0,Female,0,0,0,0,0,0,0
+2343,ODIR,3231.0,3231_right.jpg,RAW DATA FULL/3231_right.jpg,58.0,Female,0,0,0,0,0,0,0
+6856,HYGD,157.0,157_2.jpg,external_data/glaucoma_standard/Images/157_2.jpg,60.0,Female,0,1,0,0,0,0,0
+2120,ODIR,2989.0,2989_right.jpg,RAW DATA FULL/2989_right.jpg,44.0,Male,0,0,0,0,0,0,0
+1524,ODIR,2341.0,2341_right.jpg,RAW DATA FULL/2341_right.jpg,69.0,Female,0,0,0,0,0,0,0
+7617,RFMID1,479.0,479.png,external_data/RFMID1/Training/479.png,55.0,Female,1,0,0,0,0,0,0
+153,ODIR,181.0,181_right.jpg,RAW DATA FULL/181_right.jpg,64.0,Male,0,0,0,0,0,0,1
+6344,ODIR,4625.0,4625_left.jpg,RAW DATA FULL/4625_left.jpg,70.0,Female,1,0,0,0,0,0,0
+481,ODIR,551.0,551_right.jpg,RAW DATA FULL/551_right.jpg,57.0,Female,1,0,0,0,0,0,0
+6122,ODIR,4362.0,4362_left.jpg,RAW DATA FULL/4362_left.jpg,50.0,Female,1,0,0,0,0,0,0
+4460,ODIR,1630.0,1630_left.jpg,RAW DATA FULL/1630_left.jpg,61.0,Male,0,0,0,0,0,1,0
+7674,RFMID1,536.0,536.png,external_data/RFMID1/Training/536.png,55.0,Female,0,0,0,0,0,0,0
+7101,HYGD,269.0,269_0.jpg,external_data/glaucoma_standard/Images/269_0.jpg,60.0,Female,0,0,0,0,0,0,0
+3920,ODIR,832.0,832_left.jpg,RAW DATA FULL/832_left.jpg,61.0,Male,0,0,0,0,0,0,0
+7658,RFMID1,520.0,520.png,external_data/RFMID1/Training/520.png,55.0,Female,0,0,0,0,0,0,1
+7411,RFMID1,273.0,273.png,external_data/RFMID1/Training/273.png,55.0,Female,0,0,0,0,0,0,1
+1762,ODIR,2601.0,2601_right.jpg,RAW DATA FULL/2601_right.jpg,67.0,Male,0,0,0,0,0,0,0
+7634,RFMID1,496.0,496.png,external_data/RFMID1/Training/496.png,55.0,Female,1,0,0,0,0,0,0
+7315,RFMID1,177.0,177.png,external_data/RFMID1/Training/177.png,55.0,Female,0,0,0,0,0,0,1
+750,ODIR,870.0,870_right.jpg,RAW DATA FULL/870_right.jpg,69.0,Male,0,0,0,1,0,0,0
+7715,RFMID1,577.0,577.png,external_data/RFMID1/Training/577.png,55.0,Female,0,1,0,0,0,0,0
+1785,ODIR,2627.0,2627_right.jpg,RAW DATA FULL/2627_right.jpg,64.0,Female,0,0,0,0,0,0,0
+8213,RFMID1,1075.0,1075.png,external_data/RFMID1/Training/1075.png,55.0,Female,0,0,0,0,0,0,1
+7479,RFMID1,341.0,341.png,external_data/RFMID1/Training/341.png,55.0,Female,0,0,0,0,0,1,0
+6212,ODIR,4472.0,4472_left.jpg,RAW DATA FULL/4472_left.jpg,66.0,Male,1,0,0,0,0,0,0
+4501,ODIR,1857.0,1857_left.jpg,RAW DATA FULL/1857_left.jpg,66.0,Male,0,0,0,1,0,0,0
+4853,ODIR,2487.0,2487_left.jpg,RAW DATA FULL/2487_left.jpg,63.0,Male,0,0,0,0,0,0,0
+2711,ODIR,4128.0,4128_right.jpg,RAW DATA FULL/4128_right.jpg,59.0,Female,1,0,0,0,0,0,0
+6766,HYGD,129.0,129_2.jpg,external_data/glaucoma_standard/Images/129_2.jpg,60.0,Female,0,1,0,0,0,0,0
+8011,RFMID1,873.0,873.png,external_data/RFMID1/Training/873.png,55.0,Female,0,1,0,0,0,0,0
+4193,ODIR,1216.0,1216_left.jpg,RAW DATA FULL/1216_left.jpg,45.0,Male,0,1,0,0,0,0,0
+1333,ODIR,1890.0,1890_right.jpg,RAW DATA FULL/1890_right.jpg,55.0,Female,0,0,0,1,0,0,0
+1250,ODIR,1606.0,1606_right.jpg,RAW DATA FULL/1606_right.jpg,54.0,Male,0,0,0,0,0,1,0
+6887,HYGD,169.0,169_0.jpg,external_data/glaucoma_standard/Images/169_0.jpg,60.0,Female,0,1,0,0,0,0,0
+2854,ODIR,4290.0,4290_right.jpg,RAW DATA FULL/4290_right.jpg,51.0,Male,0,0,0,0,0,0,1
+186,ODIR,218.0,218_right.jpg,RAW DATA FULL/218_right.jpg,36.0,Female,0,0,1,0,0,0,1
+1136,ODIR,1452.0,1452_right.jpg,RAW DATA FULL/1452_right.jpg,57.0,Male,0,0,1,0,0,0,0
+8503,RFMID1,1365.0,1365.png,external_data/RFMID1/Training/1365.png,55.0,Female,1,0,0,0,0,0,0
+8791,RFMID1,1653.0,1653.png,external_data/RFMID1/Training/1653.png,55.0,Female,0,0,0,0,0,0,1
+2058,ODIR,2924.0,2924_right.jpg,RAW DATA FULL/2924_right.jpg,57.0,Male,0,0,0,0,0,0,0
+8251,RFMID1,1113.0,1113.png,external_data/RFMID1/Training/1113.png,55.0,Female,0,0,0,0,0,0,0
+3850,ODIR,755.0,755_left.jpg,RAW DATA FULL/755_left.jpg,69.0,Female,1,0,0,0,0,0,0
+148,ODIR,175.0,175_right.jpg,RAW DATA FULL/175_right.jpg,56.0,Female,1,0,0,0,0,0,1
+4124,ODIR,1098.0,1098_left.jpg,RAW DATA FULL/1098_left.jpg,66.0,Male,0,0,0,1,0,0,0
+4889,ODIR,2527.0,2527_left.jpg,RAW DATA FULL/2527_left.jpg,70.0,Female,0,0,0,0,0,0,0
+8027,RFMID1,889.0,889.png,external_data/RFMID1/Training/889.png,55.0,Female,0,0,0,0,0,0,0
+3363,ODIR,196.0,196_left.jpg,RAW DATA FULL/196_left.jpg,65.0,Male,0,0,0,0,0,0,1
+4788,ODIR,2417.0,2417_left.jpg,RAW DATA FULL/2417_left.jpg,51.0,Male,0,0,0,0,0,0,0
+2866,ODIR,4302.0,4302_right.jpg,RAW DATA FULL/4302_right.jpg,44.0,Male,1,0,0,0,0,0,0
+3776,ODIR,675.0,675_left.jpg,RAW DATA FULL/675_left.jpg,56.0,Male,1,0,0,0,1,0,0
+1386,ODIR,2113.0,2113_right.jpg,RAW DATA FULL/2113_right.jpg,52.0,Female,0,0,1,0,0,0,0
+5941,ODIR,4174.0,4174_left.jpg,RAW DATA FULL/4174_left.jpg,66.0,Female,1,0,0,0,0,0,0
+3067,ODIR,4538.0,4538_right.jpg,RAW DATA FULL/4538_right.jpg,44.0,Male,1,0,0,0,0,0,0
+8191,RFMID1,1053.0,1053.png,external_data/RFMID1/Training/1053.png,55.0,Female,0,0,0,0,0,0,1
+5695,ODIR,3408.0,3408_left.jpg,RAW DATA FULL/3408_left.jpg,72.0,Male,0,0,0,0,0,0,0
+3629,ODIR,509.0,509_left.jpg,RAW DATA FULL/509_left.jpg,43.0,Female,0,0,0,0,0,0,1
+8558,RFMID1,1420.0,1420.png,external_data/RFMID1/Training/1420.png,55.0,Female,1,0,0,0,0,0,0
+4797,ODIR,2426.0,2426_left.jpg,RAW DATA FULL/2426_left.jpg,54.0,Female,0,0,0,0,0,0,0
+8000,RFMID1,862.0,862.png,external_data/RFMID1/Training/862.png,55.0,Female,0,0,0,0,0,0,1
+3028,ODIR,4488.0,4488_right.jpg,RAW DATA FULL/4488_right.jpg,45.0,Male,1,0,0,0,0,0,0
+2969,ODIR,4418.0,4418_right.jpg,RAW DATA FULL/4418_right.jpg,45.0,Male,1,0,0,0,0,0,0
+8405,RFMID1,1267.0,1267.png,external_data/RFMID1/Training/1267.png,55.0,Female,0,1,0,0,0,0,0
+1708,ODIR,2543.0,2543_right.jpg,RAW DATA FULL/2543_right.jpg,49.0,Male,0,0,0,0,0,0,0
+2953,ODIR,4400.0,4400_right.jpg,RAW DATA FULL/4400_right.jpg,59.0,Male,1,0,0,0,0,0,0
+454,ODIR,520.0,520_right.jpg,RAW DATA FULL/520_right.jpg,63.0,Female,0,0,0,0,0,0,1
+6964,HYGD,200.0,200_1.jpg,external_data/glaucoma_standard/Images/200_1.jpg,60.0,Female,0,0,0,0,0,0,0
+6136,ODIR,4383.0,4383_left.jpg,RAW DATA FULL/4383_left.jpg,56.0,Female,1,0,0,0,0,0,0
+5868,ODIR,4088.0,4088_left.jpg,RAW DATA FULL/4088_left.jpg,42.0,Female,1,0,0,0,1,0,0
+6411,HYGD,10.0,10_0.jpg,external_data/glaucoma_standard/Images/10_0.jpg,60.0,Female,0,1,0,0,0,0,0
+609,ODIR,701.0,701_right.jpg,RAW DATA FULL/701_right.jpg,60.0,Male,1,0,0,0,0,0,0
+4263,ODIR,1308.0,1308_left.jpg,RAW DATA FULL/1308_left.jpg,45.0,Female,0,0,0,0,0,0,1
+4826,ODIR,2458.0,2458_left.jpg,RAW DATA FULL/2458_left.jpg,52.0,Female,0,0,0,0,0,0,0
+645,ODIR,743.0,743_right.jpg,RAW DATA FULL/743_right.jpg,56.0,Female,1,0,0,0,0,0,1
+7454,RFMID1,316.0,316.png,external_data/RFMID1/Training/316.png,55.0,Female,0,0,0,0,0,0,1
+2074,ODIR,2941.0,2941_right.jpg,RAW DATA FULL/2941_right.jpg,55.0,Male,0,0,0,0,0,0,0
+4052,ODIR,981.0,981_left.jpg,RAW DATA FULL/981_left.jpg,80.0,Male,1,0,0,0,0,0,1
+8056,RFMID1,918.0,918.png,external_data/RFMID1/Training/918.png,55.0,Female,0,0,0,0,0,1,0
+7796,RFMID1,658.0,658.png,external_data/RFMID1/Training/658.png,55.0,Female,1,0,0,0,0,0,0
+1622,ODIR,2444.0,2444_right.jpg,RAW DATA FULL/2444_right.jpg,65.0,Female,0,0,0,0,0,0,0
+4683,ODIR,2226.0,2226_left.jpg,RAW DATA FULL/2226_left.jpg,52.0,Female,1,0,1,0,0,0,0
+5497,ODIR,3192.0,3192_left.jpg,RAW DATA FULL/3192_left.jpg,58.0,Male,0,0,0,0,0,0,0
+7141,RFMID1,3.0,3.png,external_data/RFMID1/Training/3.png,55.0,Female,1,0,0,0,0,0,0
+7320,RFMID1,182.0,182.png,external_data/RFMID1/Training/182.png,55.0,Female,0,0,0,0,0,0,1
+5796,ODIR,4005.0,4005_left.jpg,RAW DATA FULL/4005_left.jpg,62.0,Female,1,0,0,0,0,0,0
+7184,RFMID1,46.0,46.png,external_data/RFMID1/Training/46.png,55.0,Female,0,0,0,0,0,0,1
+2081,ODIR,2949.0,2949_right.jpg,RAW DATA FULL/2949_right.jpg,33.0,Male,0,0,0,0,0,0,0
+7077,HYGD,255.0,255_2.jpg,external_data/glaucoma_standard/Images/255_2.jpg,60.0,Female,0,0,0,0,0,0,0
+40,ODIR,49.0,49_right.jpg,RAW DATA FULL/49_right.jpg,47.0,Female,1,0,0,0,0,0,0
+5475,ODIR,3169.0,3169_left.jpg,RAW DATA FULL/3169_left.jpg,63.0,Male,0,0,0,0,0,0,0
+2089,ODIR,2957.0,2957_right.jpg,RAW DATA FULL/2957_right.jpg,62.0,Female,0,0,0,0,0,0,0
+3924,ODIR,837.0,837_left.jpg,RAW DATA FULL/837_left.jpg,45.0,Male,0,0,0,0,0,0,1
+2175,ODIR,3052.0,3052_right.jpg,RAW DATA FULL/3052_right.jpg,71.0,Female,0,0,0,0,0,0,0
+7313,RFMID1,175.0,175.png,external_data/RFMID1/Training/175.png,55.0,Female,0,0,0,0,0,0,0
+8372,RFMID1,1234.0,1234.png,external_data/RFMID1/Training/1234.png,55.0,Female,0,1,0,0,0,0,0
+74,ODIR,90.0,90_right.jpg,RAW DATA FULL/90_right.jpg,53.0,Female,1,0,0,0,0,0,1
+7926,RFMID1,788.0,788.png,external_data/RFMID1/Training/788.png,55.0,Female,0,0,0,0,0,0,1
+3798,ODIR,698.0,698_left.jpg,RAW DATA FULL/698_left.jpg,65.0,Male,1,0,0,0,0,1,0
+2657,ODIR,4067.0,4067_right.jpg,RAW DATA FULL/4067_right.jpg,54.0,Female,1,0,0,0,0,0,0
+3180,ODIR,4672.0,4672_right.jpg,RAW DATA FULL/4672_right.jpg,65.0,Male,1,0,0,0,0,0,0
+2076,ODIR,2943.0,2943_right.jpg,RAW DATA FULL/2943_right.jpg,45.0,Female,0,0,0,0,0,0,0
+441,ODIR,507.0,507_right.jpg,RAW DATA FULL/507_right.jpg,57.0,Female,1,0,0,0,0,0,1
+8350,RFMID1,1212.0,1212.png,external_data/RFMID1/Training/1212.png,55.0,Female,1,0,0,0,0,0,0
+2051,ODIR,2916.0,2916_right.jpg,RAW DATA FULL/2916_right.jpg,61.0,Male,0,0,0,0,0,0,0
+2541,ODIR,3446.0,3446_right.jpg,RAW DATA FULL/3446_right.jpg,56.0,Female,0,0,0,0,0,0,0
+7402,RFMID1,264.0,264.png,external_data/RFMID1/Training/264.png,55.0,Female,1,0,0,0,0,0,0
+1301,ODIR,1838.0,1838_right.jpg,RAW DATA FULL/1838_right.jpg,62.0,Male,1,0,0,0,0,0,0
+5877,ODIR,4098.0,4098_left.jpg,RAW DATA FULL/4098_left.jpg,57.0,Female,1,0,0,0,0,0,0
+7368,RFMID1,230.0,230.png,external_data/RFMID1/Training/230.png,55.0,Female,0,0,0,0,0,0,0
+3430,ODIR,274.0,274_left.jpg,RAW DATA FULL/274_left.jpg,53.0,Male,1,0,0,0,0,0,1
+1304,ODIR,1843.0,1843_right.jpg,RAW DATA FULL/1843_right.jpg,79.0,Female,0,0,0,1,0,0,0
+236,ODIR,273.0,273_right.jpg,RAW DATA FULL/273_right.jpg,57.0,Male,0,0,0,0,0,0,1
+8225,RFMID1,1087.0,1087.png,external_data/RFMID1/Training/1087.png,55.0,Female,0,1,0,0,0,0,0
+2599,ODIR,3997.0,3997_right.jpg,RAW DATA FULL/3997_right.jpg,58.0,Female,1,0,0,0,0,0,0
+4616,ODIR,2154.0,2154_left.jpg,RAW DATA FULL/2154_left.jpg,83.0,Male,0,0,1,0,0,0,0
+2573,ODIR,3966.0,3966_right.jpg,RAW DATA FULL/3966_right.jpg,55.0,Female,1,0,0,0,1,0,0
+3280,ODIR,101.0,101_left.jpg,RAW DATA FULL/101_left.jpg,45.0,Female,0,0,0,0,0,0,1
+3186,ODIR,4679.0,4679_right.jpg,RAW DATA FULL/4679_right.jpg,69.0,Male,1,0,0,0,0,0,0
+3953,ODIR,873.0,873_left.jpg,RAW DATA FULL/873_left.jpg,66.0,Male,0,0,0,0,0,0,1
+2768,ODIR,4197.0,4197_right.jpg,RAW DATA FULL/4197_right.jpg,41.0,Female,1,0,0,0,0,0,0
+4831,ODIR,2463.0,2463_left.jpg,RAW DATA FULL/2463_left.jpg,41.0,Female,0,0,0,0,0,0,0
+4223,ODIR,1258.0,1258_left.jpg,RAW DATA FULL/1258_left.jpg,72.0,Male,0,1,0,0,0,0,0
+7894,RFMID1,756.0,756.png,external_data/RFMID1/Training/756.png,55.0,Female,0,0,0,1,0,0,0
+2106,ODIR,2975.0,2975_right.jpg,RAW DATA FULL/2975_right.jpg,71.0,Female,0,0,0,0,0,0,0
+2679,ODIR,4093.0,4093_right.jpg,RAW DATA FULL/4093_right.jpg,55.0,Male,1,0,0,0,0,0,0
+7325,RFMID1,187.0,187.png,external_data/RFMID1/Training/187.png,55.0,Female,0,0,0,0,0,0,1
+2761,ODIR,4190.0,4190_right.jpg,RAW DATA FULL/4190_right.jpg,48.0,Male,1,0,0,0,0,0,0
+4688,ODIR,2233.0,2233_left.jpg,RAW DATA FULL/2233_left.jpg,77.0,Female,0,0,1,0,0,0,0
+5399,ODIR,3088.0,3088_left.jpg,RAW DATA FULL/3088_left.jpg,63.0,Female,0,0,0,0,0,0,0
+1387,ODIR,2114.0,2114_right.jpg,RAW DATA FULL/2114_right.jpg,80.0,Female,0,0,1,0,0,0,0
+2901,ODIR,4338.0,4338_right.jpg,RAW DATA FULL/4338_right.jpg,54.0,Male,1,0,0,0,0,0,0
+3577,ODIR,445.0,445_left.jpg,RAW DATA FULL/445_left.jpg,59.0,Male,1,0,0,0,0,0,0
+7964,RFMID1,826.0,826.png,external_data/RFMID1/Training/826.png,55.0,Female,0,0,0,0,0,0,1
+8745,RFMID1,1607.0,1607.png,external_data/RFMID1/Training/1607.png,55.0,Female,0,0,0,1,0,0,0
+7083,HYGD,258.0,258_1.jpg,external_data/glaucoma_standard/Images/258_1.jpg,60.0,Female,0,0,0,0,0,0,0
+8888,RFMID1,1750.0,1750.png,external_data/RFMID1/Training/1750.png,55.0,Female,0,1,0,0,0,0,0
+7393,RFMID1,255.0,255.png,external_data/RFMID1/Training/255.png,55.0,Female,0,0,0,0,0,0,0
+5000,ODIR,2651.0,2651_left.jpg,RAW DATA FULL/2651_left.jpg,55.0,Female,0,0,0,0,0,0,0
+5853,ODIR,4072.0,4072_left.jpg,RAW DATA FULL/4072_left.jpg,60.0,Female,1,0,0,0,1,0,0
+1279,ODIR,1674.0,1674_right.jpg,RAW DATA FULL/1674_right.jpg,74.0,Female,1,0,0,0,0,1,1
+8528,RFMID1,1390.0,1390.png,external_data/RFMID1/Training/1390.png,55.0,Female,0,0,0,0,0,0,1
+804,ODIR,931.0,931_right.jpg,RAW DATA FULL/931_right.jpg,65.0,Male,1,1,0,0,0,0,0
+6404,HYGD,7.0,7_0.jpg,external_data/glaucoma_standard/Images/7_0.jpg,60.0,Female,0,1,0,0,0,0,0
+1555,ODIR,2375.0,2375_right.jpg,RAW DATA FULL/2375_right.jpg,73.0,Male,0,0,0,0,0,0,0
+8587,RFMID1,1449.0,1449.png,external_data/RFMID1/Training/1449.png,55.0,Female,0,1,0,0,0,0,0
+3190,ODIR,4688.0,4688_right.jpg,RAW DATA FULL/4688_right.jpg,42.0,Male,1,0,0,0,0,0,0
+4566,ODIR,2100.0,2100_left.jpg,RAW DATA FULL/2100_left.jpg,31.0,Male,1,0,1,0,0,0,0
+4802,ODIR,2431.0,2431_left.jpg,RAW DATA FULL/2431_left.jpg,51.0,Female,0,0,0,0,0,0,0
+8940,RFMID1,1802.0,1802.png,external_data/RFMID1/Training/1802.png,55.0,Female,0,0,0,0,0,0,0
+7166,RFMID1,28.0,28.png,external_data/RFMID1/Training/28.png,55.0,Female,0,0,0,0,0,0,0
+4841,ODIR,2475.0,2475_left.jpg,RAW DATA FULL/2475_left.jpg,53.0,Male,0,0,0,0,0,0,0
+3594,ODIR,464.0,464_left.jpg,RAW DATA FULL/464_left.jpg,50.0,Female,0,0,0,1,0,0,0
+6035,ODIR,4273.0,4273_left.jpg,RAW DATA FULL/4273_left.jpg,32.0,Female,1,0,0,0,0,0,0
+6852,HYGD,155.0,155_3.jpg,external_data/glaucoma_standard/Images/155_3.jpg,60.0,Female,0,1,0,0,0,0,0
+6958,HYGD,196.0,196_0.jpg,external_data/glaucoma_standard/Images/196_0.jpg,60.0,Female,0,0,0,0,0,0,0
+1920,ODIR,2778.0,2778_right.jpg,RAW DATA FULL/2778_right.jpg,56.0,Female,0,0,0,0,0,0,0
+513,ODIR,587.0,587_right.jpg,RAW DATA FULL/587_right.jpg,53.0,Male,0,0,0,0,0,0,1
+4177,ODIR,1195.0,1195_left.jpg,RAW DATA FULL/1195_left.jpg,62.0,Female,0,0,0,0,0,0,1
+6843,HYGD,154.0,154_0.jpg,external_data/glaucoma_standard/Images/154_0.jpg,60.0,Female,0,1,0,0,0,0,0
+1308,ODIR,1847.0,1847_right.jpg,RAW DATA FULL/1847_right.jpg,61.0,Female,0,0,0,1,0,0,0
+5667,ODIR,3377.0,3377_left.jpg,RAW DATA FULL/3377_left.jpg,72.0,Male,0,0,0,0,0,0,0
+914,ODIR,1090.0,1090_right.jpg,RAW DATA FULL/1090_right.jpg,55.0,Male,0,0,0,0,0,0,1
+3452,ODIR,300.0,300_left.jpg,RAW DATA FULL/300_left.jpg,55.0,Male,1,0,0,0,1,0,0
+3695,ODIR,583.0,583_left.jpg,RAW DATA FULL/583_left.jpg,54.0,Male,0,1,0,0,0,0,0
+4242,ODIR,1281.0,1281_left.jpg,RAW DATA FULL/1281_left.jpg,61.0,Male,1,1,0,0,0,0,0
+3156,ODIR,4634.0,4634_right.jpg,RAW DATA FULL/4634_right.jpg,64.0,Female,1,0,0,0,0,0,0
+2198,ODIR,3078.0,3078_right.jpg,RAW DATA FULL/3078_right.jpg,53.0,Male,0,0,0,0,0,0,0
+7840,RFMID1,702.0,702.png,external_data/RFMID1/Training/702.png,55.0,Female,0,1,0,0,0,0,0
+774,ODIR,897.0,897_right.jpg,RAW DATA FULL/897_right.jpg,65.0,Male,0,0,0,0,0,0,1
+4425,ODIR,1583.0,1583_left.jpg,RAW DATA FULL/1583_left.jpg,1.0,Female,0,0,0,0,0,1,0
+6150,ODIR,4398.0,4398_left.jpg,RAW DATA FULL/4398_left.jpg,59.0,Male,1,0,0,0,0,0,0
+6097,ODIR,4336.0,4336_left.jpg,RAW DATA FULL/4336_left.jpg,54.0,Male,1,0,0,0,0,0,0
+943,ODIR,1130.0,1130_right.jpg,RAW DATA FULL/1130_right.jpg,60.0,Female,0,0,0,0,0,0,1
+822,ODIR,953.0,953_right.jpg,RAW DATA FULL/953_right.jpg,46.0,Male,1,0,0,0,0,0,1
+6878,HYGD,165.0,165_2.jpg,external_data/glaucoma_standard/Images/165_2.jpg,60.0,Female,0,1,0,0,0,0,0
+5005,ODIR,2657.0,2657_left.jpg,RAW DATA FULL/2657_left.jpg,56.0,Female,0,0,0,0,0,0,0
+6612,HYGD,71.0,71_1.jpg,external_data/glaucoma_standard/Images/71_1.jpg,60.0,Female,0,1,0,0,0,0,0
+4277,ODIR,1353.0,1353_left.jpg,RAW DATA FULL/1353_left.jpg,63.0,Male,0,1,0,0,0,0,0
+164,ODIR,192.0,192_right.jpg,RAW DATA FULL/192_right.jpg,66.0,Female,0,0,0,0,0,0,1
+5619,ODIR,3327.0,3327_left.jpg,RAW DATA FULL/3327_left.jpg,68.0,Male,0,0,0,0,0,0,0
+4547,ODIR,2030.0,2030_left.jpg,RAW DATA FULL/2030_left.jpg,66.0,Male,1,1,0,0,0,0,1
+3983,ODIR,904.0,904_left.jpg,RAW DATA FULL/904_left.jpg,66.0,Female,1,0,0,0,0,0,1
+2538,ODIR,3443.0,3443_right.jpg,RAW DATA FULL/3443_right.jpg,65.0,Male,0,0,0,0,0,0,0
+6957,HYGD,195.0,195_2.jpg,external_data/glaucoma_standard/Images/195_2.jpg,60.0,Female,0,0,0,0,0,0,0
+3191,ODIR,4689.0,4689_right.jpg,RAW DATA FULL/4689_right.jpg,54.0,Male,1,0,0,0,0,0,0
+1311,ODIR,1854.0,1854_right.jpg,RAW DATA FULL/1854_right.jpg,83.0,Male,0,0,0,1,0,0,0
+8451,RFMID1,1313.0,1313.png,external_data/RFMID1/Training/1313.png,55.0,Female,1,0,0,0,0,0,0
+5207,ODIR,2877.0,2877_left.jpg,RAW DATA FULL/2877_left.jpg,43.0,Female,0,0,0,0,0,0,0
+8614,RFMID1,1476.0,1476.png,external_data/RFMID1/Training/1476.png,55.0,Female,0,1,0,0,0,0,0
+8102,RFMID1,964.0,964.png,external_data/RFMID1/Training/964.png,55.0,Female,0,0,0,0,0,0,1
+7585,RFMID1,447.0,447.png,external_data/RFMID1/Training/447.png,55.0,Female,0,1,0,0,0,0,0
+5383,ODIR,3072.0,3072_left.jpg,RAW DATA FULL/3072_left.jpg,59.0,Female,0,0,0,0,0,0,0
+3054,ODIR,4523.0,4523_right.jpg,RAW DATA FULL/4523_right.jpg,59.0,Male,1,0,0,0,0,0,0
+3675,ODIR,560.0,560_left.jpg,RAW DATA FULL/560_left.jpg,74.0,Male,0,0,1,0,0,0,0
+7776,RFMID1,638.0,638.png,external_data/RFMID1/Training/638.png,55.0,Female,0,1,0,0,0,0,0
+7218,RFMID1,80.0,80.png,external_data/RFMID1/Training/80.png,55.0,Female,1,0,0,0,0,0,0
+6722,HYGD,108.0,108_4.jpg,external_data/glaucoma_standard/Images/108_4.jpg,60.0,Female,0,1,0,0,0,0,0
+3300,ODIR,125.0,125_left.jpg,RAW DATA FULL/125_left.jpg,71.0,Male,0,0,0,0,0,0,1
+3310,ODIR,136.0,136_left.jpg,RAW DATA FULL/136_left.jpg,75.0,Female,0,0,0,1,0,0,1
+6904,HYGD,175.0,175_0.jpg,external_data/glaucoma_standard/Images/175_0.jpg,60.0,Female,0,1,0,0,0,0,0
+7221,RFMID1,83.0,83.png,external_data/RFMID1/Training/83.png,55.0,Female,0,0,0,0,0,0,0
+327,ODIR,376.0,376_right.jpg,RAW DATA FULL/376_right.jpg,58.0,Female,1,0,0,0,0,0,1
+5886,ODIR,4109.0,4109_left.jpg,RAW DATA FULL/4109_left.jpg,56.0,Male,1,0,0,0,0,0,0
+2490,ODIR,3391.0,3391_right.jpg,RAW DATA FULL/3391_right.jpg,46.0,Male,0,0,0,0,0,0,0
+8774,RFMID1,1636.0,1636.png,external_data/RFMID1/Training/1636.png,55.0,Female,1,0,0,0,0,0,0
+6103,ODIR,4342.0,4342_left.jpg,RAW DATA FULL/4342_left.jpg,59.0,Male,1,0,0,0,0,0,0
+5954,ODIR,4188.0,4188_left.jpg,RAW DATA FULL/4188_left.jpg,46.0,Male,1,0,0,0,0,0,0
+8747,RFMID1,1609.0,1609.png,external_data/RFMID1/Training/1609.png,55.0,Female,1,0,0,0,0,0,0
+4408,ODIR,1558.0,1558_left.jpg,RAW DATA FULL/1558_left.jpg,73.0,Female,0,0,0,0,0,1,0
+832,ODIR,964.0,964_right.jpg,RAW DATA FULL/964_right.jpg,71.0,Male,1,0,0,0,0,0,1
+3079,ODIR,4550.0,4550_right.jpg,RAW DATA FULL/4550_right.jpg,51.0,Male,1,0,0,0,0,0,0
+7516,RFMID1,378.0,378.png,external_data/RFMID1/Training/378.png,55.0,Female,0,0,0,0,0,0,0
+3462,ODIR,311.0,311_left.jpg,RAW DATA FULL/311_left.jpg,65.0,Male,1,0,0,1,0,0,0
+5297,ODIR,2975.0,2975_left.jpg,RAW DATA FULL/2975_left.jpg,71.0,Female,0,0,0,0,0,0,0
+1823,ODIR,2668.0,2668_right.jpg,RAW DATA FULL/2668_right.jpg,45.0,Male,0,0,0,0,0,0,0
+7643,RFMID1,505.0,505.png,external_data/RFMID1/Training/505.png,55.0,Female,0,0,0,1,0,0,0
+54,ODIR,66.0,66_right.jpg,RAW DATA FULL/66_right.jpg,62.0,Male,0,0,0,0,0,0,1
+6230,ODIR,4494.0,4494_left.jpg,RAW DATA FULL/4494_left.jpg,60.0,Male,1,0,0,0,0,0,0
+4064,ODIR,999.0,999_left.jpg,RAW DATA FULL/999_left.jpg,56.0,Female,0,0,1,0,0,0,0
+3451,ODIR,299.0,299_left.jpg,RAW DATA FULL/299_left.jpg,65.0,Female,1,0,0,0,0,0,1
+6305,ODIR,4583.0,4583_left.jpg,RAW DATA FULL/4583_left.jpg,28.0,Male,1,0,0,0,0,0,0
+1901,ODIR,2758.0,2758_right.jpg,RAW DATA FULL/2758_right.jpg,57.0,Male,0,0,0,0,0,0,0
+1481,ODIR,2215.0,2215_right.jpg,RAW DATA FULL/2215_right.jpg,69.0,Male,0,0,1,0,0,0,0
+4873,ODIR,2511.0,2511_left.jpg,RAW DATA FULL/2511_left.jpg,53.0,Male,0,0,0,0,0,0,0
+4895,ODIR,2533.0,2533_left.jpg,RAW DATA FULL/2533_left.jpg,56.0,Female,0,0,0,0,0,0,0
+7810,RFMID1,672.0,672.png,external_data/RFMID1/Training/672.png,55.0,Female,0,0,0,0,0,0,1
+4150,ODIR,1143.0,1143_left.jpg,RAW DATA FULL/1143_left.jpg,45.0,Male,0,0,0,0,0,0,1
+7068,HYGD,251.0,251_0.jpg,external_data/glaucoma_standard/Images/251_0.jpg,60.0,Female,0,0,0,0,0,0,0
+3335,ODIR,162.0,162_left.jpg,RAW DATA FULL/162_left.jpg,76.0,Female,0,0,0,1,0,0,0
+6016,ODIR,4252.0,4252_left.jpg,RAW DATA FULL/4252_left.jpg,58.0,Male,1,0,0,0,0,0,0
+7811,RFMID1,673.0,673.png,external_data/RFMID1/Training/673.png,55.0,Female,0,1,0,0,0,0,0
+4926,ODIR,2566.0,2566_left.jpg,RAW DATA FULL/2566_left.jpg,62.0,Female,0,0,0,0,0,0,0
+946,ODIR,1136.0,1136_right.jpg,RAW DATA FULL/1136_right.jpg,67.0,Female,1,0,0,0,0,0,0
+5797,ODIR,4008.0,4008_left.jpg,RAW DATA FULL/4008_left.jpg,52.0,Male,1,0,0,0,0,0,0
+3293,ODIR,118.0,118_left.jpg,RAW DATA FULL/118_left.jpg,48.0,Male,1,0,0,0,0,0,1
+2161,ODIR,3037.0,3037_right.jpg,RAW DATA FULL/3037_right.jpg,80.0,Female,0,0,0,0,0,0,0
+8905,RFMID1,1767.0,1767.png,external_data/RFMID1/Training/1767.png,55.0,Female,0,0,0,0,0,0,0
+5083,ODIR,2744.0,2744_left.jpg,RAW DATA FULL/2744_left.jpg,40.0,Male,0,0,0,0,0,0,0
+6645,HYGD,83.0,83_1.jpg,external_data/glaucoma_standard/Images/83_1.jpg,60.0,Female,0,1,0,0,0,0,0
+8288,RFMID1,1150.0,1150.png,external_data/RFMID1/Training/1150.png,55.0,Female,1,0,0,0,0,0,0
+3057,ODIR,4527.0,4527_right.jpg,RAW DATA FULL/4527_right.jpg,49.0,Male,1,0,0,0,0,0,0
+7342,RFMID1,204.0,204.png,external_data/RFMID1/Training/204.png,55.0,Female,0,0,0,1,0,0,0
+5490,ODIR,3185.0,3185_left.jpg,RAW DATA FULL/3185_left.jpg,63.0,Male,0,0,0,0,0,0,0
+6733,HYGD,112.0,112_1.jpg,external_data/glaucoma_standard/Images/112_1.jpg,60.0,Female,0,1,0,0,0,0,0
+768,ODIR,890.0,890_right.jpg,RAW DATA FULL/890_right.jpg,48.0,Female,1,0,0,0,0,0,1
+2065,ODIR,2932.0,2932_right.jpg,RAW DATA FULL/2932_right.jpg,56.0,Male,0,0,0,0,0,0,0
+8601,RFMID1,1463.0,1463.png,external_data/RFMID1/Training/1463.png,55.0,Female,0,1,0,0,0,0,0
+3495,ODIR,348.0,348_left.jpg,RAW DATA FULL/348_left.jpg,66.0,Female,1,0,0,0,0,0,0
+7311,RFMID1,173.0,173.png,external_data/RFMID1/Training/173.png,55.0,Female,0,0,0,0,0,0,1
+285,ODIR,327.0,327_right.jpg,RAW DATA FULL/327_right.jpg,53.0,Male,1,0,0,0,0,0,0
+1500,ODIR,2237.0,2237_right.jpg,RAW DATA FULL/2237_right.jpg,76.0,Male,0,0,1,0,0,0,0
+4524,ODIR,1919.0,1919_left.jpg,RAW DATA FULL/1919_left.jpg,50.0,Male,0,0,0,1,0,0,1
+8517,RFMID1,1379.0,1379.png,external_data/RFMID1/Training/1379.png,55.0,Female,1,0,0,0,0,0,0
+2332,ODIR,3219.0,3219_right.jpg,RAW DATA FULL/3219_right.jpg,69.0,Male,0,0,0,0,0,0,0
+2717,ODIR,4136.0,4136_right.jpg,RAW DATA FULL/4136_right.jpg,61.0,Male,1,0,0,0,0,0,0
+2079,ODIR,2946.0,2946_right.jpg,RAW DATA FULL/2946_right.jpg,64.0,Female,0,0,0,0,0,0,0
+3389,ODIR,229.0,229_left.jpg,RAW DATA FULL/229_left.jpg,63.0,Female,1,0,0,0,0,0,0
+722,ODIR,834.0,834_right.jpg,RAW DATA FULL/834_right.jpg,47.0,Female,0,0,0,0,0,0,1
+951,ODIR,1145.0,1145_right.jpg,RAW DATA FULL/1145_right.jpg,40.0,Female,0,0,0,0,0,0,1
+2482,ODIR,3383.0,3383_right.jpg,RAW DATA FULL/3383_right.jpg,68.0,Male,0,0,0,0,0,0,0
+2262,ODIR,3145.0,3145_right.jpg,RAW DATA FULL/3145_right.jpg,57.0,Female,0,0,0,0,0,0,0
+989,ODIR,1212.0,1212_right.jpg,RAW DATA FULL/1212_right.jpg,73.0,Female,0,1,0,0,0,0,0
+3212,ODIR,21.0,21_left.jpg,RAW DATA FULL/21_left.jpg,76.0,Female,0,0,0,0,0,0,1
+1759,ODIR,2598.0,2598_right.jpg,RAW DATA FULL/2598_right.jpg,67.0,Male,0,0,0,0,0,0,0
+8859,RFMID1,1721.0,1721.png,external_data/RFMID1/Training/1721.png,55.0,Female,0,1,0,0,0,0,0
+4422,ODIR,1578.0,1578_left.jpg,RAW DATA FULL/1578_left.jpg,34.0,Female,0,0,0,0,0,1,0
+6704,HYGD,103.0,103_1.jpg,external_data/glaucoma_standard/Images/103_1.jpg,60.0,Female,0,1,0,0,0,0,0
+5479,ODIR,3173.0,3173_left.jpg,RAW DATA FULL/3173_left.jpg,46.0,Male,0,0,0,0,0,0,0
+1724,ODIR,2561.0,2561_right.jpg,RAW DATA FULL/2561_right.jpg,32.0,Male,0,0,0,0,0,0,0
+5182,ODIR,2848.0,2848_left.jpg,RAW DATA FULL/2848_left.jpg,61.0,Female,0,0,0,0,0,0,0
+8537,RFMID1,1399.0,1399.png,external_data/RFMID1/Training/1399.png,55.0,Female,0,1,0,0,0,0,0
+341,ODIR,391.0,391_right.jpg,RAW DATA FULL/391_right.jpg,56.0,Male,1,0,0,0,0,0,1
+3701,ODIR,590.0,590_left.jpg,RAW DATA FULL/590_left.jpg,57.0,Male,0,0,0,0,0,0,1
+4243,ODIR,1282.0,1282_left.jpg,RAW DATA FULL/1282_left.jpg,68.0,Female,0,1,0,0,0,0,0
+688,ODIR,790.0,790_right.jpg,RAW DATA FULL/790_right.jpg,61.0,Male,1,0,0,0,1,0,0
+3432,ODIR,277.0,277_left.jpg,RAW DATA FULL/277_left.jpg,75.0,Male,0,0,0,0,0,0,1
+5203,ODIR,2872.0,2872_left.jpg,RAW DATA FULL/2872_left.jpg,72.0,Male,0,0,0,0,0,0,0
+4944,ODIR,2588.0,2588_left.jpg,RAW DATA FULL/2588_left.jpg,75.0,Male,0,0,0,0,0,0,0
+966,ODIR,1168.0,1168_right.jpg,RAW DATA FULL/1168_right.jpg,67.0,Female,0,0,0,1,0,0,0
+3120,ODIR,4594.0,4594_right.jpg,RAW DATA FULL/4594_right.jpg,66.0,Female,1,0,0,0,0,0,0
+8585,RFMID1,1447.0,1447.png,external_data/RFMID1/Training/1447.png,55.0,Female,0,0,0,0,0,1,0
+8049,RFMID1,911.0,911.png,external_data/RFMID1/Training/911.png,55.0,Female,1,1,0,0,0,0,0
+2203,ODIR,3083.0,3083_right.jpg,RAW DATA FULL/3083_right.jpg,66.0,Male,0,0,0,0,0,0,0
+2713,ODIR,4130.0,4130_right.jpg,RAW DATA FULL/4130_right.jpg,58.0,Female,1,0,0,0,0,0,0
+4757,ODIR,2385.0,2385_left.jpg,RAW DATA FULL/2385_left.jpg,74.0,Female,0,0,0,0,0,0,0
+5098,ODIR,2763.0,2763_left.jpg,RAW DATA FULL/2763_left.jpg,47.0,Male,0,0,0,0,0,0,0
+8470,RFMID1,1332.0,1332.png,external_data/RFMID1/Training/1332.png,55.0,Female,1,0,0,0,0,0,0
+8641,RFMID1,1503.0,1503.png,external_data/RFMID1/Training/1503.png,55.0,Female,1,1,0,0,0,0,0
+6320,ODIR,4599.0,4599_left.jpg,RAW DATA FULL/4599_left.jpg,39.0,Female,1,0,0,0,0,0,0
+5280,ODIR,2957.0,2957_left.jpg,RAW DATA FULL/2957_left.jpg,62.0,Female,0,0,0,0,0,0,0
+5975,ODIR,4210.0,4210_left.jpg,RAW DATA FULL/4210_left.jpg,62.0,Female,1,0,0,0,0,0,0
+3572,ODIR,437.0,437_left.jpg,RAW DATA FULL/437_left.jpg,53.0,Female,1,0,0,0,0,0,1
+4805,ODIR,2434.0,2434_left.jpg,RAW DATA FULL/2434_left.jpg,54.0,Male,0,0,0,0,0,0,0
+5299,ODIR,2977.0,2977_left.jpg,RAW DATA FULL/2977_left.jpg,64.0,Male,0,0,0,0,0,0,0
+1990,ODIR,2850.0,2850_right.jpg,RAW DATA FULL/2850_right.jpg,44.0,Male,0,0,0,0,0,0,0
+4120,ODIR,1094.0,1094_left.jpg,RAW DATA FULL/1094_left.jpg,49.0,Male,1,0,0,0,0,0,0
+4759,ODIR,2387.0,2387_left.jpg,RAW DATA FULL/2387_left.jpg,64.0,Female,0,0,0,0,0,0,0
+8123,RFMID1,985.0,985.png,external_data/RFMID1/Training/985.png,55.0,Female,0,0,0,0,0,0,1
+5298,ODIR,2976.0,2976_left.jpg,RAW DATA FULL/2976_left.jpg,54.0,Female,0,0,0,0,0,0,0
+9019,RFMID1,1881.0,1881.png,external_data/RFMID1/Training/1881.png,55.0,Female,0,0,0,0,0,0,0
+4971,ODIR,2619.0,2619_left.jpg,RAW DATA FULL/2619_left.jpg,73.0,Female,0,0,0,0,0,0,0
+954,ODIR,1148.0,1148_right.jpg,RAW DATA FULL/1148_right.jpg,57.0,Male,0,0,0,0,0,0,1
+5034,ODIR,2689.0,2689_left.jpg,RAW DATA FULL/2689_left.jpg,41.0,Female,0,0,0,0,0,0,0
+6783,HYGD,138.0,138_1.jpg,external_data/glaucoma_standard/Images/138_1.jpg,60.0,Female,0,1,0,0,0,0,0
+3600,ODIR,471.0,471_left.jpg,RAW DATA FULL/471_left.jpg,43.0,Female,0,0,0,0,0,0,1
+6490,HYGD,36.0,36_7.jpg,external_data/glaucoma_standard/Images/36_7.jpg,60.0,Female,0,1,0,0,0,0,0
+8635,RFMID1,1497.0,1497.png,external_data/RFMID1/Training/1497.png,55.0,Female,1,0,0,0,0,0,0
+474,ODIR,544.0,544_right.jpg,RAW DATA FULL/544_right.jpg,57.0,Male,1,0,0,0,0,0,1
+8253,RFMID1,1115.0,1115.png,external_data/RFMID1/Training/1115.png,55.0,Female,0,0,0,0,0,0,1
+8070,RFMID1,932.0,932.png,external_data/RFMID1/Training/932.png,55.0,Female,0,0,0,0,0,0,1
+385,ODIR,441.0,441_right.jpg,RAW DATA FULL/441_right.jpg,48.0,Male,1,0,0,0,0,0,1
+7973,RFMID1,835.0,835.png,external_data/RFMID1/Training/835.png,55.0,Female,0,0,0,0,0,0,1
+2122,ODIR,2991.0,2991_right.jpg,RAW DATA FULL/2991_right.jpg,30.0,Female,0,0,0,0,0,0,0
+1625,ODIR,2447.0,2447_right.jpg,RAW DATA FULL/2447_right.jpg,34.0,Female,0,0,0,0,0,0,0
+536,ODIR,614.0,614_right.jpg,RAW DATA FULL/614_right.jpg,44.0,Male,0,0,0,1,0,0,0
+6387,ODIR,4686.0,4686_left.jpg,RAW DATA FULL/4686_left.jpg,63.0,Male,1,0,0,0,0,0,0
+8727,RFMID1,1589.0,1589.png,external_data/RFMID1/Training/1589.png,55.0,Female,0,1,0,0,0,0,0
+7970,RFMID1,832.0,832.png,external_data/RFMID1/Training/832.png,55.0,Female,0,1,0,0,0,0,0
+5032,ODIR,2687.0,2687_left.jpg,RAW DATA FULL/2687_left.jpg,52.0,Male,0,0,0,0,0,0,0
+7833,RFMID1,695.0,695.png,external_data/RFMID1/Training/695.png,55.0,Female,1,0,0,0,0,0,0
+4212,ODIR,1240.0,1240_left.jpg,RAW DATA FULL/1240_left.jpg,69.0,Female,0,0,0,0,0,0,1
+6456,HYGD,27.0,27_1.jpg,external_data/glaucoma_standard/Images/27_1.jpg,60.0,Female,0,1,0,0,0,0,0
+3507,ODIR,360.0,360_left.jpg,RAW DATA FULL/360_left.jpg,59.0,Female,1,0,0,0,0,0,1
+201,ODIR,234.0,234_right.jpg,RAW DATA FULL/234_right.jpg,54.0,Male,1,0,0,0,0,0,0
+7304,RFMID1,166.0,166.png,external_data/RFMID1/Training/166.png,55.0,Female,1,0,0,0,0,0,0
+1332,ODIR,1889.0,1889_right.jpg,RAW DATA FULL/1889_right.jpg,45.0,Male,0,0,0,1,0,0,0
+7112,HYGD,275.0,275_2.jpg,external_data/glaucoma_standard/Images/275_2.jpg,60.0,Female,0,0,0,0,0,0,0
+3502,ODIR,355.0,355_left.jpg,RAW DATA FULL/355_left.jpg,55.0,Male,1,0,0,0,1,0,0
+2708,ODIR,4125.0,4125_right.jpg,RAW DATA FULL/4125_right.jpg,54.0,Male,1,0,0,0,0,0,0
+6030,ODIR,4268.0,4268_left.jpg,RAW DATA FULL/4268_left.jpg,50.0,Male,1,0,0,0,0,0,0
+5031,ODIR,2685.0,2685_left.jpg,RAW DATA FULL/2685_left.jpg,57.0,Male,0,0,0,0,0,0,0
+6514,HYGD,44.0,44_2.jpg,external_data/glaucoma_standard/Images/44_2.jpg,60.0,Female,0,1,0,0,0,0,0
+4662,ODIR,2203.0,2203_left.jpg,RAW DATA FULL/2203_left.jpg,59.0,Female,0,0,1,0,0,0,0
+4021,ODIR,948.0,948_left.jpg,RAW DATA FULL/948_left.jpg,65.0,Male,1,0,0,0,0,0,1
+1854,ODIR,2703.0,2703_right.jpg,RAW DATA FULL/2703_right.jpg,70.0,Male,0,0,0,0,0,0,0
+8536,RFMID1,1398.0,1398.png,external_data/RFMID1/Training/1398.png,55.0,Female,1,0,0,0,0,0,0
+2872,ODIR,4308.0,4308_right.jpg,RAW DATA FULL/4308_right.jpg,48.0,Male,1,0,0,0,0,0,0
+3030,ODIR,4491.0,4491_right.jpg,RAW DATA FULL/4491_right.jpg,43.0,Female,1,0,0,0,0,0,0
+1205,ODIR,1550.0,1550_right.jpg,RAW DATA FULL/1550_right.jpg,76.0,Male,0,0,0,0,0,1,0
+6563,HYGD,59.0,59_0.jpg,external_data/glaucoma_standard/Images/59_0.jpg,60.0,Female,0,1,0,0,0,0,0
+1645,ODIR,2473.0,2473_right.jpg,RAW DATA FULL/2473_right.jpg,31.0,Male,0,0,0,0,0,0,0
+3417,ODIR,260.0,260_left.jpg,RAW DATA FULL/260_left.jpg,63.0,Female,0,0,0,1,0,0,0
+3476,ODIR,326.0,326_left.jpg,RAW DATA FULL/326_left.jpg,55.0,Male,0,0,0,0,0,0,1
+8648,RFMID1,1510.0,1510.png,external_data/RFMID1/Training/1510.png,55.0,Female,0,0,0,0,0,0,0
+2861,ODIR,4297.0,4297_right.jpg,RAW DATA FULL/4297_right.jpg,67.0,Female,1,0,0,0,0,0,0
+1792,ODIR,2634.0,2634_right.jpg,RAW DATA FULL/2634_right.jpg,87.0,Female,0,0,0,0,0,0,0
+5526,ODIR,3222.0,3222_left.jpg,RAW DATA FULL/3222_left.jpg,60.0,Male,0,0,0,0,0,0,0
+6922,HYGD,181.0,181_0.jpg,external_data/glaucoma_standard/Images/181_0.jpg,60.0,Female,0,1,0,0,0,0,0
+3797,ODIR,697.0,697_left.jpg,RAW DATA FULL/697_left.jpg,56.0,Female,1,0,0,0,0,0,1
+3368,ODIR,204.0,204_left.jpg,RAW DATA FULL/204_left.jpg,54.0,Male,0,0,0,0,0,0,1
+3367,ODIR,202.0,202_left.jpg,RAW DATA FULL/202_left.jpg,63.0,Female,1,0,0,0,0,0,1
+3533,ODIR,391.0,391_left.jpg,RAW DATA FULL/391_left.jpg,56.0,Male,1,0,0,0,0,0,1
+7196,RFMID1,58.0,58.png,external_data/RFMID1/Training/58.png,55.0,Female,0,0,0,0,0,0,1
+8729,RFMID1,1591.0,1591.png,external_data/RFMID1/Training/1591.png,55.0,Female,0,0,0,0,0,0,1
+5109,ODIR,2774.0,2774_left.jpg,RAW DATA FULL/2774_left.jpg,71.0,Female,0,0,0,0,0,0,0
+6024,ODIR,4261.0,4261_left.jpg,RAW DATA FULL/4261_left.jpg,35.0,Male,1,0,0,0,0,0,0
+3449,ODIR,297.0,297_left.jpg,RAW DATA FULL/297_left.jpg,71.0,Male,0,0,0,0,0,0,1
+7966,RFMID1,828.0,828.png,external_data/RFMID1/Training/828.png,55.0,Female,1,0,0,0,0,0,0
+603,ODIR,695.0,695_right.jpg,RAW DATA FULL/695_right.jpg,52.0,Female,0,0,0,0,0,0,0
+3056,ODIR,4525.0,4525_right.jpg,RAW DATA FULL/4525_right.jpg,48.0,Male,1,0,0,0,0,0,0
+8412,RFMID1,1274.0,1274.png,external_data/RFMID1/Training/1274.png,55.0,Female,0,1,0,0,0,0,0
+126,ODIR,149.0,149_right.jpg,RAW DATA FULL/149_right.jpg,57.0,Female,0,0,0,0,0,0,1
+5959,ODIR,4194.0,4194_left.jpg,RAW DATA FULL/4194_left.jpg,50.0,Female,1,0,0,0,0,0,0
+3876,ODIR,782.0,782_left.jpg,RAW DATA FULL/782_left.jpg,44.0,Male,0,0,0,0,0,0,1
+2935,ODIR,4379.0,4379_right.jpg,RAW DATA FULL/4379_right.jpg,59.0,Female,1,0,0,0,0,0,0
+7300,RFMID1,162.0,162.png,external_data/RFMID1/Training/162.png,55.0,Female,0,0,0,1,0,1,0
+5443,ODIR,3134.0,3134_left.jpg,RAW DATA FULL/3134_left.jpg,33.0,Male,0,0,0,0,0,0,0

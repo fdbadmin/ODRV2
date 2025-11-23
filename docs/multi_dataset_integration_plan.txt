@@ -1,0 +1,161 @@
+"""
+MULTI-DATASET INTEGRATION PLAN
+═══════════════════════════════════════════════════════════════════════════════
+
+AVAILABLE DATASETS SUMMARY
+───────────────────────────────────────────────────────────────────────────────
+
+1. ODIR (Ocular Disease Intelligent Recognition)
+   - Location: RAW DATA FULL/
+   - Total images: 6,392
+   - Glaucoma: 397 (6.2%)
+   - Multi-label: 7 diseases (D, G, C, A, H, M, O)
+   - Image type: Full fundus
+   - Status: Currently used for training
+   - Train/Val: 5,112 | Test: 1,280
+
+2. HYGD (Hillel Yaffe Glaucoma Dataset)
+   - Location: external_data/glaucoma_standard/
+   - Total images: 747
+   - Glaucoma (GON+): 548 (73.4%)
+   - Normal (GON-): 199
+   - Binary: Glaucoma vs Normal only
+   - Image type: Full fundus (Deep Fundus Images)
+   - Quality scores: Available (1-10 scale)
+   - Status: External validation only
+
+3. RFMID1 (Retinal Fundus Multi-disease Image Dataset v1)
+   - Location: external_data/RFMID1/Training/
+   - Total images: 1,920
+   - Normal (Disease_Risk=0): 401 (20.9%)
+   - Disease (Disease_Risk=1): 1,519 (79.1%)
+   - Multi-label: 46 disease categories
+   - Image type: Full fundus (.png format)
+   - Status: Not yet integrated
+
+4. RFMID2 (Retinal Fundus Multi-disease Image Dataset v2)
+   - Location: external_data/RFMID2/Training_set/
+   - Total images: 509 (457 images found in folder)
+   - Normal (WNL=1): 157 (30.8%)
+   - Disease (WNL=0): 352 (69.2%)
+   - Multi-label: 52 disease categories
+   - Image type: Full fundus (.jpg format)
+   - Status: Not yet integrated
+   - Note: Also has validation and test sets (zipped)
+
+5. ACRIMA
+   - Location: external_data/Database/Images/
+   - Total images: 705
+   - Glaucoma (_g_): 396 (56.2%)
+   - Normal: 309
+   - Binary: Glaucoma vs Normal
+   - Image type: OPTIC DISC CROPS (not full fundus!)
+   - Status: External validation only
+   - Note: Domain shift issue - not suitable for integration with full fundus data
+
+═══════════════════════════════════════════════════════════════════════════════
+INTEGRATION STRATEGY
+───────────────────────────────────────────────────────────────────────────────
+
+PHASE 1: GLAUCOMA-FOCUSED INTEGRATION (RECOMMENDED START)
+──────────────────────────────────────────────────────────
+
+Goal: Massively improve glaucoma detection by combining glaucoma labels
+
+Datasets to combine:
+✓ ODIR: 397 glaucoma images
+✓ HYGD: 548 glaucoma images
+✓ RFMID1: Extract glaucoma cases (need to check disease codes)
+✓ RFMID2: Extract glaucoma cases (need to check disease codes)
+✗ ACRIMA: Skip (optic disc crops, different domain)
+
+Expected glaucoma count after integration:
+- Conservative estimate: 397 + 548 = 945+ glaucoma images
+- With RFMID: Potentially 1,200-1,500+ glaucoma images
+- Massive improvement from current 312 training samples!
+
+Benefits:
++ 3-5x more glaucoma training data
++ Better generalization (multiple imaging sources)
++ Improved sensitivity on external datasets
++ More balanced training (closer to 15-20% glaucoma)
+
+
+PHASE 2: FULL MULTI-DISEASE INTEGRATION
+────────────────────────────────────────
+
+Goal: Expand to all disease categories using RFMID datasets
+
+Approach:
+1. Map disease codes between datasets:
+   - ODIR: D, G, C, A, H, M, O
+   - RFMID: 46-52 disease categories
+   - Find overlapping conditions
+
+2. Create unified multi-label dataset:
+   - Combine all compatible full fundus images
+   - Total: ~9,000+ images
+   - Better coverage for all disease categories
+
+3. Handle class imbalance:
+   - Use class weights
+   - Balanced sampling strategies
+   - Focus on minority classes
+
+═══════════════════════════════════════════════════════════════════════════════
+DATASET COMPATIBILITY ANALYSIS
+───────────────────────────────────────────────────────────────────────────────
+
+COMPATIBLE (Full Fundus Images):
+✓ ODIR - Full fundus, multi-label
+✓ HYGD - Full fundus (Deep Fundus Images), binary
+✓ RFMID1 - Full fundus, multi-label
+✓ RFMID2 - Full fundus, multi-label
+
+NOT COMPATIBLE:
+✗ ACRIMA - Optic disc crops only (different field of view)
+  → Keep for external validation only
+  → Could be used for separate optic disc classifier
+
+═══════════════════════════════════════════════════════════════════════════════
+RECOMMENDED NEXT STEPS
+───────────────────────────────────────────────────────────────────────────────
+
+1. INVESTIGATE RFMID DISEASE CODES
+   - Check if RFMID contains glaucoma labels
+   - Map disease codes to ODIR categories
+   - Identify which conditions overlap
+
+2. CREATE UNIFIED GLAUCOMA DATASET
+   - Combine ODIR + HYGD glaucoma images
+   - Add RFMID glaucoma cases if available
+   - Create combined CSV with standardized labels
+
+3. RETRAIN WITH COMBINED DATA
+   - Use same 5-fold cross-validation approach
+   - Train on combined dataset
+   - Evaluate on ODIR holdout + HYGD + RFMID holdout
+
+4. EVALUATE GENERALIZATION
+   - Test on each source dataset separately
+   - Measure improvement in sensitivity
+   - Check if specificity is maintained
+
+═══════════════════════════════════════════════════════════════════════════════
+EXPECTED IMPROVEMENTS
+───────────────────────────────────────────────────────────────────────────────
+
+Current Performance (ODIR only - 312 glaucoma samples):
+- ODIR Holdout: Good performance
+- HYGD External: 22.63% sensitivity, 98.99% specificity
+- Issue: Severe class imbalance, poor generalization
+
+After Integration (945-1500+ glaucoma samples):
+- ODIR Holdout: Maintained or improved
+- HYGD External: Expected 60-80% sensitivity, 90-95% specificity
+- Benefits: Better generalization, reduced class imbalance
+
+═══════════════════════════════════════════════════════════════════════════════
+"""
+
+# This document provides the integration roadmap
