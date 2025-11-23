@@ -32,26 +32,33 @@ def download_aptos_dataset():
     print("📥 Downloading APTOS 2019 Blindness Detection dataset...")
     print("This may take a few minutes (dataset is ~1GB)\n")
     
+    # Find kaggle executable
+    import shutil
+    kaggle_cmd = shutil.which('kaggle')
+    if not kaggle_cmd:
+        # Try venv location
+        venv_kaggle = Path(sys.executable).parent / 'kaggle'
+        if venv_kaggle.exists():
+            kaggle_cmd = str(venv_kaggle)
+        else:
+            print("❌ Kaggle CLI not found!")
+            print("\nInstall it with:")
+            print("  pip install kaggle")
+            return False
+    
     try:
         # Check if kaggle is installed
-        result = subprocess.run(['kaggle', '--version'], capture_output=True, text=True)
+        result = subprocess.run([kaggle_cmd, '--version'], capture_output=True, text=True)
         print(f"✓ Kaggle CLI version: {result.stdout.strip()}")
-    except FileNotFoundError:
-        print("❌ Kaggle CLI not found!")
-        print("\nInstall it with:")
-        print("  pip install kaggle")
-        print("\nThen setup API credentials:")
-        print("  1. Go to https://www.kaggle.com/settings")
-        print("  2. Click 'Create New API Token'")
-        print("  3. Move kaggle.json to ~/.kaggle/")
-        print("  4. Run: chmod 600 ~/.kaggle/kaggle.json")
+    except Exception as e:
+        print(f"❌ Error running kaggle: {e}")
         return False
     
     # Download dataset
     try:
         print(f"\nDownloading to: {data_dir.absolute()}")
         subprocess.run(
-            ['kaggle', 'competitions', 'download', '-c', 'aptos2019-blindness-detection', '-p', str(data_dir)],
+            [kaggle_cmd, 'competitions', 'download', '-c', 'aptos2019-blindness-detection', '-p', str(data_dir)],
             check=True
         )
         print("✓ Download complete!")
