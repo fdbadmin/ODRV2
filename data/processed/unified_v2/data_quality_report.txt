@@ -1,0 +1,169 @@
+================================================================================
+DATA QUALITY CHECK REPORT
+================================================================================
+
+Total samples: 44673
+Total issues: 16051
+
+
+MISSING_FILES:
+----------------------------------------
+  {'index': 0, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/0_right.jpg', 'dataset': 'ODIR'}
+  {'index': 1, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/1_right.jpg', 'dataset': 'ODIR'}
+  {'index': 2, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/2_right.jpg', 'dataset': 'ODIR'}
+  {'index': 3, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/4_right.jpg', 'dataset': 'ODIR'}
+  {'index': 4, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/5_right.jpg', 'dataset': 'ODIR'}
+  {'index': 5, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/6_right.jpg', 'dataset': 'ODIR'}
+  {'index': 6, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/7_right.jpg', 'dataset': 'ODIR'}
+  {'index': 7, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/9_right.jpg', 'dataset': 'ODIR'}
+  {'index': 8, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/10_right.jpg', 'dataset': 'ODIR'}
+  {'index': 9, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/11_right.jpg', 'dataset': 'ODIR'}
+  {'index': 10, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/13_right.jpg', 'dataset': 'ODIR'}
+  {'index': 11, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/15_right.jpg', 'dataset': 'ODIR'}
+  {'index': 12, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/16_right.jpg', 'dataset': 'ODIR'}
+  {'index': 13, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/21_right.jpg', 'dataset': 'ODIR'}
+  {'index': 14, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/23_right.jpg', 'dataset': 'ODIR'}
+  {'index': 15, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/26_right.jpg', 'dataset': 'ODIR'}
+  {'index': 16, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/27_right.jpg', 'dataset': 'ODIR'}
+  {'index': 17, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/28_right.jpg', 'dataset': 'ODIR'}
+  {'index': 18, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/33_right.jpg', 'dataset': 'ODIR'}
+  {'index': 19, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/34_right.jpg', 'dataset': 'ODIR'}
+  {'index': 20, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/37_right.jpg', 'dataset': 'ODIR'}
+  {'index': 21, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/38_right.jpg', 'dataset': 'ODIR'}
+  {'index': 22, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/42_right.jpg', 'dataset': 'ODIR'}
+  {'index': 23, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/43_right.jpg', 'dataset': 'ODIR'}
+  {'index': 24, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/46_right.jpg', 'dataset': 'ODIR'}
+  {'index': 25, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/47_right.jpg', 'dataset': 'ODIR'}
+  {'index': 26, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/48_right.jpg', 'dataset': 'ODIR'}
+  {'index': 27, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/51_right.jpg', 'dataset': 'ODIR'}
+  {'index': 28, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/53_right.jpg', 'dataset': 'ODIR'}
+  {'index': 29, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/54_right.jpg', 'dataset': 'ODIR'}
+  {'index': 30, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/55_right.jpg', 'dataset': 'ODIR'}
+  {'index': 31, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/58_right.jpg', 'dataset': 'ODIR'}
+  {'index': 32, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/60_right.jpg', 'dataset': 'ODIR'}
+  {'index': 33, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/61_right.jpg', 'dataset': 'ODIR'}
+  {'index': 34, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/62_right.jpg', 'dataset': 'ODIR'}
+  {'index': 35, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/64_right.jpg', 'dataset': 'ODIR'}
+  {'index': 36, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/66_right.jpg', 'dataset': 'ODIR'}
+  {'index': 37, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/71_right.jpg', 'dataset': 'ODIR'}
+  {'index': 38, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/73_right.jpg', 'dataset': 'ODIR'}
+  {'index': 39, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/74_right.jpg', 'dataset': 'ODIR'}
+  {'index': 40, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/75_right.jpg', 'dataset': 'ODIR'}
+  {'index': 41, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/77_right.jpg', 'dataset': 'ODIR'}
+  {'index': 42, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/79_right.jpg', 'dataset': 'ODIR'}
+  {'index': 43, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/81_right.jpg', 'dataset': 'ODIR'}
+  {'index': 44, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/82_right.jpg', 'dataset': 'ODIR'}
+  {'index': 45, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/83_right.jpg', 'dataset': 'ODIR'}
+  {'index': 46, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/85_right.jpg', 'dataset': 'ODIR'}
+  {'index': 47, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/86_right.jpg', 'dataset': 'ODIR'}
+  {'index': 48, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/87_right.jpg', 'dataset': 'ODIR'}
+  {'index': 49, 'path': '/Users/fdb/VSCode/ODRV2/data/raw/ODIR-5K/ODIR-5K_Training_Images/88_right.jpg', 'dataset': 'ODIR'}
+  ... and 9009 more
+
+CORRUPTED_IMAGES:
+----------------------------------------
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/99_5.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/99_5.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/126_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/126_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/53_4.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/53_4.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/69_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/69_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/183_5.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/183_5.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/244_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/244_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/111_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/111_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/83_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/83_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/281_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/281_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/169_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/169_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/129_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/129_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/169_2.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/169_2.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/278_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/278_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/183_6.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/183_6.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/164_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/164_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/43_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/43_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/280_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/280_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/200_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/200_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/80_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/80_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/282_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/282_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/28_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/28_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/16_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/16_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/170_5.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/170_5.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/94_2.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/94_2.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/55_4.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/55_4.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/143_3.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/143_3.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/91_4.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/91_4.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/18_3.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/18_3.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/17_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/17_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/110_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/110_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/144_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/144_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/198_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/198_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/163_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/163_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/240_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/240_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/43_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/43_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/44_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/44_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/47_6.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/47_6.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/151_2.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/151_2.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/154_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/154_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/202_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/202_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/25_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/25_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/220_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/220_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/77_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/77_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/43_2.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/43_2.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/226_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/226_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/38_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/38_0.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/180_4.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/180_4.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/153_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/153_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/10_1.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/10_1.jpg'", 'dataset': 'HYGD'}
+  {'path': '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/242_0.jpg', 'reason': "[Errno 2] No such file or directory: '/Users/fdb/VSCode/ODRV2/external_data/glaucoma_standard/242_0.jpg'", 'dataset': 'HYGD'}
+  ... and 550 more
+
+INVALID_SEX:
+----------------------------------------
+  Female
+  Male
+  Male
+  Male
+  Female
+  Male
+  Female
+  Male
+  Male
+  Female
+  Female
+  Male
+  Female
+  Female
+  Male
+  Female
+  Male
+  Female
+  Female
+  Male
+  Male
+  Male
+  Male
+  Male
+  Male
+  Female
+  Female
+  Male
+  Female
+  Female
+  Male
+  Male
+  Female
+  Male
+  Male
+  Male
+  Male
+  Female
+  Male
+  Male
+  Male
+  Male
+  Female
+  Male
+  Male
+  Female
+  Female
+  Female
+  Female
+  Female
+  ... and 6342 more

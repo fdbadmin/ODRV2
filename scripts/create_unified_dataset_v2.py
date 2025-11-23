@@ -35,16 +35,21 @@ class UnifiedDatasetV2Creator:
         self.disease_labels = ['Label_D', 'Label_G', 'Label_C', 'Label_A', 'Label_H', 'Label_M', 'Label_O']
         
     def load_odir(self) -> pd.DataFrame:
-        """Load ODIR dataset (6,392 images)"""
+        """Load ODIR dataset (8,000 images from RAW DATA FULL)"""
         print("Loading ODIR dataset...")
         df = pd.read_csv(self.base_path / "data" / "processed" / "odir_eye_labels.csv")
         
         # Standardize columns
         df['source_dataset'] = 'ODIR'
         df['source_id'] = df['ID'].astype(str)
+        # Images are in RAW DATA FULL/ directory
         df['image_path'] = df['filename'].apply(
-            lambda x: str(self.base_path / "data" / "raw" / "ODIR-5K" / "ODIR-5K_Training_Images" / x)
+            lambda x: str(self.base_path / "RAW DATA FULL" / x)
         )
+        
+        # Filter only files that exist
+        df = df[df['image_path'].apply(lambda x: Path(x).exists())].reset_index(drop=True)
+        print(f"  Found {len(df)} images")
         
         # Convert gender to numeric: Male=1, Female=0
         df['Patient Sex'] = df['Patient Sex'].map({'Male': 1, 'Female': 0})
@@ -56,14 +61,14 @@ class UnifiedDatasetV2Creator:
     def load_hygd(self) -> pd.DataFrame:
         """Load HYGD dataset (747 images)"""
         print("Loading HYGD dataset...")
-        df = pd.read_csv(self.base_path / "external_data" / "glaucoma_standard" / "labels.csv")
+        df = pd.read_csv(self.base_path / "external_data" / "glaucoma_standard" / "Labels.csv")
         
         result = pd.DataFrame({
             'source_dataset': ['HYGD'] * len(df),
             'source_id': df['Patient'].astype(str) + '_' + df['Image Name'],
             'filename': df['Image Name'],
             'image_path': df['Image Name'].apply(
-                lambda x: str(self.base_path / "external_data" / "glaucoma_standard" / x)
+                lambda x: str(self.base_path / "external_data" / "glaucoma_standard" / "Images" / x)
             ),
             'Patient Age': np.nan,
             'Patient Sex': np.nan,
@@ -88,7 +93,7 @@ class UnifiedDatasetV2Creator:
             'source_id': df['ID'].astype(str),
             'filename': df['ID'].astype(str) + '.png',
             'image_path': (df['ID'].astype(str) + '.png').apply(
-                lambda x: str(self.base_path / "external_data" / "RFMiD1" / "Training_Set" / x)
+                lambda x: str(self.base_path / "external_data" / "RFMiD1" / "Training" / x)
             ),
             'Patient Age': np.nan,
             'Patient Sex': np.nan,
