@@ -4,10 +4,8 @@ type: software
 title: "ODRV2: Multi-Disease Ocular Recognition System"
 abstract: "State-of-the-art multi-label fundus image classification achieving 88% Macro F1 on ODIR-5K dataset with rigorous patient-level evaluation, explainability features, and uncertainty quantification."
 authors:
-  - family-names: "[Your Last Name]"
-    given-names: "[Your First Name]"
-    email: "[Your Email]"
-    affiliation: "[Your Institution]"
+  - family-names: "Brandimarte"
+    given-names: "Fabian"
 repository-code: "https://github.com/fdbadmin/ODRV2"
 url: "https://github.com/fdbadmin/ODRV2"
 license: MIT
@@ -25,7 +23,6 @@ keywords:
   - ODIR dataset
   - ConvNeXt
   - patient-level evaluation
-  - data leakage prevention
   - clinical AI
 references:
   - type: dataset

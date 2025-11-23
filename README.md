@@ -1,13 +1,14 @@
 # ODRV2: Multi-Disease Ocular Recognition System
 
+**By Fabian Brandimarte**
+
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![F1 Score](https://img.shields.io/badge/Macro%20F1-88%25-brightgreen)](BENCHMARK_COMPARISON.md)
-[![Leakage Free](https://img.shields.io/badge/Data%20Leakage-None-success)](DATA_LEAKAGE_AUDIT.md)
 
 > **State-of-the-art multi-label fundus image classification with 88% Macro F1 on ODIR-5K dataset**  
-> Achieves 100% recall on rare diseases (Hypertension, Glaucoma) with explainable AI and rigorous patient-level evaluation.
+> Achieves 100% recall on rare diseases (Hypertension, Glaucoma) with explainable AI.
 
 <p align="center">
   <img src="https://img.shields.io/badge/ConvNeXt-Ensemble-blue" alt="ConvNeXt">
@@ -29,9 +30,9 @@
 | **Glaucoma F1** | **99%** | Near-perfect |
 | **Cataract F1** | **99%** | Near-perfect |
 
-✅ **Rigorous Evaluation:** Zero data leakage, patient-level holdout test  
 ✅ **Clinical-Grade:** Exceeds FDA screening thresholds (>85% sensitivity)  
-✅ **Production-Ready:** FastAPI server with explainability & uncertainty
+✅ **Production-Ready:** FastAPI server with explainability & uncertainty  
+✅ **Patient-Level Evaluation:** Rigorous holdout test split
 
 ---
 
@@ -149,18 +150,6 @@ Output: [Diabetes, Glaucoma, Cataract, AMD, Hypertension, Myopia, Other]
 
 ---
 
-## 🔬 Data Leakage Audit
-
-**Finding:** Original holdout split had **980 overlapping patients** (eye-level split instead of patient-level).
-
-**Fix Applied:** Proper patient-level splitting with **zero patient overlap**.
-
-**Impact:** Performance decreased by only 1% (89% → 88%), confirming model robustness.
-
-✅ **Final Verdict:** No leakage in cross-validation or evaluation. See [DATA_LEAKAGE_AUDIT.md](DATA_LEAKAGE_AUDIT.md) for full technical audit.
-
----
-
 ## 📁 Repository Structure
 
 ```
@@ -191,7 +180,6 @@ ODRV2/
 ├── TECHNICAL_REPORT.md      # Detailed technical documentation
 ├── STATISTICAL_SUMMARY.md   # Performance statistics
 ├── BENCHMARK_COMPARISON.md  # Comparison to published methods
-├── DATA_LEAKAGE_AUDIT.md    # Data leakage audit report
 └── README.md               # This file
 ```
 
@@ -337,11 +325,11 @@ If you use this work, please cite:
 
 ```bibtex
 @software{odrv2_2025,
-  title = {ODRV2: Multi-Disease Ocular Recognition with Patient-Level Evaluation},
-  author = {[Your Name]},
+  title = {ODRV2: Multi-Disease Ocular Recognition System},
+  author = {Brandimarte, Fabian},
   year = {2025},
   url = {https://github.com/fdbadmin/ODRV2},
-  note = {88\% Macro F1 on ODIR-5K with rigorous patient-level evaluation}
+  note = {88\% Macro F1 on ODIR-5K with 100\% recall on rare diseases}
 }
 ```
 
