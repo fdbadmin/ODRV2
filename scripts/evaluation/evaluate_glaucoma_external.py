@@ -8,7 +8,9 @@ from tqdm import tqdm
 import torch
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.inference.service import load_ensemble, _normalize, _load_image
 

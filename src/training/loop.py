@@ -38,29 +38,49 @@ class TrainingConfig:
 import torch.nn.functional as F
 
 class FocalLoss(nn.Module):
-    def __init__(self, alpha: torch.Tensor | None = None, gamma: float = 2.0, reduction: str = 'mean'):
+    def __init__(self, alpha: torch.Tensor | None = None, gamma: float = 2.0, gamma_rare: float = 3.0, reduction: str = 'mean'):
+        """
+        Focal Loss for multi-label classification with enhanced rare disease focus.
+        
+        Args:
+            alpha: Class weights (from pos_weight)
+            gamma: Base focal parameter for common diseases
+            gamma_rare: Higher focal parameter for rare diseases (indices 2,3,4,5: C,A,H,M)
+            reduction: 'mean', 'sum', or 'none'
+        """
         super().__init__()
         self.alpha = alpha
         self.gamma = gamma
+        self.gamma_rare = gamma_rare
         self.reduction = reduction
+        # Indices for rare diseases: Cataract(2), AMD(3), HTN(4), Myopia(5)
+        self.rare_indices = {2, 3, 4, 5}
 
     def forward(self, inputs: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+        """
+        Args:
+            inputs: [batch, num_classes] logits
+            targets: [batch, num_classes] labels
+        """
         bce_loss = F.binary_cross_entropy_with_logits(inputs, targets, reduction='none')
         pt = torch.exp(-bce_loss)
-        focal_loss = (1 - pt) ** self.gamma * bce_loss
         
+        # Apply different gamma for rare diseases
+        # focal_loss shape: [batch, num_classes]
+        focal_loss = torch.zeros_like(bce_loss)
+        for class_idx in range(inputs.shape[1]):
+            if class_idx in self.rare_indices:
+                # Use higher gamma for rare diseases
+                focal_loss[:, class_idx] = (1 - pt[:, class_idx]) ** self.gamma_rare * bce_loss[:, class_idx]
+            else:
+                # Use base gamma for common diseases
+                focal_loss[:, class_idx] = (1 - pt[:, class_idx]) ** self.gamma * bce_loss[:, class_idx]
+        
+        # Apply alpha weights
         if self.alpha is not None:
             if self.alpha.device != inputs.device:
                 self.alpha = self.alpha.to(inputs.device)
-            # alpha is [num_classes], targets is [batch, num_classes]
-            # We want to apply alpha[c] where target[c] is 1.
-            # But for multi-label, we might want to weight positive and negative differently.
-            # Standard Focal Loss is usually for multi-class.
-            # For multi-label, we can treat each class as a binary problem.
-            # Here we simply multiply by alpha for positive cases?
-            # Or just use alpha as class weights regardless of target?
-            # The user provided pos_weight which is for positive examples.
-            # Let's use alpha as a class-wise weight multiplier.
+            # Multiply each class by its corresponding alpha weight
             focal_loss = focal_loss * self.alpha
             
         if self.reduction == 'mean':
@@ -77,23 +97,25 @@ class FundusLightningModule(LightningModule):
         super().__init__()
         self.save_hyperparameters(config.__dict__)
         self.backbone = FundusBackbone(feature_dim=config.feature_dim)
-        self.conditioner = MetadataConditioner(config.feature_dim)
+        # Metadata conditioner removed - not using age/sex
         self.classifier = MultiLabelClassifier(config.feature_dim, config.num_classes)
         pos_weight = getattr(config, "pos_weight", None)
         if pos_weight is not None:
             weight_tensor = torch.tensor(pos_weight, dtype=torch.float32)
         else:
             weight_tensor = None
-        # self.criterion = nn.BCEWithLogitsLoss(pos_weight=weight_tensor)
-        self.criterion = FocalLoss(alpha=weight_tensor, gamma=2.0)
+        # Use enhanced focal loss with higher gamma for rare diseases
+        # gamma=2.0 for common (DR, Glaucoma, Other)
+        # gamma_rare=3.0 for rare (Cataract, AMD, HTN, Myopia)
+        self.criterion = FocalLoss(alpha=weight_tensor, gamma=2.0, gamma_rare=3.0)
         self._val_logits: list[torch.Tensor] = []
         self._val_labels: list[torch.Tensor] = []
         self._val_losses: list[torch.Tensor] = []
 
     def forward(self, batch: dict[str, Any]) -> torch.Tensor:  # type: ignore[override]
         features = self.backbone(batch["image"])
-        conditioned = self.conditioner(features, batch["age"], batch["sex"])
-        return self.classifier(conditioned)
+        # Skip metadata conditioning - use features directly
+        return self.classifier(features)
 
     def training_step(self, batch: dict[str, Any], _: int) -> torch.Tensor:  # type: ignore[override]
         logits = self.forward(batch)

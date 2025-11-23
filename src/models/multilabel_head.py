@@ -17,7 +17,12 @@ class MetadataConditioner(nn.Module):
         )
 
     def forward(self, embedding: torch.Tensor, age: torch.Tensor, sex: torch.Tensor) -> torch.Tensor:
-        metadata = torch.stack([age, sex], dim=1)
+        # age and sex are already [batch_size] tensors, stack them to [batch_size, 2]
+        if age.dim() == 1:
+            age = age.unsqueeze(1)
+        if sex.dim() == 1:
+            sex = sex.unsqueeze(1)
+        metadata = torch.cat([age, sex], dim=1)
         gamma = self.mlp(metadata)
         return embedding * (1 + gamma)
 

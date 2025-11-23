@@ -33,7 +33,7 @@ class FundusDataset(Dataset):
         self,
         df: pd.DataFrame,
         image_size: tuple[int, int] = (448, 448),
-        augment: bool = True,
+        augment: bool = False,
         use_metadata: bool = False
     ):
         """
@@ -41,18 +41,19 @@ class FundusDataset(Dataset):
             df: DataFrame with image_path and label columns
             image_size: Target image size (height, width)
             augment: Whether to apply data augmentation
-            use_metadata: Whether to include age/sex metadata
+            use_metadata: Whether to include age/sex metadata (deprecated, kept for compatibility)
         """
         self.df = df.reset_index(drop=True)
         self.image_size = image_size
-        self.use_metadata = use_metadata
+        self.use_metadata = False  # Always disabled
         
         # Define augmentation pipeline
         if augment:
             self.transform = A.Compose([
                 A.Resize(image_size[0], image_size[1]),
                 A.RandomRotate90(p=0.5),
-                A.Flip(p=0.5),
+                A.HorizontalFlip(p=0.5),
+                A.VerticalFlip(p=0.5),
                 A.RandomBrightnessContrast(
                     brightness_limit=0.2,
                     contrast_limit=0.2,
