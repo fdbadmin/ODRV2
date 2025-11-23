@@ -76,7 +76,7 @@ python scripts/data_prep/create_unified_splits_v3.py
 ### 3. Training
 
 ```bash
-# Start training (Optimized for Apple Silicon M1/M2/M3)
+# Start training (Optimized for Apple Silicon M1-M5+)
 python scripts/training/train.py
 ```
 
@@ -208,6 +208,7 @@ curl -X POST http://localhost:8000/predict \
 ## 📚 Documentation
 
 - **[TECHNICAL_REPORT.md](TECHNICAL_REPORT.md)**: Detailed methodology, architecture, and results
+- **[TRAINING_HYPERPARAMETERS_V3.md](docs/TRAINING_HYPERPARAMETERS_V3.md)**: Complete list of training parameters and class weights
 - **[STATISTICAL_SUMMARY.md](STATISTICAL_SUMMARY.md)**: Complete performance statistics and confusion matrices
 - **[BENCHMARK_COMPARISON.md](BENCHMARK_COMPARISON.md)**: Comparison to published state-of-the-art
 - **[DATA_LEAKAGE_AUDIT.md](DATA_LEAKAGE_AUDIT.md)**: Comprehensive data leakage audit
