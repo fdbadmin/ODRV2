@@ -38,17 +38,31 @@ def create_holdout_test_set():
             print("Keeping existing test set.")
             return True
     
-    # Create stratified split (20% for final testing)
-    # Stratify by most common disease (Diabetes) to ensure balance
+    # Create PATIENT-LEVEL stratified split (20% for final testing)
+    # CRITICAL: Must split by patient ID to prevent data leakage
     label_cols = ['Label_D', 'Label_G', 'Label_C', 'Label_A', 'Label_H', 'Label_M', 'Label_O']
     
-    # Split using simple stratification on Diabetes (most samples)
-    df_train_val, df_test = train_test_split(
-        df,
+    # Get unique patients with their labels (aggregate max across both eyes)
+    patient_df = df.groupby('ID')[label_cols].max().reset_index()
+    
+    # Split PATIENTS (not eyes) using stratification on Diabetes
+    patients_train_val, patients_test = train_test_split(
+        patient_df,
         test_size=0.2,
-        stratify=df['Label_D'],  # Stratify on most common disease
+        stratify=patient_df['Label_D'],  # Stratify on most common disease
         random_state=42
     )
+    
+    # Now filter eyes based on patient assignment
+    train_val_patient_ids = set(patients_train_val['ID'])
+    test_patient_ids = set(patients_test['ID'])
+    
+    df_train_val = df[df['ID'].isin(train_val_patient_ids)].copy()
+    df_test = df[df['ID'].isin(test_patient_ids)].copy()
+    
+    # Verify no patient overlap
+    assert len(train_val_patient_ids & test_patient_ids) == 0, "Patient overlap detected!"
+    print(f"\n✓ No patient overlap: {len(train_val_patient_ids)} train/val patients, {len(test_patient_ids)} test patients")
     
     # Save test set
     df_test.to_csv(test_path, index=False)

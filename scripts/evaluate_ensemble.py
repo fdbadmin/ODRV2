@@ -7,10 +7,13 @@ from sklearn.metrics import classification_report, multilabel_confusion_matrix, 
 from src.inference.service import load_ensemble, _normalize, _load_image
 from src.utils.label_parser import CLASS_CODES
 
-def evaluate_ensemble():
+def evaluate_ensemble(data_csv_path=None):
     # Setup paths
     root_dir = Path(".")
-    data_path = root_dir / "data/processed/odir_eye_labels.csv"
+    if data_csv_path is None:
+        data_path = root_dir / "data/processed/odir_eye_labels.csv"
+    else:
+        data_path = Path(data_csv_path)
     img_dir = root_dir / "RAW DATA FULL"
     models_dir = root_dir / "models"
     config_path = root_dir / "configs/training.yaml"
@@ -33,10 +36,14 @@ def evaluate_ensemble():
     THRESHOLDS = [0.45, 0.45, 0.40, 0.75, 0.15, 0.30, 0.25]
     CLASS_NAMES = ['D', 'G', 'C', 'A', 'H', 'M', 'O']
     
-    # Select a subset for evaluation (e.g., 1000 samples) to keep it quick
-    # Use a fixed seed for reproducibility
-    eval_df = df.sample(n=1000, random_state=42)
-    print(f"Evaluating on {len(eval_df)} random samples...")
+    # Use ALL samples from the provided dataset (for holdout test evaluation)
+    # Or sample 1000 if dataset is large (for quick validation checks)
+    if len(df) > 2000:
+        eval_df = df.sample(n=1000, random_state=42)
+        print(f"Evaluating on {len(eval_df)} random samples (sampled from {len(df)})...")
+    else:
+        eval_df = df
+        print(f"Evaluating on ALL {len(eval_df)} samples...")
     
     y_true = []
     y_pred = []
@@ -114,4 +121,8 @@ def evaluate_ensemble():
         print(f"  Specificity:          {specificity:.3f}")
 
 if __name__ == "__main__":
-    evaluate_ensemble()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--data-path', type=str, default=None, help='Path to CSV file to evaluate')
+    args = parser.parse_args()
+    evaluate_ensemble(args.data_path)
