@@ -4,6 +4,9 @@ Main Training Script for Unified V3
 Optimized for Apple Silicon (MPS)
 """
 
+import os
+os.environ["NO_ALBUMENTATIONS_UPDATE"] = "1"
+
 import sys
 from pathlib import Path
 # Add project root to path (3 levels up: scripts/training/train.py -> scripts/training -> scripts -> root)
@@ -22,6 +25,7 @@ import json
 from src.data.dataset import FundusDataset
 from src.models.backbones import FundusBackbone
 from src.models.multilabel_head import MultiLabelClassifier
+from src.utils.label_parser import CLASS_CODES
 
 # Optimize for Apple Silicon 4 performance cores
 torch.set_num_threads(4)
@@ -269,11 +273,36 @@ def train_fold(fold, train_df, val_df, config):
     best_f1 = 0.0
     patience_counter = 0
     history = []
+    start_epoch = 0
     
     fold_dir = config['model_dir'] / f"fold_{fold}"
     fold_dir.mkdir(parents=True, exist_ok=True)
+
+    # Resume logic
+    if (fold_dir / 'best_model.pth').exists():
+        print(f"  Found checkpoint for Fold {fold}. Resuming...")
+        checkpoint = torch.load(fold_dir / 'best_model.pth', map_location=device, weights_only=False)
+        model.load_state_dict(checkpoint['model_state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        best_f1 = checkpoint['best_f1']
+        start_epoch = checkpoint['epoch']
+        
+        if (fold_dir / 'history.json').exists():
+            with open(fold_dir / 'history.json', 'r') as f:
+                history = json.load(f)
+            # Truncate history to match start_epoch to avoid duplicates/inconsistencies
+            history = history[:start_epoch]
+            
+        print(f"  Resuming from Epoch {start_epoch+1} (Best F1: {best_f1:.4f})")
+
+    # Scheduler (handle resume)
+    scheduler = optim.lr_scheduler.CosineAnnealingLR(
+        optimizer,
+        T_max=config['epochs'],
+        last_epoch=start_epoch - 1
+    )
     
-    for epoch in range(config['epochs']):
+    for epoch in range(start_epoch, config['epochs']):
         epoch_start = time.time()
         
         # Train
@@ -292,6 +321,11 @@ def train_fold(fold, train_df, val_df, config):
         print(f"  Train - Loss: {train_metrics['loss']:.4f}, F1: {train_metrics['f1_macro']:.4f}")
         print(f"  Val   - Loss: {val_metrics['loss']:.4f}, F1: {val_metrics['f1_macro']:.4f}")
         
+        # Print per-class F1
+        print("  Per-class Val F1:")
+        for i, score in enumerate(val_metrics['f1_per_class']):
+            print(f"    {CLASS_CODES[i]}: {score:.4f}")
+        
         history.append({
             'epoch': epoch + 1,
             'train': train_metrics,
@@ -299,6 +333,10 @@ def train_fold(fold, train_df, val_df, config):
             'lr': optimizer.param_groups[0]['lr'],
             'time': epoch_time
         })
+        
+        # Save history live
+        with open(fold_dir / 'history.json', 'w') as f:
+            json.dump(history, f, indent=2)
         
         # Save best model
         if val_metrics['f1_macro'] > best_f1:
@@ -324,6 +362,9 @@ def train_fold(fold, train_df, val_df, config):
     with open(fold_dir / 'history.json', 'w') as f:
         json.dump(history, f, indent=2)
     
+    # Mark as completed
+    (fold_dir / 'completed.txt').touch()
+    
     print(f"\nFold {fold} complete! Best Val F1: {best_f1:.4f}")
     return best_f1
 
@@ -341,7 +382,7 @@ def main():
         'feature_dim': 1024,  # ConvNeXt-base
         'dropout': 0.3,
         'image_size': (448, 448),
-        'batch_size': 8,
+        'batch_size': 16,
         'epochs': 30,
         'learning_rate': 2e-4,
         'weight_decay': 1e-2,
@@ -366,6 +407,21 @@ def main():
     # Train each fold
     fold_results = []
     for fold in range(config['num_folds']):
+        fold_dir = config['model_dir'] / f"fold_{fold}"
+        
+        # Check for completion marker
+        if (fold_dir / 'completed.txt').exists():
+            print(f"\nFold {fold} already completed. Skipping...")
+            # Load best result from history or checkpoint if needed
+            try:
+                ckpt = torch.load(fold_dir / 'best_model.pth', map_location='cpu', weights_only=False)
+                best_f1 = ckpt.get('best_f1', 0.0)
+                fold_results.append(best_f1)
+                print(f"  Loaded best F1: {best_f1:.4f}")
+            except:
+                print("  Could not load checkpoint, skipping result.")
+            continue
+
         train_df = df[df['fold'] != fold].reset_index(drop=True)
         val_df = df[df['fold'] == fold].reset_index(drop=True)
         

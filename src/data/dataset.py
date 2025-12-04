@@ -65,7 +65,7 @@ class FundusDataset(Dataset):
                     val_shift_limit=10,
                     p=0.5
                 ),
-                A.GaussNoise(var_limit=(10.0, 50.0), p=0.3),
+                A.GaussNoise(p=0.3),
                 A.GaussianBlur(blur_limit=(3, 5), p=0.3),
                 A.Normalize(
                     mean=[0.485, 0.456, 0.406],

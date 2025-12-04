@@ -16,7 +16,7 @@ This document details the hyperparameters and configuration used for training th
 
 | Hyperparameter | Value | Notes |
 |----------------|-------|-------|
-| **Batch Size** | `8` | Optimized for Apple Silicon (MPS) memory |
+| **Batch Size** | `20` | Aggressive optimization for 32GB Apple Silicon |
 | **Epochs** | `30` | Maximum training epochs per fold |
 | **Learning Rate** | `2e-4` | Initial learning rate |
 | **Weight Decay** | `1e-2` | L2 regularization |
