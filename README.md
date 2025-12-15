@@ -1,262 +1,219 @@
-# ODRV2: Unified Multi-Dataset Ocular Disease Recognition
+# ODRV2 — Unified Multi-Disease Fundus Screening (Research)
 
-**By Fabian Brandimarte**
+ODRV2 is a research pipeline for **multi-label ocular disease detection** from fundus photographs.
 
-[![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unified V3](https://img.shields.io/badge/Dataset-Unified%20V3%20(47k)-brightgreen)](docs/UNIFIED_PIPELINE_V3.md)
+- **Diseases (7):** Diabetic Retinopathy, Glaucoma, Cataract, AMD, Hypertensive Retinopathy, Myopia, Other
+- **Core model:** ConvNeXt-Base backbone + multi-label head
+- **Training:** 5-fold CV on Unified Dataset V3; best-performing *pruned ensemble* uses folds **0/1/4**
+- **Explainability:** GradCAM-style attention maps
 
-> **Next-Generation Ocular Disease Screening System**  
-> Trained on **47,000+ images** from 5 major datasets to detect 7 ocular conditions with clinical-grade accuracy.
+Important: this repository is a **research/screening tool**. It is **not** a medical device. Any outputs must be verified by qualified clinicians and validated externally before clinical use.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Unified%20V3-Active-brightgreen" alt="Unified V3">
-  <img src="https://img.shields.io/badge/ConvNeXt-Ensemble-blue" alt="ConvNeXt">
-  <img src="https://img.shields.io/badge/Apple%20Silicon-Optimized-purple" alt="MPS">
-</p>
+## Contents
 
----
+- [At a glance](#at-a-glance)
+- [Results](#results)
+- [Pipeline overview](#pipeline-overview)
+- [Quickstart (inference)](#quickstart-inference)
+- [Quickstart (training)](#quickstart-training)
+- [Evaluation & audits](#evaluation--audits)
+- [Deployments](#deployments)
+- [Benchmark comparison to published work](#benchmark-comparison-to-published-work)
+- [Repository map](#repository-map)
+- [Documentation index](#documentation-index)
+- [Citation](#citation)
 
-## 🚀 Unified V3 Overview
+## At a glance
 
-The **Unified V3** pipeline represents a major leap forward from single-dataset models. By integrating **ODIR-5K, EyePACS, Cataract-Kaggle, PALM, and ADAM**, we address the critical issue of data scarcity for rare diseases.
+**Unified Dataset V3 (current research dataset)**
 
-| Feature | Previous Model (V2) | **Unified V3 (Current)** |
-|---------|---------------------|--------------------------|
-| **Training Data** | 6,400 images (ODIR only) | **~47,000 images** (5+ sources) |
-| **Patient Count** | ~3,300 | **~32,000+** |
-| **Rare Diseases** | Limited samples | **Dedicated datasets** for AMD, Cataract, Myopia |
-| **Splitting** | Standard Stratified | **Priority Stratification** (Zero Leakage) |
-| **Hardware** | CUDA/Standard | **Apple Silicon (MPS) Optimized** |
+- **Images:** 32,157
+- **Patients:** 20,287
+- **Holdout test:** 6,282 images from 4,058 patients (never seen during training)
 
-👉 **[Read the Full Pipeline Guide](docs/UNIFIED_PIPELINE_V3.md)**
+See [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md) for the full methodology and final evaluation.
 
----
+## Results
 
-## 📊 Dataset Composition
+### Unified V3 holdout (final pruned ensemble)
 
-The model is trained to detect 7 conditions + Normal:
+From [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md):
 
-| Class | Source Datasets | Count (Approx) |
-|-------|-----------------|----------------|
-| **Diabetes (D)** | EyePACS, ODIR | ~30,000+ |
-| **Glaucoma (G)** | ODIR, HRF | ~1,500 |
-| **Cataract (C)** | Cataract-Kaggle, ODIR | ~1,400 |
-| **AMD (A)** | ADAM, ODIR | ~1,000 |
-| **Hypertension (H)** | ODIR, HRF | ~200 |
-| **Myopia (M)** | PALM, ODIR | ~1,500 |
-| **Other (O)** | ODIR | ~2,500 |
-| **Normal (N)** | All | ~10,000+ |
+- **Macro F1:** 0.8189
+- **Macro AUC-ROC:** 0.9742
+- **Macro precision:** 0.9075
+- **Macro recall:** 0.7632
 
----
+Per-class metrics (precision/recall/F1/AUC) and supports are reported in the technical report.
 
-## 🛠️ Quick Start
+### External validation (glaucoma-specific)
 
-### 1. Installation
+The final report includes an external evaluation on HYGD (215 images) with strong glaucoma performance (see [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md)).
+
+## Pipeline overview
+
+The repo contains **two related pipelines**:
+
+1) **Unified V3 “pure PyTorch” training** (recommended on macOS/MPS)
+   - Entry: `scripts/training/train.py`
+   - Uses patient-level CV folds created from globally unique patient identifiers
+
+2) **Lightning/Hydra-based training + FastAPI inference service** (more production-like)
+   - Inference service: `src/inference/service.py`
+   - Configs: `configs/*.yaml`
+
+High-level stages:
+
+1. **Ingest + standardize datasets** → build a unified CSV
+2. **Patient-level splitting** → train/val/test with leakage prevention
+3. **Train 5 folds** (ConvNeXt-Base) → save checkpoints per fold
+4. **Prune ensemble** (select strongest folds) → folds 0/1/4
+5. **Evaluate on holdout test** → macro metrics + per-class metrics
+6. **Explainability/QC** → attention heatmaps + image QC checks
+
+For the step-by-step Unified V3 pipeline, see [docs/UNIFIED_PIPELINE_V3.md](docs/UNIFIED_PIPELINE_V3.md).
+
+## Quickstart (inference)
+
+### 1) Install
 
 ```bash
-git clone https://github.com/fdbadmin/ODRV2.git
-cd ODRV2
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Data Preparation
+### 2) Desktop app (PyQt)
 
 ```bash
-# 1. Merge all raw datasets into Unified V3
-python scripts/data_prep/preprocess_dataset.py
+python desktop_app.py
+```
 
-# 2. Create patient-level stratified splits (Train/Val/Test)
+### 3) Web demo (Streamlit Space code)
+
+The Streamlit app used for the Hugging Face Space lives in `huggingface_space/`.
+
+```bash
+streamlit run huggingface_space/app.py
+```
+
+### 4) FastAPI inference service (optional)
+
+There is also a FastAPI service that supports ensemble inference, uncertainty metrics, and GradCAM overlays.
+See `src/inference/service.py` for the server factory.
+
+## Quickstart (training)
+
+### Unified V3 training (recommended)
+
+1) Build unified dataset CSV and patient-level splits:
+
+```bash
+python scripts/data_prep/preprocess_dataset.py
 python scripts/data_prep/create_unified_splits_v3.py
 ```
 
-### 3. Training
+2) Train folds:
 
 ```bash
-# Start training (Optimized for Apple Silicon M1-M5+)
 python scripts/training/train.py
 ```
 
-**Config:** ConvNeXt-Base | Focal Loss (γ=2.0) | AdamW | 5-Fold CV
-
-### 4. Evaluation
+If you want live logging to a file:
 
 ```bash
-# Audit dataset integrity (Check for leakage)
+python start_training_monitored.py
+```
+
+Notes:
+
+- `scripts/training/train.py` sets up patient IDs from filenames and creates fold assignments.
+- The training loop is optimized for macOS MPS and avoids some Lightning/MPS edge cases.
+
+## Evaluation & audits
+
+### Dataset integrity / leakage
+
+Run the dataset audit:
+
+```bash
 python scripts/analysis/audit_dataset.py
 ```
 
----
+Read the leakage deep-dive and fixes in [DATA_LEAKAGE_AUDIT.md](DATA_LEAKAGE_AUDIT.md).
 
-## 🏆 Baseline Performance (V2 Benchmark)
+### QC and explainability
 
-*Note: V3 results are currently being benchmarked. Below are the results from the V2 model (ODIR-5K only) which serves as our baseline.*
+- Desktop: attention heatmaps per disease are generated in `src/desktop/inference.py`.
+- Streamlit Space: QC metrics + attention overlay live in `huggingface_space/app.py`.
 
-| Metric | Value | Notes |
-|--------|-------|-------|
-| **Macro F1** | **88.0%** | Patient-level holdout |
-| **Hypertension Recall** | **100%** | Zero missed cases (39/39) |
-| **Myopia F1** | **100%** | Perfect detection |
-| **Glaucoma F1** | **99%** | Near-perfect |
+## Deployments
 
----
+This repo includes multiple ways to present the model:
 
-## 🏗️ Architecture
+- **Desktop (PyQt6):** clinician-friendly local UI
+- **Streamlit Space app:** shareable web demo (see `huggingface_space/`)
+- **FastAPI service:** programmatic inference endpoint (see `src/inference/service.py`)
 
-### Model Overview
+## Benchmark comparison to published work
 
-```
-Input: 448×448 RGB Fundus Image
-    ↓
-┌─────────────────────────────────────────────┐
-│   Unified V3 Ensemble (5-Fold CV)          │
-│                                             │
-│  Each Fold:                                 │
-│  ┌────────────────────────────────────┐   │
-│  │ ConvNeXt Base (88.6M params)       │   │
-│  │   ↓                                │   │
-│  │ 1024-D Visual Features             │   │
-│  │   ↓                                │   │
-│  │ Multi-Label Head (BCE + Focal)     │   │
-│  └────────────────────────────────────┘   │
-│                                             │
-│  Ensemble: Average predictions across 5    │
-└─────────────────────────────────────────────┘
-    ↓
-Output: [Diabetes, Glaucoma, Cataract, AMD, Hypertension, Myopia, Other]
-```
+This repository contains an explicit benchmark write-up for **ODIR-5K** experiments:
 
-### Key Features
+- [BENCHMARK_COMPARISON.md](BENCHMARK_COMPARISON.md) compares an ODIR-5K evaluation to selected published results.
+- [STATISTICAL_SUMMARY.md](STATISTICAL_SUMMARY.md) contains detailed per-class statistics for that evaluation.
 
-1. **ConvNeXt Backbone**: State-of-the-art CNN architecture.
-2. **Adaptive Focal Loss**: Higher gamma (γ=3.0) for rare diseases (AMD, HTN).
-3. **Unified Data Sampling**: Balanced sampling across 5 datasets.
-4. **Apple Silicon Optimization**: Custom MPS-accelerated training loop.
-5. **Zero-Leakage Splitting**: Strict patient isolation.
+Important context:
 
----
+- The ODIR-5K benchmark documents a specific experimental setting (dataset + split + thresholding) that is **not identical** to the Unified V3 holdout evaluation.
+- When comparing to papers, match the **dataset**, **split protocol** (patient-level vs image-level), and **metric definitions** (macro/micro, thresholding, etc.).
 
-## 📁 Repository Structure
+If you want the comparison section in this README to track a single canonical setting, use the Unified V3 holdout numbers from the technical report and treat the ODIR-5K benchmark as a historical baseline.
+
+## Repository map
 
 ```
 ODRV2/
+├── configs/                  # Hydra configs (Lightning + inference service)
+├── data/                     # Raw/processed data and split CSVs
+├── docs/                     # Pipeline and integration docs
+├── huggingface_space/        # Streamlit Space app (web demo)
+├── models/                   # Checkpoints (local)
 ├── scripts/
-│   ├── training/            # Main training scripts
-│   │   └── train.py         # Optimized Pure PyTorch loop
-│   ├── data_prep/           # Data processing
-│   │   ├── preprocess_dataset.py       # Merges datasets (V3)
-│   │   └── create_unified_splits_v3.py # Stratified splitting
-│   ├── analysis/            # Auditing & Visualization
-│   │   └── audit_dataset.py # Data integrity checks
-│   ├── evaluation/          # Model evaluation
-│   └── download/            # Dataset downloaders
-├── data/
-│   └── processed/
-│       └── unified_v3/      # Unified V3 CSV files
-├── models/
-│   └── unified_v3/          # Trained checkpoints
-├── src/
-│   ├── models/              # Neural network architectures
-│   └── training/            # Training utilities
-└── docs/
-    └── UNIFIED_PIPELINE_V3.md # Detailed pipeline guide
+│   ├── data_prep/            # Build unified dataset and splits
+│   ├── training/             # Training entrypoint(s)
+│   ├── analysis/             # Audits and QC/visualization
+│   └── evaluation/           # Evaluation utilities
+└── src/
+    ├── desktop/              # Desktop UI + desktop inference utilities
+    ├── inference/            # FastAPI service + GradCAM
+    ├── models/               # Model components
+    └── training/             # Training utilities (Lightning)
 ```
 
----
+## Documentation index
 
-## 🌐 Web Interface
+- [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md) — final methodology and results
+- [docs/UNIFIED_PIPELINE_V3.md](docs/UNIFIED_PIPELINE_V3.md) — end-to-end Unified V3 pipeline guide
+- [DATA_LEAKAGE_AUDIT.md](DATA_LEAKAGE_AUDIT.md) — leakage findings and fixes
+- [BENCHMARK_COMPARISON.md](BENCHMARK_COMPARISON.md) — ODIR-5K comparison to selected published work
+- [STATISTICAL_SUMMARY.md](STATISTICAL_SUMMARY.md) — detailed ODIR-5K stats
 
-### Features
-- 📸 **Drag-and-drop** image upload
-- 🎯 **Real-time prediction** with confidence scores
-- 🔥 **Grad-CAM heatmaps** showing decision regions
-- ⚠️ **Uncertainty flags** for low-confidence predictions
-- 📊 **Multi-disease detection** in single inference
+## Citation
 
-### API Endpoint
-
-```bash
-# POST /predict
-curl -X POST http://localhost:8000/predict \
-  -F "file=@fundus_image.jpg" \
-  -F "age=65" \
-  -F "sex=M"
-
-# Response
-{
-  "predictions": {
-    "Diabetes": {"probability": 0.92, "detected": true},
-    "Glaucoma": {"probability": 0.03, "detected": false},
-    ...
-  },
-  "uncertainty": {
-    "ensemble_disagreement": 0.08,
-    "predictive_entropy": 0.15,
-    "high_uncertainty": false
-  },
-  "gradcam_heatmaps": {
-    "Diabetes": "data:image/png;base64,..."
-  }
-}
-```
-
----
-
-## 📚 Documentation
-
-- **[TECHNICAL_REPORT.md](TECHNICAL_REPORT.md)**: Detailed methodology, architecture, and results
-- **[TRAINING_HYPERPARAMETERS_V3.md](docs/TRAINING_HYPERPARAMETERS_V3.md)**: Complete list of training parameters and class weights
-- **[STATISTICAL_SUMMARY.md](STATISTICAL_SUMMARY.md)**: Complete performance statistics and confusion matrices
-- **[BENCHMARK_COMPARISON.md](BENCHMARK_COMPARISON.md)**: Comparison to published state-of-the-art
-- **[DATA_LEAKAGE_AUDIT.md](DATA_LEAKAGE_AUDIT.md)**: Comprehensive data leakage audit
-
----
-
-## 🏆 Key Contributions
-
-1. **Rigorous Evaluation**: Patient-level holdout test with zero data leakage
-2. **Rare Disease Detection**: 100% recall on Hypertension (39 cases), zero missed diagnoses
-3. **Explainability**: Grad-CAM visual explanations for clinical trust
-4. **Uncertainty Quantification**: Flags low-confidence predictions for manual review
-5. **Production-Ready**: FastAPI server with TTA and metadata fusion
-6. **Open Source**: Fully reproducible with comprehensive documentation
-
----
-
-## 🔮 Future Work
-
-- [ ] **External Validation**: Evaluate on IDRiD, APTOS, Messidor-2 datasets
-- [ ] **Clinical Trial**: Prospective study with ophthalmology clinic
-- [ ] **Model Optimization**: Distillation for edge deployment
-- [ ] **Additional Diseases**: Expand to diabetic retinopathy severity grading
-- [ ] **Multi-Modal**: Incorporate OCT scans and patient history
-
----
-
-## 📝 Citation
-
-If you use this work, please cite:
+If you use this repository, please cite the software and include the model version + evaluation setting you used. (Some metadata files emphasize the earlier ODIR-5K baseline; the canonical Unified V3 results are in the technical report.)
 
 ```bibtex
 @software{odrv2_2025,
-  title = {ODRV2: Multi-Disease Ocular Recognition System},
+  title  = {ODRV2: Unified Multi-Disease Fundus Screening (Research)},
   author = {Brandimarte, Fabian},
-  year = {2025},
-  url = {https://github.com/fdbadmin/ODRV2},
-  note = {88\% Macro F1 on ODIR-5K with 100\% recall on rare diseases}
+  year   = {2025},
+  url    = {https://github.com/fdbadmin/ODRV2}
 }
 ```
 
----
+## License
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**Dataset License:** ODIR-5K dataset is subject to the terms of the ODIR-2019 Challenge. Ensure you have obtained proper access before using this code.
+MIT — see [LICENSE](LICENSE).
 
 ---
 
