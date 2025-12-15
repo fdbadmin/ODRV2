@@ -336,7 +336,8 @@ def evaluate_with_tta_and_weights(models, df, device, batch_size=16, use_tta=Tru
         'micro_f1': f1_score(y_true, y_pred, average='micro', zero_division=0)
     }
     
-    output_path = Path('models/unified_v3/optimized_ensemble_results.json')
+    output_path = Path('models/unified_v3_retrain/optimized_ensemble_results.json')
+    output_path.parent.mkdir(exist_ok=True)
     with open(output_path, 'w') as f:
         json.dump(results, f, indent=2)
     print(f"\nResults saved to {output_path}")
@@ -348,7 +349,7 @@ def main():
     print(f"Using device: {device}")
     
     # Load data
-    csv_path = Path('data/processed/unified_v3/unified_train_v3.csv')
+    csv_path = Path('data/processed/unified_v3/train_split.csv')
     print(f"\nLoading data from {csv_path}...")
     df = pd.read_csv(csv_path)
     
@@ -361,7 +362,7 @@ def main():
     print(f"Unique patients: {df['global_patient_id'].nunique()}")
     
     # Load ensemble
-    models = load_ensemble('models/unified_v3', device)
+    models = load_ensemble('models/unified_v3_retrain', device)
     
     if len(models) == 0:
         print("No models loaded! Exiting.")
@@ -370,8 +371,8 @@ def main():
     # Run optimized evaluation
     results = evaluate_with_tta_and_weights(
         models, df, device, 
-        batch_size=8,  # Reduced for TTA (5x more memory)
-        use_tta=True
+        batch_size=16,  # Larger batch without TTA
+        use_tta=False  # Disable TTA for faster evaluation
     )
     
     print("\n" + "="*80)

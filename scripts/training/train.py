@@ -17,6 +17,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
+from contextlib import nullcontext
 from sklearn.model_selection import StratifiedKFold
 from tqdm import tqdm
 import time
@@ -151,33 +152,37 @@ def train_epoch(model, loader, criterion, optimizer, device, epoch):
     running_loss = 0.0
     all_outputs = []
     all_targets = []
-    
+
+    # Autocast disabled for stability on MPS
+    autocast_ctx = nullcontext()
+
     pbar = tqdm(loader, desc=f"Epoch {epoch+1} [Train]")
     for batch_idx, batch in enumerate(pbar):
         images = batch['image'].to(device)
         labels = batch['labels'].to(device)
-        
+
         optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        
+        with autocast_ctx:
+            outputs = model(images)
+            loss = criterion(outputs, labels)
+
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
-        
+
         running_loss += loss.item()
         all_outputs.append(outputs.detach())
         all_targets.append(labels.detach())
-        
+
         if batch_idx % 10 == 0:
             pbar.set_postfix({'loss': f'{running_loss/(batch_idx+1):.4f}'})
-    
+
     # Calculate metrics
-    all_outputs = torch.cat(all_outputs, dim=0)
-    all_targets = torch.cat(all_targets, dim=0)
+    all_outputs = torch.cat(all_outputs, dim=0).float()
+    all_targets = torch.cat(all_targets, dim=0).float()
     metrics = calculate_metrics(all_outputs, all_targets)
     metrics['loss'] = running_loss / len(loader)
-    
+
     return metrics
 
 def validate(model, loader, criterion, device):
@@ -186,26 +191,30 @@ def validate(model, loader, criterion, device):
     running_loss = 0.0
     all_outputs = []
     all_targets = []
-    
+
+    # Autocast disabled for stability on MPS
+    autocast_ctx = nullcontext()
+
     with torch.no_grad():
         pbar = tqdm(loader, desc="Validating")
         for batch in pbar:
             images = batch['image'].to(device)
             labels = batch['labels'].to(device)
-            
-            outputs = model(images)
-            loss = criterion(outputs, labels)
-            
+
+            with autocast_ctx:
+                outputs = model(images)
+                loss = criterion(outputs, labels)
+
             running_loss += loss.item()
             all_outputs.append(outputs)
             all_targets.append(labels)
-    
+
     # Calculate metrics
-    all_outputs = torch.cat(all_outputs, dim=0)
-    all_targets = torch.cat(all_targets, dim=0)
+    all_outputs = torch.cat(all_outputs, dim=0).float()
+    all_targets = torch.cat(all_targets, dim=0).float()
     metrics = calculate_metrics(all_outputs, all_targets)
     metrics['loss'] = running_loss / len(loader)
-    
+
     return metrics
 
 def train_fold(fold, train_df, val_df, config):
@@ -229,17 +238,19 @@ def train_fold(fold, train_df, val_df, config):
         train_dataset, 
         batch_size=config['batch_size'],
         shuffle=True,
-        num_workers=2,  # 2 workers for I/O
-        pin_memory=False,
-        persistent_workers=False
+        num_workers=2,  # lower to avoid MPS worker leaks
+        pin_memory=False,  # MPS doesn't support pin_memory
+        persistent_workers=False,
+        prefetch_factor=2
     )
     val_loader = DataLoader(
         val_dataset,
         batch_size=config['batch_size'],
         shuffle=False,
         num_workers=2,
-        pin_memory=False,
-        persistent_workers=False
+        pin_memory=False,  # MPS doesn't support pin_memory
+        persistent_workers=False,
+        prefetch_factor=2
     )
     
     print(f"Train batches: {len(train_loader)}, Val batches: {len(val_loader)}")
@@ -375,8 +386,8 @@ def main():
     
     # Config
     config = {
-        'csv_path': Path('data/processed/unified_v3/unified_train_v3.csv'),
-        'model_dir': Path('models/unified_v3'),
+        'csv_path': Path('data/processed/unified_v3/train_split.csv'),
+        'model_dir': Path('models/unified_v3_retrain'),
         'num_folds': 5,
         'num_classes': 7,
         'feature_dim': 1024,  # ConvNeXt-base
@@ -384,7 +395,7 @@ def main():
         'image_size': (448, 448),
         'batch_size': 16,
         'epochs': 30,
-        'learning_rate': 2e-4,
+        'learning_rate': 1e-4,
         'weight_decay': 1e-2,
         'class_weights': [1.0, 5.0, 8.0, 60.0, 150.0, 60.0, 1.0],  # D, G, C, A, H, M, O
         'patience': 5

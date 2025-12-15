@@ -13,3 +13,17 @@ wandb/
 mlruns/
 RAW DATA FULL/
 data/raw/
+
+# Large data files
+external_data/
+data/processed/
+results/
+*.npy
+*.pth
+*.ckpt
+*.zip
+*.tar
+*.gz
+
+# Reference documents (not needed in repo)
+docs/references/

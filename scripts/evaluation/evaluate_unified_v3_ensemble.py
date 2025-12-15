@@ -333,7 +333,7 @@ def main():
     print(f"Using device: {device}")
     
     # Load data
-    csv_path = Path('data/processed/unified_v3/unified_train_v3.csv')
+    csv_path = Path('data/processed/unified_v3/train_split.csv')
     print(f"\nLoading data from {csv_path}...")
     df = pd.read_csv(csv_path)
     
@@ -346,7 +346,7 @@ def main():
     print(f"Unique patients: {df['global_patient_id'].nunique()}")
     
     # Load ensemble
-    models = load_ensemble('models/unified_v3', device)
+    models = load_ensemble('models/unified_v3_retrain', device)
     
     if len(models) == 0:
         print("No models loaded! Exiting.")
@@ -387,7 +387,7 @@ def main():
     # )
     
     # Save optimal thresholds
-    threshold_path = Path('models/unified_v3/optimal_thresholds.json')
+    threshold_path = Path('models/unified_v3_retrain/optimal_thresholds.json')
     threshold_data = {
         'thresholds': optimal_thresholds,
         'class_names': class_names,
