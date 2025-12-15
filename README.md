@@ -13,6 +13,7 @@ Important: this repository is a **research/screening tool**. It is **not** a med
 
 - [At a glance](#at-a-glance)
 - [Results](#results)
+- [Key metrics explained](#key-metrics-explained)
 - [Pipeline overview](#pipeline-overview)
 - [Quickstart (inference)](#quickstart-inference)
 - [Quickstart (training)](#quickstart-training)
@@ -49,6 +50,37 @@ Per-class metrics (precision/recall/F1/AUC) and supports are reported in the tec
 ### External validation (glaucoma-specific)
 
 The final report includes an external evaluation on HYGD (215 images) with strong glaucoma performance (see [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md)).
+
+## Key metrics explained
+
+This project is **multi-label**: each image can have zero, one, or multiple conditions present. The model outputs a probability per condition; each condition becomes “positive” if its probability exceeds a chosen threshold.
+
+**Confusion-matrix terms (per class)**
+
+- **True positive (TP):** condition present and predicted present
+- **False positive (FP):** condition absent but predicted present
+- **False negative (FN):** condition present but predicted absent
+
+**Precision / Recall / F1**
+
+- **Precision:** of the images predicted positive, how many truly are positive?  
+  $\text{Precision} = \frac{TP}{TP + FP}$
+- **Recall (Sensitivity):** of the truly positive images, how many did we detect?  
+  $\text{Recall} = \frac{TP}{TP + FN}$
+- **F1 score:** harmonic mean of precision and recall (balances FP and FN).  
+  $F_1 = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
+
+**AUC-ROC**
+
+- **AUC-ROC:** threshold-independent measure of ranking quality (how well positives are scored above negatives across all possible thresholds). Higher is better, but it does not by itself choose an operating point.
+
+**Macro averaging (why “Macro F1” matters here)**
+
+- **Macro** metrics compute the metric **per class**, then average across classes (each disease has equal weight). This is useful when the label distribution is imbalanced and you care about performance across all diseases, not just the most common ones.
+
+**Thresholding (operating point)**
+
+- Reported **F1/precision/recall** depends on thresholds. Threshold selection strategy and the final per-class thresholds used for evaluation are documented in [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md).
 
 ## Pipeline overview
 
@@ -167,8 +199,6 @@ Important context:
 - The ODIR-5K benchmark documents a specific experimental setting (dataset + split + thresholding) that is **not identical** to the Unified V3 holdout evaluation.
 - When comparing to papers, match the **dataset**, **split protocol** (patient-level vs image-level), and **metric definitions** (macro/micro, thresholding, etc.).
 
-If you want the comparison section in this README to track a single canonical setting, use the Unified V3 holdout numbers from the technical report and treat the ODIR-5K benchmark as a historical baseline.
-
 ## Repository map
 
 ```
@@ -200,7 +230,7 @@ ODRV2/
 
 ## Citation
 
-If you use this repository, please cite the software and include the model version + evaluation setting you used. (Some metadata files emphasize the earlier ODIR-5K baseline; the canonical Unified V3 results are in the technical report.)
+If you use this repository, please cite the software and include the model version + evaluation setting you used.
 
 ```bibtex
 @software{odrv2_2025,

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "ODRV2: Unified Multi-Disease Fundus Screening (Research)"
-abstract: "Research pipeline for multi-label fundus image classification across seven ocular conditions. Canonical results: Unified Dataset V3 pruned ConvNeXt ensemble achieves Macro F1=0.8189 and Macro AUC-ROC=0.9742 on a fully held-out test set (6,282 images from 4,058 patients). Historical baseline: ODIR-5K patient-level holdout Macro F1≈0.88 (see repository benchmark and leakage audit notes). Includes explainability (GradCAM-style attention) and quality-control utilities."
+abstract: "Research pipeline for multi-label fundus image classification across seven ocular conditions. Canonical results: Unified Dataset V3 pruned ConvNeXt ensemble achieves Macro F1=0.8189 and Macro AUC-ROC=0.9742 on a fully held-out test set (6,282 images from 4,058 patients). Includes explainability (GradCAM-style attention) and quality-control utilities."
 authors:
   - family-names: "Brandimarte"
     given-names: "Fabian"
