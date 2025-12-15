@@ -9,6 +9,33 @@ ODRV2 is a research pipeline for **multi-label ocular disease detection** from f
 
 Important: this repository is a **research/screening tool**. It is **not** a medical device. Any outputs must be verified by qualified clinicians and validated externally before clinical use.
 
+## Headline results (Unified Dataset V3 holdout)
+
+From [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md) on a **fully held-out** test set (**6,282 images / 4,058 patients**):
+
+- **Macro F1:** **0.8189**
+- **Macro AUC-ROC:** **0.9742**
+
+What that means (quickly):
+
+- **F1** balances *precision* (few false positives) and *recall* (few false negatives).
+- **Macro** averages the metric across the 7 diseases so each disease has equal weight.
+
+Per-class F1 on the holdout test:
+
+- Diabetic Retinopathy: **0.76**
+- Glaucoma: **0.86**
+- Cataract: **0.79**
+- AMD: **0.85**
+- Hypertensive Retinopathy: **0.63**
+- Myopia: **0.93**
+- Other: **0.91**
+
+Strengths / limitations (at a glance):
+
+- **Strengths:** strong overall discrimination (high macro AUC), particularly strong F1 for Myopia/Other/Glaucoma/AMD.
+- **Limitations:** performance varies by disease and operating threshold; rare diseases have small supports; Hypertensive Retinopathy recall is the weakest in the final holdout evaluation; image quality and domain shift can materially affect results.
+
 ## Contents
 
 - [At a glance](#at-a-glance)
@@ -19,7 +46,7 @@ Important: this repository is a **research/screening tool**. It is **not** a med
 - [Quickstart (training)](#quickstart-training)
 - [Evaluation & audits](#evaluation--audits)
 - [Deployments](#deployments)
-- [Benchmark comparison to published work](#benchmark-comparison-to-published-work)
+- [Comparison to published work (optional)](#comparison-to-published-work-optional)
 - [Repository map](#repository-map)
 - [Documentation index](#documentation-index)
 - [Citation](#citation)
@@ -189,14 +216,16 @@ This repo includes multiple ways to present the model:
 
 ## Benchmark comparison to published work
 
-This repository contains an explicit benchmark write-up for **ODIR-5K** experiments:
+## Comparison to published work (optional)
+
+This repository contains an explicit comparison write-up for **ODIR-5K** experiments:
 
 - [BENCHMARK_COMPARISON.md](BENCHMARK_COMPARISON.md) compares an ODIR-5K evaluation to selected published results.
 - [STATISTICAL_SUMMARY.md](STATISTICAL_SUMMARY.md) contains detailed per-class statistics for that evaluation.
 
 Important context:
 
-- The ODIR-5K benchmark documents a specific experimental setting (dataset + split + thresholding) that is **not identical** to the Unified V3 holdout evaluation.
+- The ODIR-5K comparison documents a specific experimental setting (dataset + split + thresholding) that is **not identical** to the Unified V3 holdout evaluation.
 - When comparing to papers, match the **dataset**, **split protocol** (patient-level vs image-level), and **metric definitions** (macro/micro, thresholding, etc.).
 
 ## Repository map
