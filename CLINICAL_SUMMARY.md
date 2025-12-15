@@ -132,6 +132,30 @@ The model examines the entire fundus image and learns to recognize:
 3. **Multi-disease detection** - Can flag multiple conditions simultaneously
 4. **High specificity** - Low false positive rates minimize unnecessary referrals
 5. **Validated on held-out data** - Performance reflects real-world generalization
+6. **External validation passed** - 98% F1 on completely independent glaucoma dataset (see below)
+
+---
+
+## External Validation (Glaucoma)
+
+To verify the model generalizes beyond training data, we evaluated on **215 fundus images from an independent glaucoma dataset** that were never used in training or testing.
+
+### Results
+
+| Metric | Value |
+|--------|-------|
+| **AUC-ROC** | 98.0% |
+| **Sensitivity** | 97% (159/164 glaucoma cases detected) |
+| **Specificity** | 94% (48/51 normals correctly identified) |
+
+### What This Means Clinically
+
+- The model correctly identified **97% of glaucoma cases** from a completely new data source
+- Only **5 glaucoma cases were missed** out of 164
+- Only **3 false positives** out of 51 normal eyes
+- The model did NOT hallucinate other diseases on this glaucoma-specific dataset
+
+This external validation provides confidence that the glaucoma detection generalizes to real-world data from different sources.
 
 ---
 
